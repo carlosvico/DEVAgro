@@ -12,6 +12,10 @@ import { FazendaCreateComponent } from './components/fazenda/fazenda-create/faze
 import { FazendaReadComponent } from './components/fazenda/fazenda-read/fazenda-read.component';
 import { FazendaUpdateComponent } from './components/fazenda/fazenda-update/fazenda-update.component';
 import { FazendaDeleteComponent } from './components/fazenda/fazenda-delete/fazenda-delete.component';
+import { EmpresaCreateComponent } from './components/empresa/empresa-create/empresa-create.component';
+import { EmpresaReadComponent } from './components/empresa/empresa-read/empresa-read.component';
+import { EmpresaUpdateComponent } from './components/empresa/empresa-update/empresa-update.component';
+import { EmpresaDeleteComponent } from './components/empresa/empresa-delete/empresa-delete.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { FazendaDeleteComponent } from './components/fazenda/fazenda-delete/faze
     FazendaCreateComponent,
     FazendaReadComponent,
     FazendaUpdateComponent,
-    FazendaDeleteComponent
+    FazendaDeleteComponent,
+    EmpresaCreateComponent,
+    EmpresaReadComponent,
+    EmpresaUpdateComponent,
+    EmpresaDeleteComponent
   ],
   imports: [
     BrowserModule,
