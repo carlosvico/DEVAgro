@@ -22,7 +22,11 @@ import { EmpresaCreateComponent } from './components/empresa/empresa-create/empr
 import { EmpresaReadComponent } from './components/empresa/empresa-read/empresa-read.component';
 import { EmpresaUpdateComponent } from './components/empresa/empresa-update/empresa-update.component';
 import { EmpresaDeleteComponent } from './components/empresa/empresa-delete/empresa-delete.component';
+<<<<<<< HEAD
+import { LoginViewComponent } from './views/login-view/login-view.component';
+=======
 >>>>>>> 190530f226cd766b53a18882ad1f0f40e42f0fa6
+>>>>>>> 5aa5e8d7480f4182ee643e4088dc27d2c3eee396
 
 @NgModule({
   declarations: [
@@ -45,8 +49,13 @@ import { EmpresaDeleteComponent } from './components/empresa/empresa-delete/empr
     EmpresaCreateComponent,
     EmpresaReadComponent,
     EmpresaUpdateComponent,
+<<<<<<< HEAD
+    EmpresaDeleteComponent,
+    LoginViewComponent
+=======
     EmpresaDeleteComponent
 >>>>>>> 190530f226cd766b53a18882ad1f0f40e42f0fa6
+>>>>>>> 5aa5e8d7480f4182ee643e4088dc27d2c3eee396
   ],
   imports: [
     BrowserModule,
