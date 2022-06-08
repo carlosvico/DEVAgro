@@ -23,10 +23,14 @@ import { EmpresaReadComponent } from './components/empresa/empresa-read/empresa-
 import { EmpresaUpdateComponent } from './components/empresa/empresa-update/empresa-update.component';
 import { EmpresaDeleteComponent } from './components/empresa/empresa-delete/empresa-delete.component';
 <<<<<<< HEAD
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+=======
+<<<<<<< HEAD
 import { LoginViewComponent } from './views/login-view/login-view.component';
 =======
 >>>>>>> 190530f226cd766b53a18882ad1f0f40e42f0fa6
 >>>>>>> 5aa5e8d7480f4182ee643e4088dc27d2c3eee396
+>>>>>>> d27439457666be77eda71be836cdab85baeaebe4
 
 @NgModule({
   declarations: [
@@ -59,7 +63,8 @@ import { LoginViewComponent } from './views/login-view/login-view.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
