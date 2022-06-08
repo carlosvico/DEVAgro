@@ -16,6 +16,7 @@ import { EmpresaCreateComponent } from './components/empresa/empresa-create/empr
 import { EmpresaReadComponent } from './components/empresa/empresa-read/empresa-read.component';
 import { EmpresaUpdateComponent } from './components/empresa/empresa-update/empresa-update.component';
 import { EmpresaDeleteComponent } from './components/empresa/empresa-delete/empresa-delete.component';
+import { LoginViewComponent } from './views/login-view/login-view.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { EmpresaDeleteComponent } from './components/empresa/empresa-delete/empr
     EmpresaCreateComponent,
     EmpresaReadComponent,
     EmpresaUpdateComponent,
-    EmpresaDeleteComponent
+    EmpresaDeleteComponent,
+    LoginViewComponent
   ],
   imports: [
     BrowserModule,
