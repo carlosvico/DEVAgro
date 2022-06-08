@@ -26,10 +26,14 @@ import { EmpresaDeleteComponent } from './components/empresa/empresa-delete/empr
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginViewComponent } from './views/login-view/login-view.component';
 import { HomeComponent } from './views/home/home.component';
+<<<<<<< HEAD
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
+=======
+import { HeaderComponent } from './components/templates/header/header.component';
+>>>>>>> 4007c7e5b0d85cb5744e2d4579d7cc8091c5abc4
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +56,8 @@ import { MatListModule } from '@angular/material/list';
     EmpresaDeleteComponent,
     LoginViewComponent,
     EmpresaDeleteComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
