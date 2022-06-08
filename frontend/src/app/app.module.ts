@@ -26,6 +26,7 @@ import { EmpresaDeleteComponent } from './components/empresa/empresa-delete/empr
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginViewComponent } from './views/login-view/login-view.component';
 import { HomeComponent } from './views/home/home.component';
+import { HeaderComponent } from './components/templates/header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import { HomeComponent } from './views/home/home.component';
     EmpresaDeleteComponent,
     LoginViewComponent,
     EmpresaDeleteComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
