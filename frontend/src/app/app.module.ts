@@ -33,7 +33,11 @@ import { EmpresaUpdateComponent } from './components/empresa/empresa-update/empr
 import { EmpresaDeleteComponent } from './components/empresa/empresa-delete/empresa-delete.component';
 
 import { LoginViewComponent } from './views/login-view/login-view.component';
+import { HomeComponent } from './views/home/home.component';
+import { HeaderComponent } from './components/templates/header/header.component';
 
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +60,8 @@ import { LoginViewComponent } from './views/login-view/login-view.component';
     EmpresaDeleteComponent,
     LoginViewComponent,
     EmpresaDeleteComponent,
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -66,6 +72,8 @@ import { LoginViewComponent } from './views/login-view/login-view.component';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
