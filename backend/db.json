@@ -19,7 +19,9 @@
   "fazendas": [
     {
         "id": 1,
-        "nome": "Fazenda feliz"
+        "name": "Fazenda feliz",
+        "grao": "Milho",
+        "dataUltimaColheita": "01/01/2001"
     },
     {
         "id": 2,
