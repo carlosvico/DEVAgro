@@ -1,3 +1,4 @@
+import { EmpresaCreateComponent } from './components/empresa/empresa-create/empresa-create.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FazendaCreateComponent } from './components/fazenda/fazenda-create/fazenda-create.component';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'fazenda/create',
     component: FazendaCreateComponent
+  },
+  {
+    path: 'empresa/create',
+    component: EmpresaCreateComponent
   }
 ];
 
