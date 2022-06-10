@@ -100,12 +100,14 @@ input {
 
 input[type=submit] {
     background-color: #375F24;
+    font-weight: 600;
     color: #FFFFFF;
     box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
 }
 
 input[type=submit]:hover {
     background-color: #FFFFFF;
+    font-weight: 600;
     color: #375F24;
     transition: 0.3s;
     box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
