@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { catchError, EMPTY, map, Observable } from 'rxjs';
+import { Fazenda } from './fazenda.model';
 
 @Injectable({
   providedIn: 'root'
@@ -26,14 +27,14 @@ export class FazendaService {
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
-  } //Função responsável por inserir, no backend, um novo produto
+  } //Função responsável por inserir, no backend, uma nova fazenda
 
   read(): Observable<Fazenda[]>{
     return this.http.get<Fazenda[]>(this.baseUrl).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );;
-  } //Função responsável por ler a listagem de itens na listagem do backend
+  } //Função responsável por ler a listagem de fazendas do backend
 
   readById(id: number): Observable<Fazenda> {
     const url = `${this.baseUrl}/${id}`
@@ -41,22 +42,22 @@ export class FazendaService {
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
-  } //Função responsável por ler o item pelo id
+  } //Função responsável por ler a fazenda pelo id
 
-  update(product: Fazenda): Observable<Fazenda> {
-    const url = `${this.baseUrl}/${product.id}`
-    return this.http.put<Fazenda>(url, product).pipe(
+  update(fazenda: Fazenda): Observable<Fazenda> {
+    const url = `${this.baseUrl}/${fazenda.id}`
+    return this.http.put<Fazenda>(url, fazenda).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
-  } //Função responsável por atualizar, no backend, um produto
+  } //Função responsável por atualizar, no backend, uma fazenda
 
   delete(id: number): Observable<Fazenda> {
     const url = `${this.baseUrl}/${id}`
     return this.http.delete<Fazenda>(url).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
-    );
+    ); //Deletar uma fazenda
   }
 
   errorHandler(e: any): Observable<any> {
