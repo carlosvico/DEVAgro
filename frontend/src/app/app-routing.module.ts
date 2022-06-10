@@ -1,3 +1,5 @@
+import { GraoCreateComponent } from './components/grao/grao-create/grao-create.component';
+import { GraoReadComponent } from './components/grao/grao-read/grao-read.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FazendaCreateComponent } from './components/fazenda/fazenda-create/fazenda-create.component';
@@ -8,6 +10,14 @@ import { SidebarComponent } from './components/templates/sidebar/sidebar.compone
 
 const routes: Routes = [
   {
+    path: "grao",
+    component: GraoReadComponent
+  },
+  {
+    path: "grao/create",
+    component:GraoCreateComponent
+  },
+ {
     path: 'sidebar',
     component: SidebarComponent
   },

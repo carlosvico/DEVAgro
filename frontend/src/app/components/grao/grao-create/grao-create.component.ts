@@ -11,5 +11,9 @@ export class GraoCreateComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  cancel(): void {
+  }
+  createGrain(): void {
+  }
 
 }
