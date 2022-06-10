@@ -12,6 +12,13 @@ export class FazendaCreateComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  /*createProduct(): void {
+    this.productService.create(this.product).subscribe(() => {
+      this.productService.showOnConsole('Produto Criado!');
+      this.router.navigate(['/products']);
+    });
+  }*/
+
   cancel(): void {
     this.router.navigate(['/fazenda'])
   }

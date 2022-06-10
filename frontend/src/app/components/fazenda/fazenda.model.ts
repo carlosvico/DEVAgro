@@ -1,14 +1,14 @@
 export interface Fazenda {
     id?: number
     nome: string
-    endereco: string
-    estoque: number
+    endereco?: string
+    estoque?: number
     ultimaColheita: string
     grao: {
         id: number
     },
-    empresa: {
+    empresa?: {
         id: number
     }
 }
-           
+

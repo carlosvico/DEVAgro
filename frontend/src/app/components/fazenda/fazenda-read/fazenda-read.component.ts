@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Fazenda } from '../fazenda.model';
+import { FazendaService } from '../fazenda.service';
 
 @Component({
   selector: 'app-fazenda-read',
@@ -7,12 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FazendaReadComponent implements OnInit {
 
-  //fazendas: Fazenda[]
-  displayedColumns = ['name', 'dataUltimaColheita']
+  fazendas: Fazenda[]
+  displayedColumns = ['nome', 'ultimaColheita', 'action']
 
-  constructor() { }
+  constructor(private fazendaService: FazendaService) { }
 
   ngOnInit(): void {
+    //this.fazendaService.read().subscribe(fazendas => {
+    //  this.fazendas = fazendas;
+    //})
   }
 
 }

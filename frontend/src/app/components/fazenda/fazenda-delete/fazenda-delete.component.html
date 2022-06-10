@@ -1,1 +1,27 @@
-<p>fazenda-delete works!</p>
+<mat-card class="delete">
+  <form>
+    <mat-card-subtitle class="nameFarm">NOME</mat-card-subtitle>
+    <mat-form-field class="farm" type="text" appearance="outline" required>
+      <input matInput placeholder="Nome da Fazenda">
+    </mat-form-field>
+    <mat-card-subtitle class="nameGrain">GRÃOS</mat-card-subtitle>
+    <mat-form-field class="grain" type="text" appearance="outline" required>
+      <input matInput placeholder="Grãos Produzidos">
+    </mat-form-field>
+    <mat-card-subtitle class="lastHaverst">DATA DA ÚLTIMA COLHEITA</mat-card-subtitle>
+    <mat-form-field class="haverst" appearance="outline" required>
+      <input matInput placeholder="Data dd/mm/aaaa">
+    </mat-form-field>
+  </form>
+</mat-card>
+<div class="btnExcluir">
+  <button mat-raised-button color="primary">
+    EXCLUIR
+  </button>
+</div>
+<div class="btnCancelar">
+  <button mat-raised-button (click)="cancel()">
+    CANCELAR
+  </button>
+</div>
+
