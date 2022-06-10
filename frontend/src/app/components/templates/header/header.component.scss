@@ -20,7 +20,7 @@ header{
     width: 0px;        
     border: 1px solid #DFE0EB;
     height: 32px;    
-    margin-right: 23px;
+    margin-right: 60px;
 }
 .span-profile{
     font-family: 'Mulish';
@@ -32,15 +32,21 @@ header{
     letter-spacing: 0.2px;
     color: #222222;  
 }
-
-.img-profile{    
-    border-radius: 50%; 
+.border-img{
     border: 1.5px solid #DFE0EB;
-    max-width: 44px;
-    max-height: 44px;
-    width: auto;
-    height: auto;     
+    border-radius: 100%;
+    min-width: 55px;
+    min-height: 55px;
     margin-left: 23px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-profile{    
+    border-radius: 100%;    
+    max-width: 50px;
+    max-height: 50px;       
+    
 }
 
 .div-left{
@@ -48,7 +54,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left:255px ;
+    margin-left:285px ;
 }
 
 .div-right{
@@ -58,3 +64,4 @@ header{
     align-items: center;
     margin-right:70px ;
 }
+

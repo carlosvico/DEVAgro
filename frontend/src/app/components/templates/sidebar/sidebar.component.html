@@ -1,1 +1,32 @@
-<p>sidebar works!</p>
+<mat-sidenav-container class="sidebar">
+    
+    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" >
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">
+                    home
+                </i>
+                Início
+            </a><br>
+            <a mat-list-item routerLink="/funcionario">
+                <i class="material-icons">
+                    groups
+                </i>
+                Funcionário
+            </a><br>
+            <a mat-list-item routerLink="/fazenda">
+                <i class="material-icons">
+                    agriculture
+                </i>
+                Fazenda
+            </a><br>
+            <a mat-list-item routerLink="/grao">
+                <i class="material-icons">
+                    grain
+                </i>
+                Grão
+            </a><br>
+        </mat-nav-list>
+    </mat-sidenav>
+    
+</mat-sidenav-container>

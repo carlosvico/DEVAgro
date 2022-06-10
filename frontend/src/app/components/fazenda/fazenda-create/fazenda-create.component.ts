@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fazenda-create',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FazendaCreateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  cancel(): void {
+    this.router.navigate(['/fazenda'])
   }
-
 }
