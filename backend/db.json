@@ -1,0 +1,31 @@
+{
+  "graos": [
+    {
+      "id": 1,
+      "nome": "milho",
+      "quantidade": 1
+    },
+    {
+      "id": 2,
+      "nome": "feijão",
+      "quantidade": 2
+    },
+    {
+      "id": 3,
+      "nome": "soja",
+      "quantidade": 40
+    }
+  ],
+  "fazendas": [
+    {
+        "id": 1,
+        "name": "Fazenda feliz",
+        "grao": "Milho",
+        "dataUltimaColheita": "01/01/2001"
+    },
+    {
+        "id": 2,
+        "nome": "Fazenda louca"
+    }
+  ]
+}
