@@ -3,23 +3,34 @@ import { GraoReadComponent } from './components/grao/grao-read/grao-read.compone
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FazendaCreateComponent } from './components/fazenda/fazenda-create/fazenda-create.component';
-import { FazendaDeleteComponent } from './components/fazenda/fazenda-delete/fazenda-delete.component';
 import { FazendaReadComponent } from './components/fazenda/fazenda-read/fazenda-read.component';
 import { FazendaUpdateComponent } from './components/fazenda/fazenda-update/fazenda-update.component';
-import { SidebarComponent } from './components/templates/sidebar/sidebar.component';
+import { FuncionarioUpdateComponent } from './components/funcionario/funcionario-update/funcionario-update.component';
+import { FuncionarioCreateComponent } from './components/funcionario/funcionario-create/funcionario-create.component';
+import { FuncionarioReadComponent } from './components/funcionario/funcionario-read/funcionario-read.component';
 
 const routes: Routes = [
   {
-    path: "grao",
-    component: GraoReadComponent
+    path: 'funcionario',
+    redirectTo: '/funcionario/read',
+    pathMatch: 'full'
   },
   {
-    path: "grao/create",
-    component:GraoCreateComponent
+    path: 'funcionario/read',
+    component: FuncionarioReadComponent
   },
- {
-    path: 'sidebar',
-    component: SidebarComponent
+  {
+    path: 'funcionario/create',
+    component: FuncionarioCreateComponent
+  },
+  {
+    path: 'funcionario/update/:id',
+    component: FuncionarioUpdateComponent
+  },
+  {
+    path: 'fazenda',
+    redirectTo: '/fazenda/read',
+    pathMatch: 'full'
   },
   {
     path: 'fazenda/read',
@@ -32,10 +43,6 @@ const routes: Routes = [
   {
     path: 'fazenda/update',
     component: FazendaUpdateComponent
-  },
-  {
-    path: 'fazenda/delete',
-    component: FazendaDeleteComponent
   }
 ];
 

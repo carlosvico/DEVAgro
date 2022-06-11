@@ -1,67 +1,64 @@
 header{
-    background-color: #F7F8FC; 
-    height:10% ;    
-    width: 100%;
-    display: flex;
-    justify-content: space-between;    
+  background-color: #E5E5E5;
+  height: 128px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
 }
 
-.title{  
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
-    letter-spacing: 0.3px;
-    color: #375F24;
-    }
+.title{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30.12px;
+  letter-spacing: 0.3px;
+  color: #252733;
+}
 
-.vertical {      
-    width: 0px;        
-    border: 1px solid #DFE0EB;
-    height: 32px;    
-    margin-right: 60px;
+.vertical {
+  width: 0px;
+  border: 1px solid #DFE0EB;
+  height: 32px;
+  margin-right: 60px;
 }
 .span-profile{
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: right;
-    letter-spacing: 0.2px;
-    color: #222222;  
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+  letter-spacing: 0.2px;
+  color: #222222;
 }
 .border-img{
-    border: 1.5px solid #DFE0EB;
-    border-radius: 100%;
-    min-width: 55px;
-    min-height: 55px;
-    margin-left: 23px;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 2px;
+  border: 2px solid #DFE0EB;
+  border-radius: 100%;
+  min-width: 55px;
+  min-height: 55px;
+  margin-left: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.img-profile{    
-    border-radius: 100%;    
-    max-width: 50px;
-    max-height: 50px;       
-    
+.img-profile{
+  border-radius: 100%;
+  max-width: 50px;
+  max-height: 50px;
 }
 
 .div-left{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left:285px ;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:285px ;
 }
 
 .div-right{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right:70px ;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right:70px ;
 }
 
