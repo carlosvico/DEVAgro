@@ -5,12 +5,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { FazendaCreateComponent } from './components/fazenda/fazenda-create/fazenda-create.component';
 import { FazendaDeleteComponent } from './components/fazenda/fazenda-delete/fazenda-delete.component';
 import { FazendaUpdateComponent } from './components/fazenda/fazenda-update/fazenda-update.component';
-import { SidebarComponent } from './components/templates/sidebar/sidebar.component';
 import { FuncionarioReadComponent } from './components/funcionario/funcionario-read/funcionario-read.component';
 import { FuncionarioCreateComponent } from './components/funcionario/funcionario-create/funcionario-create.component';
 import { FuncionarioUpdateComponent } from './components/funcionario/funcionario-update/funcionario-update.component';
 import { GraoUpdateComponent } from './components/grao/grao-update/grao-update.component';
 import { FazendaCrudComponent } from './views/fazenda-crud/fazenda-crud.component';
+import { SidebarComponent } from './components/templates/sidebar/sidebar.component';
+
 
 const routes: Routes = [
   {

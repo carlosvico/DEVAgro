@@ -43,6 +43,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -88,7 +89,8 @@ import { FazendaCrudComponent } from './views/fazenda-crud/fazenda-crud.componen
     MatTableModule,
     MatSnackBarModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
