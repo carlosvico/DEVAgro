@@ -25,12 +25,6 @@ import { EmpresaReadComponent } from './components/empresa/empresa-read/empresa-
 import { EmpresaUpdateComponent } from './components/empresa/empresa-update/empresa-update.component';
 import { EmpresaDeleteComponent } from './components/empresa/empresa-delete/empresa-delete.component';
 
-//
-import { SidebarComponent } from "./components/templates/sidebar/sidebar.component";
-import { HeaderComponent } from './components/templates/header/header.component';
-import { LoginViewComponent } from './views/login-view/login-view.component';
-import { HomeComponent } from './views/home/home.component';
-
 //ANGULAR IMPORTS
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -43,6 +37,13 @@ import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+
+//
+import { SidebarComponent } from "./components/templates/sidebar/sidebar.component";
+import { HeaderComponent } from './components/templates/header/header.component';
+import { LoginViewComponent } from './views/login-view/login-view.component';
+import { HomeComponent } from './views/home/home.component';
+
 
 @NgModule({
   declarations: [
