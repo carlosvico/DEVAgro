@@ -33,6 +33,7 @@ import { HomeComponent } from './views/home/home.component';
 
 //ANGULAR IMPORTS
 import { NgModule } from '@angular/core';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -44,6 +45,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FazendaCrudComponent } from './views/fazenda-crud/fazenda-crud.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +72,8 @@ import { MatListModule } from '@angular/material/list';
     LoginViewComponent,
     EmpresaDeleteComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    FazendaCrudComponent
   ],
   imports: [
     BrowserModule,
@@ -82,6 +87,9 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatListModule,
     MatTableModule,
+    MatSnackBarModule,
+    MatButtonModule,
+    MatToolbarModule,
     MatIconModule
   ],
   providers: [],

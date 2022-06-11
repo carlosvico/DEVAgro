@@ -23,14 +23,14 @@ form {
   font-weight: bold;
 }
 
-.grain, .haverst{
+.grain, .haverst, .address{
   margin: 10px 20px 20px 20px;
   border: #375F24;
   border-radius: 8px;
   box-sizing: border-box;
 }
 
-.nameGrain, .lastHaverst {
+.nameGrain, .lastHaverst, .farmAddress {
   margin: 10px 20px 0px 20px;
   color: #375F24;
   font-weight: bold;
@@ -52,8 +52,6 @@ form {
 button {
   margin: 0px 0px 0px 300px;
   padding: 10px 25px 10px 25px;
-  border: 1px solid #375F24;
-  background: #375F24;
   color: #fff;
   border-radius: 8px;
   font-weight: bold;
@@ -61,5 +59,15 @@ button {
 
 .btnCancelar {
   display: flex;
-  margin: -45px 220px;
+  margin: -58px 140px;
+}
+
+.excluir {
+  border: 1px solid #375F24;
+  background: #375F24;
+}
+
+.cancelar {
+  border: 1px solid #818286;
+  background: #818286;
 }

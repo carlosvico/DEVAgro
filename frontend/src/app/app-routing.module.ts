@@ -3,12 +3,14 @@ import { GraoReadComponent } from './components/grao/grao-read/grao-read.compone
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FazendaCreateComponent } from './components/fazenda/fazenda-create/fazenda-create.component';
-import { FazendaReadComponent } from './components/fazenda/fazenda-read/fazenda-read.component';
+import { FazendaDeleteComponent } from './components/fazenda/fazenda-delete/fazenda-delete.component';
 import { FazendaUpdateComponent } from './components/fazenda/fazenda-update/fazenda-update.component';
 import { FuncionarioReadComponent } from './components/funcionario/funcionario-read/funcionario-read.component';
 import { FuncionarioCreateComponent } from './components/funcionario/funcionario-create/funcionario-create.component';
 import { FuncionarioUpdateComponent } from './components/funcionario/funcionario-update/funcionario-update.component';
 import { GraoUpdateComponent } from './components/grao/grao-update/grao-update.component';
+import { FazendaCrudComponent } from './views/fazenda-crud/fazenda-crud.component';
+import { SidebarComponent } from './components/templates/sidebar/sidebar.component';
 
 
 const routes: Routes = [
@@ -22,6 +24,10 @@ const routes: Routes = [
     component: FuncionarioReadComponent
   },
   {
+    path: 'sidebar',
+    component: SidebarComponent
+  },
+  {
     path: 'funcionario/create',
     component: FuncionarioCreateComponent
   },
@@ -31,20 +37,19 @@ const routes: Routes = [
   },
   {
     path: 'fazenda',
-    redirectTo: '/fazenda/read',
-    pathMatch: 'full'
-  },
-  {
-    path: 'fazenda/read',
-    component: FazendaReadComponent
+    component: FazendaCrudComponent
   },
   {
     path: 'fazenda/create',
     component: FazendaCreateComponent
   },
   {
-    path: 'fazenda/update',
+    path: 'fazenda/update/:id',
     component: FazendaUpdateComponent
+  },
+  {
+    path: 'fazenda/delete/:id',
+    component: FazendaDeleteComponent
   },
   {
     path: 'grao',
@@ -63,7 +68,6 @@ const routes: Routes = [
     path: 'grao/update',
     component: GraoUpdateComponent
   }
-
 ];
 
 @NgModule({
