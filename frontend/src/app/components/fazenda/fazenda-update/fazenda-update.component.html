@@ -2,20 +2,20 @@
   <form>
     <mat-card-subtitle class="nameFarm">NOME</mat-card-subtitle>
     <mat-form-field class="farm" type="text" appearance="outline" required>
-      <input matInput placeholder="Nome da Fazenda">
+      <input matInput placeholder="Nome da Fazenda" [(ngModel)]="fazenda.nome" name="nome">
     </mat-form-field>
     <mat-card-subtitle class="nameGrain">GRÃOS</mat-card-subtitle>
     <mat-form-field class="grain" type="text" appearance="outline" required>
-      <input matInput placeholder="Grãos Produzidos">
+      <input matInput placeholder="Grãos Produzidos" [(ngModel)]="fazenda.grao" name="grao">
     </mat-form-field>
     <mat-card-subtitle class="lastHaverst">DATA DA ÚLTIMA COLHEITA</mat-card-subtitle>
     <mat-form-field class="haverst" appearance="outline" required>
-      <input matInput placeholder="Data dd/mm/aaaa">
+      <input matInput placeholder="Data dd/mm/aaaa" [(ngModel)]="fazenda.ultimaColheita" name="ultimaColheita">
     </mat-form-field>
   </form>
 </mat-card>
 <div class="btnAtualizar">
-  <button mat-raised-button color="primary">
+  <button mat-raised-button (click)="updateFazenda()" color="primary">
     ATUALIZAR
   </button>
 </div>

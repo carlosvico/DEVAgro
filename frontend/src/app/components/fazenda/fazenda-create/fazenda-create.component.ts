@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Fazenda } from '../fazenda.model';
+import { FazendaService } from '../fazenda.service';
 
 @Component({
   selector: 'app-fazenda-create',
@@ -8,16 +10,22 @@ import { Router } from '@angular/router';
 })
 export class FazendaCreateComponent implements OnInit {
 
-  constructor(private router: Router) {}
+  fazenda: Fazenda = {
+    nome: '',
+    grao: '',
+    ultimaColheita: '',
+  }
+
+  constructor(private fazendaService: FazendaService, private router: Router) {}
 
   ngOnInit(): void {}
 
-  /*createProduct(): void {
-    this.productService.create(this.product).subscribe(() => {
-      this.productService.showOnConsole('Produto Criado!');
-      this.router.navigate(['/products']);
+  createFazenda(): void {
+    this.fazendaService.create(this.fazenda).subscribe(() => {
+      this.fazendaService.showMessage('Fazenda Criada!');
+      this.router.navigate(['/fazenda']);
     });
-  }*/
+  }
 
   cancel(): void {
     this.router.navigate(['/fazenda'])

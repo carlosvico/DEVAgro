@@ -17,7 +17,7 @@ const routes: Routes = [
     path: "grao/create",
     component:GraoCreateComponent
   },
- {
+  {
     path: 'sidebar',
     component: SidebarComponent
   },
@@ -30,11 +30,11 @@ const routes: Routes = [
     component: FazendaCreateComponent
   },
   {
-    path: 'fazenda/update',
+    path: 'fazenda/update/:id',
     component: FazendaUpdateComponent
   },
   {
-    path: 'fazenda/delete',
+    path: 'fazenda/delete/:id',
     component: FazendaDeleteComponent
   }
 ];

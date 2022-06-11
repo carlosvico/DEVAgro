@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Fazenda } from '../fazenda.model';
+import { FazendaService } from '../fazenda.service';
 
 @Component({
   selector: 'app-fazenda-delete',
@@ -8,9 +10,22 @@ import { Router } from '@angular/router';
 })
 export class FazendaDeleteComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  fazenda: Fazenda;
+
+  constructor(private fazendaService: FazendaService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.fazendaService.readById(id).subscribe(fazenda => {
+      this.fazenda = fazenda;
+    });
+  }
+
+  deleteFazenda(): void {
+    this.fazendaService.delete(this.fazenda.id).subscribe(() => {
+      this.fazendaService.showMessage('Fazenda Excluída com Sucesso!');
+      this.router.navigate(["/fazenda"]);
+    })
   }
 
   cancel(): void {

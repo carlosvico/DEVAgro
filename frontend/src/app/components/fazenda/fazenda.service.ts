@@ -22,7 +22,7 @@ export class FazendaService {
     })
   }
 
-  /*create(fazenda: Fazenda): Observable<Fazenda> {
+  create(fazenda: Fazenda): Observable<Fazenda> {
     return this.http.post<Fazenda>(this.baseUrl, fazenda).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
@@ -63,5 +63,5 @@ export class FazendaService {
   errorHandler(e: any): Observable<any> {
     this.showMessage('Ocorreu um erro!', true);
     return EMPTY;
-  }*/
+  }
 }

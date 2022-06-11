@@ -2,20 +2,20 @@
   <form>
     <mat-card-subtitle class="nameFarm">NOME</mat-card-subtitle>
     <mat-form-field class="farm" type="text" appearance="outline" required>
-      <input matInput placeholder="Nome da Fazenda">
+      <input matInput placeholder="Nome da Fazenda" [value]="fazenda.nome" name="nome" disabled>
     </mat-form-field>
     <mat-card-subtitle class="nameGrain">GRÃOS</mat-card-subtitle>
     <mat-form-field class="grain" type="text" appearance="outline" required>
-      <input matInput placeholder="Grãos Produzidos">
+      <input matInput placeholder="Grãos Produzidos" [value]="fazenda.grao" name="grao" disabled>
     </mat-form-field>
     <mat-card-subtitle class="lastHaverst">DATA DA ÚLTIMA COLHEITA</mat-card-subtitle>
     <mat-form-field class="haverst" appearance="outline" required>
-      <input matInput placeholder="Data dd/mm/aaaa">
+      <input matInput placeholder="Data dd/mm/aaaa" [value]="fazenda.ultimaColheita" name="ultimaColheita" disabled>
     </mat-form-field>
   </form>
 </mat-card>
 <div class="btnExcluir">
-  <button mat-raised-button color="primary">
+  <button mat-raised-button (click)="deleteFazenda()" color="primary">
     EXCLUIR
   </button>
 </div>
