@@ -2,7 +2,7 @@
   <form>
     <mat-card-subtitle class="nameFarm">NOME</mat-card-subtitle>
     <mat-form-field class="farm" type="text" appearance="outline" required>
-      <input matInput placeholder="Nome da Fazenda" [value]="fazenda.nome" name="nome" disabled>
+      <input matInput placeholder="Nome da Fazenda" [value]="fazenda.name" name="name" disabled>
     </mat-form-field>
     <mat-card-subtitle class="nameGrain">GRÃOS</mat-card-subtitle>
     <mat-form-field class="grain" type="text" appearance="outline" required>
@@ -12,15 +12,19 @@
     <mat-form-field class="haverst" appearance="outline" required>
       <input matInput placeholder="Data dd/mm/aaaa" [value]="fazenda.ultimaColheita" name="ultimaColheita" disabled>
     </mat-form-field>
+    <mat-card-subtitle class="farmAddress">LOCALIZAÇÃO</mat-card-subtitle>
+    <mat-form-field class="address" appearance="outline" required>
+      <input matInput placeholder="Localização" [value]="fazenda.endereco" name="endereco" disabled>
+    </mat-form-field>
   </form>
 </mat-card>
 <div class="btnExcluir">
-  <button mat-raised-button (click)="deleteFazenda()" color="primary">
+  <button class="excluir" mat-raised-button (click)="deleteFazenda()" color="primary">
     EXCLUIR
   </button>
 </div>
 <div class="btnCancelar">
-  <button mat-raised-button (click)="cancel()">
+  <button class="cancelar" mat-raised-button (click)="cancel()">
     CANCELAR
   </button>
 </div>

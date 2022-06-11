@@ -11,9 +11,10 @@ import { FazendaService } from '../fazenda.service';
 export class FazendaCreateComponent implements OnInit {
 
   fazenda: Fazenda = {
-    nome: '',
+    name: '',
     grao: '',
     ultimaColheita: '',
+    endereco: ''
   }
 
   constructor(private fazendaService: FazendaService, private router: Router) {}

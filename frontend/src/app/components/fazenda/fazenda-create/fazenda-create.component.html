@@ -2,7 +2,7 @@
   <form>
     <mat-card-subtitle class="nameFarm">NOME</mat-card-subtitle>
     <mat-form-field class="farm" type="text" appearance="outline" required>
-      <input matInput placeholder="Nome da Fazenda" [(ngModel)]="fazenda.nome" name="nome">
+      <input matInput placeholder="Nome da Fazenda" [(ngModel)]="fazenda.name" name="name">
     </mat-form-field>
     <mat-card-subtitle class="nameGrain">GRÃOS</mat-card-subtitle>
     <mat-form-field class="grain" type="text" appearance="outline" required>
@@ -12,15 +12,19 @@
     <mat-form-field class="haverst" appearance="outline" required>
       <input matInput placeholder="Data dd/mm/aaaa" [(ngModel)]="fazenda.ultimaColheita" name="ultimaColheita">
     </mat-form-field>
+    <mat-card-subtitle class="farmAddress">LOCALIZAÇÃO</mat-card-subtitle>
+    <mat-form-field class="address" appearance="outline" required>
+      <input matInput placeholder="Localização" [(ngModel)]="fazenda.endereco" name="endereco">
+    </mat-form-field>
   </form>
 </mat-card>
 <div class="btnCadastrar">
-  <button mat-raised-button (click)="createFazenda()" color="primary">
+  <button class="cadastrar" mat-raised-button (click)="createFazenda()" color="primary">
     CADASTRAR
   </button>
 </div>
 <div class="btnCancelar">
-  <button mat-raised-button (click)="cancel()">
+  <button class="cancelar" mat-raised-button (click)="cancel()">
     CANCELAR
   </button>
 </div>

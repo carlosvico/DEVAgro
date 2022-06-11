@@ -4,26 +4,39 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FazendaCreateComponent } from './components/fazenda/fazenda-create/fazenda-create.component';
 import { FazendaDeleteComponent } from './components/fazenda/fazenda-delete/fazenda-delete.component';
-import { FazendaReadComponent } from './components/fazenda/fazenda-read/fazenda-read.component';
 import { FazendaUpdateComponent } from './components/fazenda/fazenda-update/fazenda-update.component';
 import { SidebarComponent } from './components/templates/sidebar/sidebar.component';
+import { FuncionarioReadComponent } from './components/funcionario/funcionario-read/funcionario-read.component';
+import { FuncionarioCreateComponent } from './components/funcionario/funcionario-create/funcionario-create.component';
+import { FuncionarioUpdateComponent } from './components/funcionario/funcionario-update/funcionario-update.component';
+import { GraoUpdateComponent } from './components/grao/grao-update/grao-update.component';
+import { FazendaCrudComponent } from './views/fazenda-crud/fazenda-crud.component';
 
 const routes: Routes = [
   {
-    path: "grao",
-    component: GraoReadComponent
+    path: 'funcionario',
+    redirectTo: '/funcionario/read',
+    pathMatch: 'full'
   },
   {
-    path: "grao/create",
-    component:GraoCreateComponent
+    path: 'funcionario/read',
+    component: FuncionarioReadComponent
   },
   {
     path: 'sidebar',
     component: SidebarComponent
   },
   {
-    path: 'fazenda/read',
-    component: FazendaReadComponent
+    path: 'funcionario/create',
+    component: FuncionarioCreateComponent
+  },
+  {
+    path: 'funcionario/update/:id',
+    component: FuncionarioUpdateComponent
+  },
+  {
+    path: 'fazenda',
+    component: FazendaCrudComponent
   },
   {
     path: 'fazenda/create',
@@ -36,6 +49,23 @@ const routes: Routes = [
   {
     path: 'fazenda/delete/:id',
     component: FazendaDeleteComponent
+  },
+  {
+    path: 'grao',
+    redirectTo: '/grao/read',
+    pathMatch: 'full'
+  },
+  {
+    path: 'grao/read',
+    component: GraoReadComponent
+  },
+  {
+    path: 'grao/create',
+    component: GraoCreateComponent
+  },
+  {
+    path: 'grao/update',
+    component: GraoUpdateComponent
   }
 ];
 
