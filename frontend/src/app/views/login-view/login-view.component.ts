@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginViewComponent implements OnInit {
 
+  passwordType: string = 'password';
+  passwordShow: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  // ========== MÉTODOS ==========
+  togglePassword() {
+    if (this.passwordShow) {
+      this.passwordShow = false;
+      this.passwordType = 'password';
+    } else {
+      this.passwordShow = true;
+      this.passwordType = 'text';
+    }
+  }
 }
