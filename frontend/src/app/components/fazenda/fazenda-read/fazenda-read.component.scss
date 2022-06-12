@@ -1,13 +1,13 @@
 .mat-elevation-z4 {
-  //margin: 35px;
-  //border: 1px solid #375F24;
+  margin: 35px 35px 35px 300px;
+  border-radius: 8px;
+  border: 1px solid #375F24;
 }
 
 table {
-  //display: flex;
-  //flex-direction: column;
-  //border-radius: 8px;
-  //background: #FCFDFE;
+  flex-direction: column;
+  border-radius: 8px;
+  background: #FCFDFE;
   width: 100%;
 }
 
@@ -19,6 +19,6 @@ table {
   color: #d9cd26;
 }
 
-.delete > i {
+.delet > i {
   color: #e35e6b;
 }
