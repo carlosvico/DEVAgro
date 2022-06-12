@@ -1,3 +1,4 @@
+import { EmpresaCreateComponent } from './components/empresa/empresa-create/empresa-create.component';
 import { GraoCreateComponent } from './components/grao/grao-create/grao-create.component';
 import { GraoReadComponent } from './components/grao/grao-read/grao-read.component';
 import { NgModule } from '@angular/core';
@@ -67,6 +68,10 @@ const routes: Routes = [
   {
     path: 'grao/update',
     component: GraoUpdateComponent
+  },
+  {
+    path: 'empresa/create',
+    component: EmpresaCreateComponent
   }
 ];
 
