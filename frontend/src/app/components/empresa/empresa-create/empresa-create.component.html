@@ -19,8 +19,16 @@
             <input type="text" placeholder="E-mail">
             <label for="password">SENHA</label>
             <input type="password" placeholder="Senha">
+            <div class="icone" (click)="togglePassword()">
+                <i class="fa fa-eye" *ngIf="passwordShow == true" [ngStyle]="{'color': '#375F24' }"></i>
+                <i class="fa fa-eye-slash" *ngIf="passwordShow == false" [ngStyle]="{'color': '#9FA2B4'}"></i>
+            </div>
             <label for="retypepassword">DIGITE NOVAMENTE A SENHA</label>
             <input type="password" placeholder="Senha">
+            <div class="icone2" (click)="togglePassword()">
+                <i class="fa fa-eye" *ngIf="passwordShow == true" [ngStyle]="{'color': '#375F24' }"></i>
+                <i class="fa fa-eye-slash" *ngIf="passwordShow == false" [ngStyle]="{'color': '#9FA2B4'}"></i>
+            </div>
             <input type="submit" value="Log In">
         </form>
 
