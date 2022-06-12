@@ -43,7 +43,7 @@ const routes: Routes = [
     component: FazendaCreateComponent
   },
   {
-    path: 'fazenda/update',
+    path: 'fazenda/update/:id',
     component: FazendaUpdateComponent
   },
   {
@@ -60,7 +60,7 @@ const routes: Routes = [
     component: GraoCreateComponent
   },
   {
-    path: 'grao/update',
+    path: 'grao/update/:id',
     component: GraoUpdateComponent
   }
 
