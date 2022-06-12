@@ -1,8 +1,8 @@
 <mat-card class="create">
     <mat-card class="sign-up">
         <div class="logo-container">
-            <a routerLink="/" class="logo">
-                <img src="/assets/img/logoDevInHouse.png" alt="dev-agro">
+            <a routerLink="/" >
+                <img class="logo" src="/assets/img/logoDevInHouse.png" alt="dev-agro">
             </a>
         </div>
         <p class="title">Dev-Agro</p>
@@ -10,24 +10,24 @@
 
         <form>
             <label for="eName">NOME</label>
-            <input type="text" placeholder="Nome da Empresa">
+            <input type="text" placeholder="Nome da Empresa" required/>
             <label for="ecnpj">CNPJ</label>
-            <input type="text" placeholder="CNPJ">
+            <input type="text" placeholder="CNPJ" required/>
             <label for="endereco">ENDEREÇO DA SEDE</label>
-            <input type="text" placeholder="Endereço">
+            <input type="text" placeholder="Endereço" required/>
             <label for="email">E-MAIL</label>
-            <input type="text" placeholder="E-mail">
+            <input type="text" placeholder="E-mail" required/>
             <label for="password">SENHA</label>
-            <input type="password" placeholder="Senha">
+            <input [type]="passwordType" placeholder="Senha" required/>
             <div class="icone" (click)="togglePassword()">
                 <i class="fa fa-eye" *ngIf="passwordShow == true" [ngStyle]="{'color': '#375F24' }"></i>
                 <i class="fa fa-eye-slash" *ngIf="passwordShow == false" [ngStyle]="{'color': '#9FA2B4'}"></i>
             </div>
             <label for="retypepassword">DIGITE NOVAMENTE A SENHA</label>
-            <input type="password" placeholder="Senha">
-            <div class="icone2" (click)="togglePassword()">
-                <i class="fa fa-eye" *ngIf="passwordShow == true" [ngStyle]="{'color': '#375F24' }"></i>
-                <i class="fa fa-eye-slash" *ngIf="passwordShow == false" [ngStyle]="{'color': '#9FA2B4'}"></i>
+            <input [type]="passwordType2" placeholder="Senha" required/>
+            <div class="icone2" (click)="toggleRetypePassword()">
+                <i class="fa fa-eye" *ngIf="passwordShow2 == true" [ngStyle]="{'color': '#375F24' }"></i>
+                <i class="fa fa-eye-slash" *ngIf="passwordShow2 == false" [ngStyle]="{'color': '#9FA2B4'}"></i>
             </div>
             <input type="submit" value="Log In">
         </form>
