@@ -9,14 +9,15 @@ import { SidebarComponent } from './components/templates/sidebar/sidebar.compone
 
 const routes: Routes = [
   {
-<<<<<<< HEAD
+
     path: "grao",
     component: GraoReadComponent
   },
   {
     path: "grao/create",
     component:GraoCreateComponent
-=======
+  },
+  {
     path: 'sidebar',
     component: SidebarComponent
   },
@@ -31,7 +32,7 @@ const routes: Routes = [
   {
     path: 'fazenda/update',
     component: FazendaUpdateComponent
->>>>>>> 1b8ead24abd4b70d15448cab210a075667e39cc8
+
   }
 ];
 
