@@ -9,7 +9,7 @@ import { Fazenda } from './fazenda.model';
 })
 export class FazendaService {
 
-  baseUrl = "http://localhost:3001/fazenda"
+  baseUrl = "http://localhost:3001/fazendas"
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
@@ -22,7 +22,7 @@ export class FazendaService {
     })
   }
 
-  /*create(fazenda: Fazenda): Observable<Fazenda> {
+  create(fazenda: Fazenda): Observable<Fazenda> {
     return this.http.post<Fazenda>(this.baseUrl, fazenda).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
@@ -33,7 +33,7 @@ export class FazendaService {
     return this.http.get<Fazenda[]>(this.baseUrl).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
-    );;
+    );
   } //Função responsável por ler a listagem de fazendas do backend
 
   readById(id: number): Observable<Fazenda> {
@@ -44,9 +44,9 @@ export class FazendaService {
     );
   } //Função responsável por ler a fazenda pelo id
 
-  update(fazenda: Fazenda): Observable<Fazenda> {
-    const url = `${this.baseUrl}/${fazenda.id}`
-    return this.http.put<Fazenda>(url, fazenda).pipe(
+  update(fazendas: Fazenda): Observable<Fazenda> {
+    const url = `${this.baseUrl}/${fazendas.id}`
+    return this.http.put<Fazenda>(url, fazendas).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
@@ -63,5 +63,5 @@ export class FazendaService {
   errorHandler(e: any): Observable<any> {
     this.showMessage('Ocorreu um erro!', true);
     return EMPTY;
-  }*/
+  }
 }
