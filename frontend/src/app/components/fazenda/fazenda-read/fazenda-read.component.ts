@@ -5,12 +5,13 @@ import { FazendaService } from '../fazenda.service';
 @Component({
   selector: 'app-fazenda-read',
   templateUrl: './fazenda-read.component.html',
-  styleUrls: ['./fazenda-read.component.scss']
+  styleUrls: ['./fazenda-read.component.scss',]
 })
 export class FazendaReadComponent implements OnInit {
 
+  //@Output() headerTitle = 'Fazenda';
+
   fazendas: Fazenda[]
-  displayedColumns = ['id', 'name', 'ultimaColheita', 'action']
 
   constructor(private fazendaService: FazendaService) { }
 
