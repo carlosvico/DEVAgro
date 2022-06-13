@@ -1,30 +1,24 @@
 <mat-card class="create">
   <form>
-    <mat-card-subtitle class="nameFarm">NOME</mat-card-subtitle>
-    <mat-form-field class="farm" type="text" appearance="outline" required>
-      <input matInput placeholder="Nome da Fazenda" [(ngModel)]="fazenda.name" name="name">
-    </mat-form-field>
-    <mat-card-subtitle class="nameGrain">GRÃOS</mat-card-subtitle>
-    <mat-form-field class="grain" type="text" appearance="outline" required>
-      <input matInput placeholder="Grãos Produzidos" [(ngModel)]="fazenda.grao" name="grao">
-    </mat-form-field>
-    <mat-card-subtitle class="lastHaverst">DATA DA ÚLTIMA COLHEITA</mat-card-subtitle>
-    <mat-form-field class="haverst" appearance="outline" required>
-      <input matInput placeholder="Data dd/mm/aaaa" [(ngModel)]="fazenda.ultimaColheita" name="ultimaColheita">
-    </mat-form-field>
-    <mat-card-subtitle class="farmAddress">LOCALIZAÇÃO</mat-card-subtitle>
-    <mat-form-field class="address" appearance="outline" required>
-      <input matInput placeholder="Localização" [(ngModel)]="fazenda.endereco" name="endereco">
-    </mat-form-field>
+    <div class="input-fields">
+      <label class="descricao-input">NOME</label>
+      <input type="text" name="nome" class="input-field" [(ngModel)]="fazenda.name" placeholder="Nome da Fazenda" required>
+    </div>
+    <div class="input-fields">
+      <label class="descricao-input">ENDEREÇO</label>
+      <input type="text" name="endereco" class="input-field" [(ngModel)]="fazenda.endereco" placeholder="Endereço da Fazenda" required>
+    </div>
+    <div class="input-fields">
+      <label class="descricao-input">GRÃO</label>
+      <input type="text" name="grao" class="input-field" [(ngModel)]="fazenda.grao" placeholder="Grão" required>
+    </div>
+    <div class="input-fields">
+      <label class="descricao-input">DATA DA ÚLTIMA COLHEITA</label>
+      <input type="text" name="ultimaColheita" class="input-field" [(ngModel)]="fazenda.ultimaColheita" placeholder="Data da Última Colheita" required>
+    </div>
   </form>
 </mat-card>
-<div class="btnCadastrar">
-  <button class="cadastrar" mat-raised-button (click)="createFazenda()" color="primary">
-    CADASTRAR
-  </button>
-</div>
-<div class="btnCancelar">
-  <button class="cancelar" mat-raised-button (click)="cancel()">
-    CANCELAR
-  </button>
-</div>
+<mat-card class="button-position">
+  <button (click)="createFazenda()">CADASTRAR</button>
+  <button id="cancel" (click)="cancel()">CANCELAR</button>
+</mat-card>

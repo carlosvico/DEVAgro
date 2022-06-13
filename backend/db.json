@@ -18,13 +18,6 @@
   ],
   "fazendas": [
     {
-      "name": "fgsgfsgfs",
-      "grao": "fasdfsd",
-      "ultimaColheita": "01/01/2200",
-      "endereco": "Rua Do Matheus, 24",
-      "id": 2
-    },
-    {
       "name": "hfgdfgdhdfg",
       "grao": "gfdhfgfdg",
       "ultimaColheita": "12/12/2121",
@@ -32,11 +25,43 @@
       "id": 3
     },
     {
+<<<<<<< HEAD
       "name": "fazenda velha",
       "grao": "milho",
       "ultimaColheita": "01/01/1991",
       "endereco": "BH",
       "id": 4
+=======
+      "name": "Fazenda Feliz",
+      "grao": "Soja",
+      "ultimaColheita": "01/01/1000",
+      "endereco": "Rua Do Renan, 69",
+      "id": 4
+    }
+  ],
+  "funcionarios": [
+    {
+      "id": 1,
+      "nome": "Nick Carter",
+      "fazenda": "Fazenda Feliz",
+      "data": "01/02/2022",
+      "update": "13/06/2022",
+      "cpf": "Sem CPF aqui palhaço",
+      "telefone": "Lembrar de pedir dps",
+      "cargo": "Administração",
+      "ativo": true
+    },
+    {
+      "id": 2,
+      "nome": "Kevin Richardson",
+      "fazenda": "Fazenda Feliz",
+      "data": "01/02/2020",
+      "update": "03/05/2022",
+      "cpf": "Sem CPF aqui palhaço",
+      "telefone": "Lembrar de pedir dps",
+      "cargo": "Estagiário (compositor)",
+      "ativo": false
+>>>>>>> d0428269efa43b6556f677064abd08baf546b754
     }
   ]
 }

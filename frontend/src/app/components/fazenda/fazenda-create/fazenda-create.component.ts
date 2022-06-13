@@ -12,9 +12,9 @@ export class FazendaCreateComponent implements OnInit {
 
   fazenda: Fazenda = {
     name: '',
+    endereco: '',
     grao: '',
-    ultimaColheita: '',
-    endereco: ''
+    ultimaColheita: ''
   }
 
   constructor(private fazendaService: FazendaService, private router: Router) {}
@@ -22,10 +22,14 @@ export class FazendaCreateComponent implements OnInit {
   ngOnInit(): void {}
 
   createFazenda(): void {
-    this.fazendaService.create(this.fazenda).subscribe(() => {
-      this.fazendaService.showMessage('Fazenda Criada!');
-      this.router.navigate(['/fazenda']);
-    });
+    if((this.fazenda.name != '' && this.fazenda.endereco != '' && this.fazenda.grao != '' && this.fazenda.ultimaColheita != '')){
+      this.fazendaService.create(this.fazenda).subscribe(() => {
+        this.fazendaService.showMessage('Fazenda Criado!');
+        this.router.navigate(['/fazenda']);
+      });
+    }else{
+      this.fazendaService.showMessage('ERRO: Verifique se todos os campos estão preenchidos!', true);
+    }
   }
 
   cancel(): void {

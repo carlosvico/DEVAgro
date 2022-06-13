@@ -13,7 +13,4 @@ export class FazendaCrudComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  navigateToFazendaCreate(): void{
-    this.router.navigate(['/fazenda/create']);
-  }
 }

@@ -1,31 +1,24 @@
 <mat-card class="delete">
   <form>
-    <mat-card-subtitle class="nameFarm">NOME</mat-card-subtitle>
-    <mat-form-field class="farm" type="text" appearance="outline" required>
-      <input matInput placeholder="Nome da Fazenda" [value]="fazenda.name" name="name" disabled>
-    </mat-form-field>
-    <mat-card-subtitle class="nameGrain">GRÃOS</mat-card-subtitle>
-    <mat-form-field class="grain" type="text" appearance="outline" required>
-      <input matInput placeholder="Grãos Produzidos" [value]="fazenda.grao" name="grao" disabled>
-    </mat-form-field>
-    <mat-card-subtitle class="lastHaverst">DATA DA ÚLTIMA COLHEITA</mat-card-subtitle>
-    <mat-form-field class="haverst" appearance="outline" required>
-      <input matInput placeholder="Data dd/mm/aaaa" [value]="fazenda.ultimaColheita" name="ultimaColheita" disabled>
-    </mat-form-field>
-    <mat-card-subtitle class="farmAddress">LOCALIZAÇÃO</mat-card-subtitle>
-    <mat-form-field class="address" appearance="outline" required>
-      <input matInput placeholder="Localização" [value]="fazenda.endereco" name="endereco" disabled>
-    </mat-form-field>
+    <div class="input-fields">
+      <label class="descricao-input">NOME</label>
+      <input type="text" name="name" class="input-field" [(ngModel)]="fazenda.name" disabled>
+    </div>
+    <div class="input-fields">
+      <label class="descricao-input">ENDEREÇO</label>
+      <input type="text" name="endereco" class="input-field" [(ngModel)]="fazenda.endereco" disabled>
+    </div>
+    <div class="input-fields">
+      <label class="descricao-input">GRÃO</label>
+      <input type="text" name="grao" class="input-field" [(ngModel)]="fazenda.grao" disabled>
+    </div>
+    <div class="input-fields">
+      <label class="descricao-input">DATA DA ÚLTIMA COLHEITA</label>
+      <input type="text" name="ultimaColheita" class="input-field" [(ngModel)]="fazenda.ultimaColheita" disabled>
+    </div>
   </form>
 </mat-card>
-<div class="btnExcluir">
-  <button class="excluir" mat-raised-button (click)="deleteFazenda()" color="primary">
-    EXCLUIR
-  </button>
-</div>
-<div class="btnCancelar">
-  <button class="cancelar" mat-raised-button (click)="cancel()">
-    CANCELAR
-  </button>
-</div>
-
+<mat-card class="button-position">
+  <button (click)="deleteFazenda()">DELETAR</button>
+  <button id="cancel" (click)="cancel()">CANCELAR</button>
+</mat-card>
