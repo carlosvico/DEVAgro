@@ -7,35 +7,29 @@
   <form>
     <div class="input-fields">
       <label class="descricao-input">NOME</label>
-      <input type="text" name="nome" class="input-field" placeholder="Nome">
+      <input type="text" name="nome" class="input-field" [(ngModel)]="funcionario.nome">
     </div>
     <div class="select-fields">
       <label class="descricao-input">FAZENDA</label>
-      <select name="fazenda" class="select-field">
-        <option value="1">Op 1</option>
-        <option value="2">Op 2</option>
+      <select class="select-field" (change)="changeFarm()">
+        <option *ngFor="let fazenda of fazendas" value="{{ fazenda.name }}" [attr.selected]="(fazenda.name === funcionario.fazenda) ? true: null">{{ fazenda.name }}</option>
       </select>
     </div>
     <div class="input-fields">
       <label class="descricao-input">FUNÇÃO PRINCIPAL</label>
-      <input type="text" name="funcao" class="input-field" placeholder="Função principal">
+      <input type="text" name="funcao" class="input-field"  [(ngModel)]="funcionario.cargo">
     </div>
     <div class="switch-toggle">
       <label class="descricao-input">ATIVO</label>
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" id="ativo" (change)="isActive($event)" [attr.checked]="funcionario.ativo ? true: null">
         <span class="slider round"></span>
       </label>
-    </div>
-    <div class="button-fields">
-      <label class="descricao-input">FOTO</label>
-      <button mat-icon-button id="foto">
-        <mat-icon>add_photo_alternate</mat-icon>
-      </button>
     </div>
   </form>
 </mat-card>
 <mat-card class="button-position">
-  <button>ALTERAR</button>
+  <button (click)="updateFuncionario()">ALTERAR</button>
+  <button id="cancel" (click)="cancel()">CANCELAR</button>
 </mat-card>
 

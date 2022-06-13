@@ -30,6 +30,37 @@
       "ultimaColheita": "12/12/2121",
       "endereco": "Rua do Diego, 6924",
       "id": 3
+    },
+    {
+      "name": "Fazenda Feliz",
+      "grao": "Soja",
+      "ultimaColheita": "01/01/1000",
+      "endereco": "Rua Do Renan, 69",
+      "id": 4
+    }
+  ],
+  "funcionarios": [
+    {
+      "id": 1,
+      "nome": "Nick Carter",
+      "fazenda": "fgsgfsgfs",
+      "data": "01/02/2022",
+      "update": "13/06/2022",
+      "cpf": "Sem CPF aqui palhaço",
+      "telefone": "Lembrar de pedir dps",
+      "cargo": "Administração (vocalista)",
+      "ativo": true
+    },
+    {
+      "id": 2,
+      "nome": "Kevin Richardson",
+      "fazenda": "Fazenda Feliz",
+      "data": "01/02/2020",
+      "update": "03/05/2022",
+      "cpf": "Sem CPF aqui palhaço",
+      "telefone": "Lembrar de pedir dps",
+      "cargo": "Estagiário (compositor)",
+      "ativo": false
     }
   ]
 }

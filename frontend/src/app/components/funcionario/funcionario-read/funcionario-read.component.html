@@ -50,20 +50,20 @@
               <div class="detalhes-linha">
                 <div class="detalhes-content">
                   <span class="detalhes-name">{{ funcionario.fazenda }}</span>
-                  <p class="detalhes-date">{{ funcionario.dataFazenda}}</p>
+                  <p class="detalhes-date">{{ funcionario.update}}</p>
                 </div>
               </div>
             </td>
-
+            <!-- cargo -->
             <td>
               <div class="detalhes-linha">
-                <span class="detalhes-name">{{ funcionario.funcao }}</span>
+                <span class="detalhes-name">{{ funcionario.cargo }}</span>
               </div>
             </td>
             <!-- ativo -->
             <td>
               <div class="detalhes-linha">
-                <div class="active  {{ funcionario.ativo }}">{{ funcionario.ativo }}</div>
+                <div class="active  {{ funcionario.ativo }}">{{ funcionario.ativo? 'sim': 'não' }}</div>
               </div>
             </td>
 
@@ -76,7 +76,6 @@
                   <mat-icon>delete</mat-icon>
                 </div>
               </div>
-            </td>
           </tr>
         </tbody>
 

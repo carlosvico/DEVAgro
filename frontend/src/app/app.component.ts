@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 
 export class AppComponent {
   title = 'frontend';
-  @Input() header: string = 'Funcionário';
+  @Input() headerTitle: string = '';
 }
