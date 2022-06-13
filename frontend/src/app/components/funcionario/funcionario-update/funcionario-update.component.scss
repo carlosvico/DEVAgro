@@ -191,21 +191,6 @@ button:hover {
   margin-left: 15%;
 }
 
-.button-submit {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  margin-left: 500px;
-  margin-bottom: 150px;
-  width: 675px;
-  height: 84px;
-  border: none;
-  border-radius: 4px;
-  background: #375f24;
-  box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
-  color: #E5E5E5;
-  cursor: pointer;
-}
 
 .button-submit:hover {
   background:#223b16;
@@ -215,8 +200,10 @@ button:hover {
 .button-position {
   height: 20vh;
   margin: 30px 35px 0 300px;
-  border-radius: 8px;
   position: relative;
+  background: #E5E5E5;
+  border: none;
+  box-shadow: none;
 }
 
 .button-position button {
