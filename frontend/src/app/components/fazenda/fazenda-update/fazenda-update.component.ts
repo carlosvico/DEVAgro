@@ -33,6 +33,6 @@ export class FazendaUpdateComponent implements OnInit {
   }
 
   cancel(): void {
-    this.router.navigate(['/fazenda'])
+    this.router.navigate(['/fazenda']);
   }
 }

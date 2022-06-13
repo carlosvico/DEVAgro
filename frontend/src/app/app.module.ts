@@ -48,6 +48,7 @@ import { SidebarComponent } from "./components/templates/sidebar/sidebar.compone
 import { HeaderComponent } from './components/templates/header/header.component';
 import { LoginViewComponent } from './views/login-view/login-view.component';
 import { HomeComponent } from './views/home/home.component';
+import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { HomeComponent } from './views/home/home.component';
     EmpresaDeleteComponent,
     HomeComponent,
     HeaderComponent,
-    FazendaCrudComponent
+    FazendaCrudComponent,
+    FuncionarioCrudComponent
   ],
   imports: [
     BrowserModule,

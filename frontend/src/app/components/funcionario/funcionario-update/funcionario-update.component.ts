@@ -43,14 +43,20 @@ export class FuncionarioUpdateComponent implements OnInit {
 
   updateFuncionario(): void {
 
-    if(this.oldFarm.name != this.funcionario.fazenda){
-      this.funcionario.update = new Date(Date.now()).toLocaleDateString();
+    if((this.funcionario.nome != '' && this.funcionario.cargo != '' && this.funcionario.fazenda != '')){
+      if(this.oldFarm.name != this.funcionario.fazenda){
+        this.funcionario.update = new Date(Date.now()).toLocaleDateString();
+      }
+
+      this.funcionarioService.update(this.funcionario).subscribe(() => {
+        this.funcionarioService.showMessage('Funcionario Alterado com Sucesso!');
+        this.router.navigate(["/funcionario"]);
+      })
+    }else{
+      this.funcionarioService.showMessage('ERRO: Verifique se todos os campos estão preenchidos!', true);
     }
 
-    this.funcionarioService.update(this.funcionario).subscribe(() => {
-      this.funcionarioService.showMessage('Fazenda Alterada com Sucesso!');
-      this.router.navigate(["/funcionario"]);
-    })
+
   }
 
   cancel(): void {
