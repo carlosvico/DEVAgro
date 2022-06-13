@@ -1,7 +1,26 @@
 .mat-elevation-z4 {
-  margin: 35px 35px 35px 300px;
+  height: 83vh;
+  margin: 35px 35px -70px 300px;
+  border: 2px solid #DFE0EB;
   border-radius: 8px;
-  border: 1px solid #375F24;
+  background: #FFFFFF;
+  position: relative;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 20px 10px 0px;
+  color: #375F24;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.table-responsive {
+  height: 600px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 table {
@@ -9,6 +28,36 @@ table {
   border-radius: 8px;
   background: #FCFDFE;
   width: 100%;
+}
+
+table th {
+  font-weight: 700;
+  font-size: 14px;
+  padding: 30px 32px 13px;
+  letter-spacing: 0.2px;
+  color: #9FA2B4;
+  border: none;
+}
+
+table td {
+  padding-left: 32px;
+  height: 92px;
+}
+
+.active{
+  width: 65px;
+  height: 24px;
+  font-weight: 700;
+  font-size: 11px;
+  line-height:14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border-radius: 100px;
 }
 
 .edit {
