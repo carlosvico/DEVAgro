@@ -1,3 +1,4 @@
+import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
 import { EmpresaCreateComponent } from './components/empresa/empresa-create/empresa-create.component';
 import { GraoCreateComponent } from './components/grao/grao-create/grao-create.component';
 import { GraoReadComponent } from './components/grao/grao-read/grao-read.component';
@@ -19,8 +20,7 @@ import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.c
 const routes: Routes = [
   {
     path: 'funcionario',
-    redirectTo: '/funcionario/read',
-    pathMatch: 'full'
+    component: FuncionarioCrudComponent
   },
   {
     path: 'funcionario/read',
