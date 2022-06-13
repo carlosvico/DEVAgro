@@ -90,18 +90,19 @@ form input {
     color: #375F24;
 }
 
-.fa {
+/* ========== HIDDEN/SHOW ICON ==========*/
+.icone {
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    
     position: relative;
-    bottom: 68px;
-    right: 30px;
-    color: #9FA2B4;
 
+    bottom: 103px;
+    left: 318px;
+    
     cursor: pointer;
-}
-
-.fa:hover {
-    transform: scale(1.03);
-    transition: all 0.1s ease;
 }
 
 .btn-login {
@@ -125,7 +126,7 @@ form input {
 }
 
 .area-signin {
-    padding-top: 30px;
+    padding-top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;

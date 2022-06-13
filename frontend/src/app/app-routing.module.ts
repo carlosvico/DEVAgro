@@ -1,3 +1,4 @@
+import { EmpresaCreateComponent } from './components/empresa/empresa-create/empresa-create.component';
 import { GraoCreateComponent } from './components/grao/grao-create/grao-create.component';
 import { GraoReadComponent } from './components/grao/grao-read/grao-read.component';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,8 @@ import { FuncionarioUpdateComponent } from './components/funcionario/funcionario
 import { GraoUpdateComponent } from './components/grao/grao-update/grao-update.component';
 import { FazendaCrudComponent } from './views/fazenda-crud/fazenda-crud.component';
 import { SidebarComponent } from './components/templates/sidebar/sidebar.component';
+import { FuncionarioDeleteComponent } from './components/funcionario/funcionario-delete/funcionario-delete.component';
+import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.component';
 
 
 const routes: Routes = [
@@ -34,6 +37,10 @@ const routes: Routes = [
   {
     path: 'funcionario/update/:id',
     component: FuncionarioUpdateComponent
+  },
+  {
+    path: 'funcionario/delete/:id',
+    component: FuncionarioDeleteComponent
   },
   {
     path: 'fazenda',
@@ -65,8 +72,16 @@ const routes: Routes = [
     component: GraoCreateComponent
   },
   {
-    path: 'grao/update',
+    path: 'grao/update/:id',
     component: GraoUpdateComponent
+  },
+  {
+    path: 'grao/delete/:id',
+    component: GraoDeleteComponent
+  },
+  {
+    path: 'empresa/create',
+    component: EmpresaCreateComponent
   }
 ];
 

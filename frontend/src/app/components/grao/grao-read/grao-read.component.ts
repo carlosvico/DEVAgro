@@ -8,6 +8,17 @@ import { Router } from '@angular/router'
 })
 export class GraoReadComponent implements OnInit {
 
+  graos: any = [
+    {
+      id: 1,
+      nome: 'Soja',
+      tipo: 'Soja tipo A',
+      fazenda: 'Estância das vivências',
+      dataFazenda: '04/05/2022',
+      ativo: 'não'
+    }
+  ];
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
