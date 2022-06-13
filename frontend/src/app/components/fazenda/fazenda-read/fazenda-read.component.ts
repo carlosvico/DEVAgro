@@ -9,8 +9,9 @@ import { FazendaService } from '../fazenda.service';
 })
 export class FazendaReadComponent implements OnInit {
 
+  //@Output() headerTitle = 'Fazenda';
+
   fazendas: Fazenda[]
-  displayedColumns = ['id', 'name', 'ultimaColheita', 'action']
 
   constructor(private fazendaService: FazendaService) { }
 

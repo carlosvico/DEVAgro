@@ -2,8 +2,6 @@ import { FuncionarioService } from './../funcionario.service';
 import { Funcionario } from './../funcionario.model';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FazendaService } from '../../fazenda/fazenda.service';
-import { Fazenda } from '../../fazenda/fazenda.model';
 
 @Component({
   selector: 'app-funcionario-delete',
