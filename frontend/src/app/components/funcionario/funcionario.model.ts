@@ -1,14 +1,11 @@
 export interface Funcionario {
     id?: number
     nome: string
-    sobrenome: number
+    fazenda: string
+    data: string
+    update: string
     cpf: string
-    endereco: string
     telefone: string
-    sexo: string
-    dataNascimento: string
-    dataAdmissao: string
-    empresa: {
-        id: number
-    }
+    cargo:string
+    ativo:boolean
 }

@@ -1,25 +1,24 @@
 <mat-card class="update">
   <form>
-    <mat-card-subtitle class="nameFarm">NOME</mat-card-subtitle>
-    <mat-form-field class="farm" type="text" appearance="outline" required>
-      <input matInput placeholder="Nome da Fazenda">
-    </mat-form-field>
-    <mat-card-subtitle class="nameGrain">GRÃOS</mat-card-subtitle>
-    <mat-form-field class="grain" type="text" appearance="outline" required>
-      <input matInput placeholder="Grãos Produzidos">
-    </mat-form-field>
-    <mat-card-subtitle class="lastHaverst">DATA DA ÚLTIMA COLHEITA</mat-card-subtitle>
-    <mat-form-field class="haverst" appearance="outline" required>
-      <input matInput placeholder="Data dd/mm/aaaa">
-    </mat-form-field>
+    <div class="input-fields">
+      <label class="descricao-input">NOME</label>
+      <input type="text" name="name" class="input-field" [(ngModel)]="fazenda.name">
+    </div>
+    <div class="input-fields">
+      <label class="descricao-input">ENDEREÇO</label>
+      <input type="text" name="endereco" class="input-field" [(ngModel)]="fazenda.endereco">
+    </div>
+    <div class="input-fields">
+      <label class="descricao-input">GRÃO</label>
+      <input type="text" name="grao" class="input-field" [(ngModel)]="fazenda.grao">
+    </div>
+    <div class="input-fields">
+      <label class="descricao-input">DATA DA ÚLTIMA COLHEITA</label>
+      <input type="text" name="ultimaColheita" class="input-field" [(ngModel)]="fazenda.ultimaColheita">
+    </div>
   </form>
 </mat-card>
-<div class="btn">
-  <button mat-raised-button color="primary">
-    ATUALIZAR
-  </button>
-  <button mat-raised-button (click)="cancel()">
-    CANCELAR
-  </button>
-</div>
-
+<mat-card class="button-position">
+  <button (click)="updateFazenda()">ALTERAR</button>
+  <button id="cancel" (click)="cancel()">CANCELAR</button>
+</mat-card>

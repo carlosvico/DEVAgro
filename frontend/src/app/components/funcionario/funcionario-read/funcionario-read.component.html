@@ -1,1 +1,95 @@
-<p>funcionario-read works!</p>
+<!--
+  <p>funcionario-read works!</p>
+-->
+<mat-card class="read">
+  <header>
+    <section class="title">
+      <h3>Funcionários da empresa</h3>
+    </section>
+    <section class="filters">
+      <div class="order">
+        <mat-icon> format_line_spacing</mat-icon>
+        <span> Ordenar</span>
+      </div>
+      <div class="filter">
+        <mat-icon>filter_list</mat-icon>
+        <span>Filtro</span>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <div class="table-responsive">
+      <table class="table table-hover">
+
+        <thead>
+          <tr>
+            <th scope="col">Detalhes dos Funcionários</th>
+            <th scope="col">Fazenda alocado</th>
+            <th scope="col">Função principal</th>
+            <th scope="col">Ativo</th>
+            <th scope="col"> </th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- detalhes -->
+          <tr *ngFor="let funcionario of funcionarios">
+            <td>
+              <div class="detalhes-linha">
+                <div class="imagem">
+                  <img src="assets/img/funcionario-default-photo.png" alt="perfil">
+                </div>
+                <div class="detalhes-content">
+                  <span class="detalhes-name">{{ funcionario.nome }}</span>
+                  <p class="detalhes-date">Cadastrado em {{ funcionario.data }}</p>
+                </div>
+              </div>
+            </td>
+            <!-- alocado -->
+            <td>
+              <div class="detalhes-linha">
+                <div class="detalhes-content">
+                  <span class="detalhes-name">{{ funcionario.fazenda }}</span>
+                  <p class="detalhes-date">{{ funcionario.update}}</p>
+                </div>
+              </div>
+            </td>
+            <!-- cargo -->
+            <td>
+              <div class="detalhes-linha">
+                <span class="detalhes-name">{{ funcionario.cargo }}</span>
+              </div>
+            </td>
+            <!-- ativo -->
+            <td>
+              <div class="detalhes-linha">
+                <div class="active  {{ funcionario.ativo }}">{{ funcionario.ativo? 'sim': 'não' }}</div>
+              </div>
+            </td>
+
+            <td>
+              <div class="detalhes-linha">
+                <div class="icone" routerLink="/funcionario/update/{{ funcionario.id }}">
+                  <mat-icon>edit</mat-icon>
+                </div>
+                <div class="icone" routerLink="/funcionario/delete/{{ funcionario.id }}">
+                  <mat-icon>delete</mat-icon>
+                </div>
+              </div>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </main>
+
+  <div class="button-add" routerLink="/funcionario/create">
+    +
+  </div>
+
+  <footer>
+    <div class="footer-text">
+      <span>{{ funcionarios.length }} funcionários </span>
+    </div>
+  </footer>
+</mat-card>

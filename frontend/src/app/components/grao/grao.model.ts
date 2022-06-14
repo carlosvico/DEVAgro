@@ -1,8 +1,9 @@
 export interface Grao {
     id?: number
-     nome: string
-    tempoMedioColheita: number
-    empresa: {
+    nome: string    
+    previsaoColheita: Date
+    informacoesAdicionais: string
+    fazenda: {
         id: number
     }
 }

@@ -1,1 +1,30 @@
-<p>funcionario-update works!</p>
+<mat-card class="update">
+  <form>
+    <div class="input-fields">
+      <label class="descricao-input">NOME</label>
+      <input type="text" name="nome" class="input-field" [(ngModel)]="funcionario.nome">
+    </div>
+    <div class="select-fields">
+      <label class="descricao-input">FAZENDA</label>
+      <select class="select-field" (change)="changeFarm()">
+        <option *ngFor="let fazenda of fazendas" value="{{ fazenda.name }}" [attr.selected]="(fazenda.name === funcionario.fazenda) ? true: null">{{ fazenda.name }}</option>
+      </select>
+    </div>
+    <div class="input-fields">
+      <label class="descricao-input">FUNÇÃO PRINCIPAL</label>
+      <input type="text" name="funcao" class="input-field"  [(ngModel)]="funcionario.cargo">
+    </div>
+    <div class="switch-toggle">
+      <label class="descricao-input">ATIVO</label>
+      <label class="switch">
+        <input type="checkbox" id="ativo" (change)="isActive($event)" [attr.checked]="funcionario.ativo ? true: null">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </form>
+</mat-card>
+<mat-card class="button-position">
+  <button (click)="updateFuncionario()">ALTERAR</button>
+  <button id="cancel" (click)="cancel()">CANCELAR</button>
+</mat-card>
+

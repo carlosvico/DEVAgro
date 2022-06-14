@@ -1,1 +1,24 @@
-<p>fazenda-delete works!</p>
+<mat-card class="delete">
+  <form>
+    <div class="input-fields">
+      <label class="descricao-input">NOME</label>
+      <input type="text" name="name" class="input-field" [(ngModel)]="fazenda.name" disabled>
+    </div>
+    <div class="input-fields">
+      <label class="descricao-input">ENDEREÇO</label>
+      <input type="text" name="endereco" class="input-field" [(ngModel)]="fazenda.endereco" disabled>
+    </div>
+    <div class="input-fields">
+      <label class="descricao-input">GRÃO</label>
+      <input type="text" name="grao" class="input-field" [(ngModel)]="fazenda.grao" disabled>
+    </div>
+    <div class="input-fields">
+      <label class="descricao-input">DATA DA ÚLTIMA COLHEITA</label>
+      <input type="text" name="ultimaColheita" class="input-field" [(ngModel)]="fazenda.ultimaColheita" disabled>
+    </div>
+  </form>
+</mat-card>
+<mat-card class="button-position">
+  <button (click)="deleteFazenda()">DELETAR</button>
+  <button id="cancel" (click)="cancel()">CANCELAR</button>
+</mat-card>
