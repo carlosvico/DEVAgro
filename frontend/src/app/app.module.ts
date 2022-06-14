@@ -41,14 +41,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { FazendaCrudComponent } from './views/fazenda-crud/fazenda-crud.component';
+
 
 //
 import { SidebarComponent } from "./components/templates/sidebar/sidebar.component";
 import { HeaderComponent } from './components/templates/header/header.component';
 import { LoginViewComponent } from './views/login-view/login-view.component';
 import { HomeComponent } from './views/home/home.component';
-import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
+
 
 
 @NgModule({
@@ -75,8 +75,7 @@ import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-c
     EmpresaDeleteComponent,
     HomeComponent,
     HeaderComponent,
-    FazendaCrudComponent,
-    FuncionarioCrudComponent
+    
   ],
   imports: [
     BrowserModule,
