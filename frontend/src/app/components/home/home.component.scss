@@ -1,15 +1,23 @@
 .grid-container {
-  margin: 20px;
+  margin: 0% 0% 0% 0%;
+}
+
+.mat-grid-list{
+  margin-top: 0%;
+}
+
+.mat-grid-tile-content{
+
 }
 
 .dashboard-card {
   position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 15px;
-  height: 30vh;
-  margin: 0px 35px 0 300px;
+  top: 0%;
+  left: 4%;
+  right: 5%;
+  bottom: 15%;
+  height: 85%;
+  margin: 0% 10% 0% 5%;
 }
 
 .dashboard-card-content {
@@ -17,8 +25,9 @@
 }
 
 .read {
-  height: 83vh;
-  margin: 0px 0px 0 300px;
+  height: 43vh;
+  width: 143vh;
+  margin: 0px 45px 0 70px;
   border: 2px solid #DFE0EB;
   border-radius: 8px;
   background: #FFFFFF;
