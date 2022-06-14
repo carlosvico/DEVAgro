@@ -28,7 +28,6 @@ const routes: Routes = [
     path: 'login',
     component: LoginViewComponent
   },
-
   {
     path: 'singup',
     component: EmpresaCreateComponent
