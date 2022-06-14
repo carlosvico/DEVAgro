@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { HeaderService } from './../../components/templates/header/header.service';
 import { Router } from '@angular/router';
-import { HeaderService } from 'src/app/components/templates/header/header.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home-view',
@@ -9,7 +9,7 @@ import { HeaderService } from 'src/app/components/templates/header/header.servic
 })
 export class HomeViewComponent implements OnInit {
 
-  constructor(private router: Router, private headerService: HeaderService) {
+  constructor(private router: Router, private headerService: HeaderService) { 
     headerService.headerData = {
       title: 'Início',
       routeUrl: '/home'

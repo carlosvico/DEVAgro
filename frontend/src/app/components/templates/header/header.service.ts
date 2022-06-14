@@ -11,6 +11,7 @@ export class HeaderService {
     title: 'Início',
     routeUrl: ''
   })
+  static headerData: { title: string; routeUrl: string; };
 
   constructor() { }
 
