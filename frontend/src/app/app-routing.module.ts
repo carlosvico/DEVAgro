@@ -35,6 +35,17 @@ const routes: Routes = [
     component: EmpresaCreateComponent
   },
   {
+
+
+    path: "grao",
+    component: GraoReadComponent
+  },
+  {
+    path: "grao/create",
+    component: GraoCreateComponent
+  },
+  {
+
     path: 'funcionario',
     component: FuncionarioCrudComponent
   },
@@ -43,6 +54,7 @@ const routes: Routes = [
     component: FuncionarioReadComponent
   },
   {
+
     path: 'sidebar',
     component: SidebarComponent
   },
@@ -69,6 +81,7 @@ const routes: Routes = [
   {
     path: 'fazenda/update/:id',
     component: FazendaUpdateComponent
+
   },
   {
     path: 'fazenda/delete/:id',
@@ -93,6 +106,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+
   }
 ];
 
