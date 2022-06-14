@@ -18,6 +18,7 @@ import { FuncionarioDeleteComponent } from './components/funcionario/funcionario
 import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.component';
 import { HomeComponent } from './views/home/home.component';
 import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
 
 
 const routes: Routes = [
@@ -86,6 +87,14 @@ const routes: Routes = [
   {
     path: 'grao/delete/:id',
     component: GraoDeleteComponent
+  },
+  {
+    path: 'empresa/create',
+    component: EmpresaCreateComponent
+  },
+  {
+    path:'**',
+    component:NotFoundComponent
   },
   {
     path: 'home',
