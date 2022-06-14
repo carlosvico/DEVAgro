@@ -49,8 +49,45 @@ export class FuncionarioCreateComponent implements OnInit {
     this.funcionario.fazenda = document.querySelector('select').value;
   }
 
+  validatorInputs(): boolean{
+    if(this.funcionario.nome.trim() === '' || this.funcionario.fazenda.trim() === '' || this.funcionario.cpf.trim() === '' || this.funcionario.telefone.trim() === '' || this.funcionario.cargo.trim() === ''){
+      if(this.funcionario.nome.trim() === ''){
+        document.getElementById('nome').classList.add('obrigatory');
+      }else{
+        document.getElementById('nome').classList.remove('obrigatory');
+      }
+
+      if(this.funcionario.fazenda.trim() === ''){
+        document.getElementById('fazenda').classList.add('obrigatory');
+      }else{
+        document.getElementById('fazenda').classList.remove('obrigatory');
+      }
+
+      if(this.funcionario.cpf.trim() === ''){
+        document.getElementById('cpf').classList.add('obrigatory');
+      }else{
+        document.getElementById('cpf').classList.remove('obrigatory');
+      }
+
+      if(this.funcionario.telefone.trim() === ''){
+        document.getElementById('telefone').classList.add('obrigatory');
+      }else{
+        document.getElementById('telefone').classList.remove('obrigatory');
+      }
+
+      if(this.funcionario.cargo.trim() === ''){
+        document.getElementById('cargo').classList.add('obrigatory');
+      }else{
+        document.getElementById('cargo').classList.remove('obrigatory');
+      }
+      return false;
+    }else{
+      return true;
+    }
+  }
+
   createFuncionario(): void {
-    if((this.funcionario.nome != '' && this.funcionario.cpf != '' && this.funcionario.telefone != '' && this.funcionario.cargo != '' && this.funcionario.fazenda != '')){
+    if(this.validatorInputs() === true){
       this.funcionario.data =  new Date(Date.now()).toLocaleDateString();
       this.funcionario.update = this.funcionario.data;
       this.funcionarioService.create(this.funcionario).subscribe(() => {
