@@ -3,4 +3,6 @@ export interface Empresa {
     nome: string
     cnpj: string
     endereco: string
+    email: string
+    senha: string
 }
