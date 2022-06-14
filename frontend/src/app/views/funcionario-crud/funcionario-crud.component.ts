@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HeaderService } from 'src/app/components/templates/header/header.service';
 
 @Component({
   selector: 'app-funcionario-crud',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FuncionarioCrudComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private headerService: HeaderService) { 
+    headerService.headerData = {
+      title: 'Funcionário',
+      routeUrl: '/funcionario'
+    }
+  }
 
   ngOnInit(): void {
   }

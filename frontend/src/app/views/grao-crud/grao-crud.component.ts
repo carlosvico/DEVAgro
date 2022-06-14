@@ -3,16 +3,16 @@ import { Router } from '@angular/router';
 import { HeaderService } from 'src/app/components/templates/header/header.service';
 
 @Component({
-  selector: 'app-fazenda-crud',
-  templateUrl: './fazenda-crud.component.html',
-  styleUrls: ['./fazenda-crud.component.scss']
+  selector: 'app-grao-crud',
+  templateUrl: './grao-crud.component.html',
+  styleUrls: ['./grao-crud.component.scss']
 })
-export class FazendaCrudComponent implements OnInit {
+export class GraoCrudComponent implements OnInit {
 
   constructor(private router: Router, private headerService: HeaderService) { 
     headerService.headerData = {
-      title: 'Fazenda',
-      routeUrl: '/fazenda'
+      title: 'Grão',
+      routeUrl: '/grao'
     }
   }
 
