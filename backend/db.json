@@ -25,13 +25,6 @@
       "id": 3
     },
     {
-<<<<<<< HEAD
-      "name": "fazenda velha",
-      "grao": "milho",
-      "ultimaColheita": "01/01/1991",
-      "endereco": "BH",
-      "id": 4
-=======
       "name": "Fazenda Feliz",
       "grao": "Soja",
       "ultimaColheita": "01/01/1000",
@@ -61,7 +54,6 @@
       "telefone": "Lembrar de pedir dps",
       "cargo": "Estagiário (compositor)",
       "ativo": false
->>>>>>> d0428269efa43b6556f677064abd08baf546b754
     }
   ]
 }
