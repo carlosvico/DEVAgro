@@ -15,9 +15,23 @@ import { FazendaCrudComponent } from './views/fazenda-crud/fazenda-crud.componen
 import { SidebarComponent } from './components/templates/sidebar/sidebar.component';
 import { FuncionarioDeleteComponent } from './components/funcionario/funcionario-delete/funcionario-delete.component';
 import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.component';
+import { LoginViewComponent } from './views/login-view/login-view.component';
 
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginViewComponent
+  },
+  {
+    path: 'singup',
+    component: EmpresaCreateComponent
+  },
   {
     path: 'funcionario',
     component: FuncionarioCrudComponent
@@ -78,10 +92,6 @@ const routes: Routes = [
   {
     path: 'grao/delete/:id',
     component: GraoDeleteComponent
-  },
-  {
-    path: 'empresa/create',
-    component: EmpresaCreateComponent
   }
 ];
 

@@ -64,14 +64,6 @@
       "email": "blablabla@email.com",
       "endereco": "Rua do Senai, 24",
       "senha": "123456"
-    },
-    {
-      "nome": "aaaaaaaa",
-      "email": "aaaaaaa@aaaaaaa",
-      "cnpj": "aaaaa",
-      "endereco": "aaaaaaaa",
-      "senha": "aaa",
-      "id": 2
     }
   ]
 }
