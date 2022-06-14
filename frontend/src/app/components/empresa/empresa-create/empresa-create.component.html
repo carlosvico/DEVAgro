@@ -10,15 +10,15 @@
 
         <form>
             <label for="eName">NOME</label>
-            <input type="text" placeholder="Nome da Empresa" required/>
+            <input type="text" placeholder="Nome da Empresa" [(ngModel)]="empresa.nome" name="nome" required/>
             <label for="ecnpj">CNPJ</label>
-            <input type="text" placeholder="CNPJ" required/>
+            <input type="text" placeholder="CNPJ" [(ngModel)]="empresa.cnpj" name="cnpj" required/>
             <label for="endereco">ENDEREÇO DA SEDE</label>
-            <input type="text" placeholder="Endereço" required/>
+            <input type="text" placeholder="Endereço" [(ngModel)]="empresa.endereco" name="endereco" required/>
             <label for="email">E-MAIL</label>
-            <input type="text" placeholder="E-mail" required/>
+            <input type="email" placeholder="E-mail" [(ngModel)]="empresa.email" name="email" required/>
             <label for="password">SENHA</label>
-            <input [type]="passwordType" placeholder="Senha" required/>
+            <input [type]="passwordType" placeholder="Senha" [(ngModel)]="empresa.senha" name="senha" required/>
             <div class="icone" (click)="togglePassword()">
                 <i class="fa fa-eye" *ngIf="passwordShow == true" [ngStyle]="{'color': '#375F24' }"></i>
                 <i class="fa fa-eye-slash" *ngIf="passwordShow == false" [ngStyle]="{'color': '#9FA2B4'}"></i>
@@ -29,7 +29,7 @@
                 <i class="fa fa-eye" *ngIf="passwordShow2 == true" [ngStyle]="{'color': '#375F24' }"></i>
                 <i class="fa fa-eye-slash" *ngIf="passwordShow2 == false" [ngStyle]="{'color': '#9FA2B4'}"></i>
             </div>
-            <input type="submit" value="Log In" routerLink="/login">
+            <input type="submit" value="Log In" (click)="createEmpresa()" class="login-button">
         </form>
 
 
