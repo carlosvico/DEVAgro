@@ -65,6 +65,7 @@ const routes: Routes = [
   {
     path: 'fazenda/update/:id',
     component: FazendaUpdateComponent
+
   },
   {
     path: 'fazenda/delete/:id',
@@ -89,6 +90,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+
   }
 ];
 
