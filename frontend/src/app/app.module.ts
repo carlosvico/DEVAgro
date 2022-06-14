@@ -49,6 +49,7 @@ import { LoginViewComponent } from './views/login-view/login-view.component';
 import { HomeComponent } from './views/home/home.component';
 
 import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
 import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
 
 
@@ -79,6 +80,7 @@ import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
     HeaderComponent,
     FazendaCrudComponent,
     FuncionarioCrudComponent,
+    NotFoundComponent,
     GraoCrudComponent
 
   ],
