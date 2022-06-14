@@ -21,7 +21,7 @@ import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
 
 const routes: Routes = [
   {
-<<<<<<< HEAD
+
 
     path: "grao",
     component: GraoReadComponent
@@ -31,7 +31,7 @@ const routes: Routes = [
     component:GraoCreateComponent
   },
   {
-=======
+
     path: 'funcionario',
     component: FuncionarioCrudComponent
   },
@@ -40,7 +40,7 @@ const routes: Routes = [
     component: FuncionarioReadComponent
   },
   {
->>>>>>> ae66eca3c2514d9e198b081b322fe67837bbf63b
+
     path: 'sidebar',
     component: SidebarComponent
   },
@@ -67,9 +67,7 @@ const routes: Routes = [
   {
     path: 'fazenda/update/:id',
     component: FazendaUpdateComponent
-<<<<<<< HEAD
 
-=======
   },
   {
     path: 'fazenda/delete/:id',
@@ -98,7 +96,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
->>>>>>> ae66eca3c2514d9e198b081b322fe67837bbf63b
+
   }
 ];
 
