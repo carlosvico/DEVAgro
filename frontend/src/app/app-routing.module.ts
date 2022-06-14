@@ -18,7 +18,6 @@ import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.c
 import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -95,7 +94,7 @@ const routes: Routes = [
     component: HomeViewComponent
   },
   {
-    path:'**',
+    path: '**',
     component:NotFoundComponent
   }
 ];
