@@ -15,11 +15,26 @@ import { FazendaCrudComponent } from './views/fazenda-crud/fazenda-crud.componen
 import { SidebarComponent } from './components/templates/sidebar/sidebar.component';
 import { FuncionarioDeleteComponent } from './components/funcionario/funcionario-delete/funcionario-delete.component';
 import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.component';
+import {NotFoundComponent} from './views/not-found/not-found.component'
+import { LoginViewComponent } from './views/login-view/login-view.component';
 import { HomeComponent } from './views/home/home.component';
 import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
 
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginViewComponent
+  },
+  {
+    path: 'singup',
+    component: EmpresaCreateComponent
+  },
   {
 
 
@@ -28,7 +43,7 @@ const routes: Routes = [
   },
   {
     path: "grao/create",
-    component:GraoCreateComponent
+    component: GraoCreateComponent
   },
   {
 
@@ -94,6 +109,10 @@ const routes: Routes = [
     component: EmpresaCreateComponent
   },
   {
+    path:'**',
+    component:NotFoundComponent
+  },
+  {  
     path: 'home',
     component: HomeComponent
 

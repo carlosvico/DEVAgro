@@ -55,5 +55,15 @@
       "cargo": "Estagiário (compositor)",
       "ativo": false
     }
+  ],
+  "empresas": [
+    {
+      "id": 1,
+      "nome": "Empresa 1",
+      "cnpj": "12345678901234",
+      "email": "blablabla@email.com",
+      "endereco": "Rua do Senai, 24",
+      "senha": "123456"
+    }
   ]
 }
