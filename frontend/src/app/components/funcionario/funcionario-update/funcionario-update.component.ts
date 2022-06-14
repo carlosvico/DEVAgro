@@ -41,9 +41,34 @@ export class FuncionarioUpdateComponent implements OnInit {
     this.funcionario.fazenda = document.querySelector('select').value;
   }
 
+  validatorInputs(): boolean{
+    if(this.funcionario.nome.trim() === '' || this.funcionario.fazenda.trim() === '' || this.funcionario.cargo.trim() === ''){
+      if(this.funcionario.nome.trim() === ''){
+        document.getElementById('nome').classList.add('obrigatory');
+      }else{
+        document.getElementById('nome').classList.remove('obrigatory');
+      }
+
+      if(this.funcionario.fazenda.trim() === ''){
+        document.getElementById('fazenda').classList.add('obrigatory');
+      }else{
+        document.getElementById('fazenda').classList.remove('obrigatory');
+      }
+
+      if(this.funcionario.cargo.trim() === ''){
+        document.getElementById('cargo').classList.add('obrigatory');
+      }else{
+        document.getElementById('cargo').classList.remove('obrigatory');
+      }
+      return false;
+    }else{
+      return true;
+    }
+  }
+
   updateFuncionario(): void {
 
-    if((this.funcionario.nome != '' && this.funcionario.cargo != '' && this.funcionario.fazenda != '')){
+    if(this.validatorInputs() === true){
       if(this.oldFarm.name != this.funcionario.fazenda){
         this.funcionario.update = new Date(Date.now()).toLocaleDateString();
       }

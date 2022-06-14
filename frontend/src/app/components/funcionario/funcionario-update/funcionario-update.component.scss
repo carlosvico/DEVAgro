@@ -210,3 +210,10 @@ button:hover {
 .button-position button {
   margin-left: 16.5%;
 }
+
+.obrigatory {
+  border: 1px solid #a31d1d;
+  display: inline-block;
+  animation: shakeX;
+  animation-duration: 1s;
+}

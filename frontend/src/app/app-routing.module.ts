@@ -1,4 +1,4 @@
-import { HomeComponent } from './components/home/home.component';
+import { HomeViewComponent } from './views/home-view/home-view.component';
 import { LoginViewComponent } from './views/login-view/login-view.component';
 import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
 import { EmpresaCreateComponent } from './components/empresa/empresa-create/empresa-create.component';
@@ -17,7 +17,6 @@ import { FuncionarioDeleteComponent } from './components/funcionario/funcionario
 import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.component';
 import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
-
 
 const routes: Routes = [
   {
@@ -92,10 +91,10 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeViewComponent
   },
   {
-    path:'**',
+    path: '**',
     component:NotFoundComponent
   }
 ];
