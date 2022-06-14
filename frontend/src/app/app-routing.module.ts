@@ -17,8 +17,6 @@ import { FuncionarioDeleteComponent } from './components/funcionario/funcionario
 import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.component';
 import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
-import { HomeViewComponent } from './views/home-view/home-view.component';
-
 
 const routes: Routes = [
   {
