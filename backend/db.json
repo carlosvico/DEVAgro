@@ -31,5 +31,23 @@
       "endereco": "Rua do Diego, 6924",
       "id": 3
     }
+  ],
+  "empresas": [
+    {
+      "id": 1,
+      "nome": "Empresa 1",
+      "cnpj": "12345678901234",
+      "email": "blablabla@email.com",
+      "endereco": "Rua do Senai, 24",
+      "senha": "123456"
+    },
+    {
+      "nome": "aaaaaaaa",
+      "email": "aaaaaaa@aaaaaaa",
+      "cnpj": "aaaaa",
+      "endereco": "aaaaaaaa",
+      "senha": "aaa",
+      "id": 2
+    }
   ]
 }

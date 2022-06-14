@@ -1,4 +1,7 @@
+import { Router } from '@angular/router';
+import { EmpresaService } from './../empresa.service';
 import { Component, OnInit } from '@angular/core';
+import { Empresa } from '../empresa.model';
 
 @Component({
   selector: 'app-empresa-create',
@@ -11,8 +14,16 @@ export class EmpresaCreateComponent implements OnInit {
   passwordType: string = 'password';
   passwordType2: string = 'password';
 
+  empresa: Empresa = {
+    nome: '',
+    email:'',
+    cnpj: '',
+    endereco: '',
+    senha: ''
+  }
 
-  constructor() { }
+
+  constructor(private empresaService: EmpresaService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -35,6 +46,18 @@ export class EmpresaCreateComponent implements OnInit {
       this.passwordShow2 = true;
       this.passwordType2 = 'text';
     }
+  }
+
+  createEmpresa(): void {
+    this.empresaService.create(this.empresa).subscribe(() => {
+      this.empresaService.showMessage("Empresa cadastrada com sucesso!");
+      this.router.navigate(['/']);
+    })
+
+  }
+
+  navigateToLogiIn(): void{
+    this.router.navigate(['/']);
   }
 
 }
