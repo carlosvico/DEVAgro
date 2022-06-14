@@ -43,10 +43,6 @@ const routes: Routes = [
     component: FuncionarioReadComponent
   },
   {
-    path: 'sidebar',
-    component: SidebarComponent
-  },
-  {
     path: 'funcionario/create',
     component: FuncionarioCreateComponent
   },
