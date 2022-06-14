@@ -1,6 +1,6 @@
 .create {
-  height: 35vh;
-  margin: 0 35px 0 300px;
+  height: 39vh;
+  margin: 0 35px 0 35px;
   border: 2px solid #DFE0EB;
   border-radius: 8px;
   background: #FFFFFF;
@@ -172,6 +172,7 @@ button {
   box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
   color: #E5E5E5;
   cursor: pointer;
+  margin: 11px;
 }
 
 button:hover {
