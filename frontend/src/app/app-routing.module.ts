@@ -16,6 +16,8 @@ import { SidebarComponent } from './components/templates/sidebar/sidebar.compone
 import { FuncionarioDeleteComponent } from './components/funcionario/funcionario-delete/funcionario-delete.component';
 import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.component';
 import { LoginViewComponent } from './views/login-view/login-view.component';
+import { HomeComponent } from './views/home/home.component';
+import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
 
 
 const routes: Routes = [
@@ -74,12 +76,7 @@ const routes: Routes = [
   },
   {
     path: 'grao',
-    redirectTo: '/grao/read',
-    pathMatch: 'full'
-  },
-  {
-    path: 'grao/read',
-    component: GraoReadComponent
+    component: GraoCrudComponent
   },
   {
     path: 'grao/create',
@@ -92,6 +89,10 @@ const routes: Routes = [
   {
     path: 'grao/delete/:id',
     component: GraoDeleteComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   }
 ];
 
