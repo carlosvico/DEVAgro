@@ -16,9 +16,37 @@ import { SidebarComponent } from './components/templates/sidebar/sidebar.compone
 import { FuncionarioDeleteComponent } from './components/funcionario/funcionario-delete/funcionario-delete.component';
 import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.component';
 import {NotFoundComponent} from './views/not-found/not-found.component'
+import { LoginViewComponent } from './views/login-view/login-view.component';
+import { HomeComponent } from './views/home/home.component';
+import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
+
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginViewComponent
+  },
+  {
+    path: 'singup',
+    component: EmpresaCreateComponent
+  },
+  {
+
+
+    path: "grao",
+    component: GraoReadComponent
+  },
+  {
+    path: "grao/create",
+    component: GraoCreateComponent
+  },
+  {
+
     path: 'funcionario',
     component: FuncionarioCrudComponent
   },
@@ -27,6 +55,7 @@ const routes: Routes = [
     component: FuncionarioReadComponent
   },
   {
+
     path: 'sidebar',
     component: SidebarComponent
   },
@@ -53,6 +82,7 @@ const routes: Routes = [
   {
     path: 'fazenda/update/:id',
     component: FazendaUpdateComponent
+
   },
   {
     path: 'fazenda/delete/:id',
@@ -60,12 +90,7 @@ const routes: Routes = [
   },
   {
     path: 'grao',
-    redirectTo: '/grao/read',
-    pathMatch: 'full'
-  },
-  {
-    path: 'grao/read',
-    component: GraoReadComponent
+    component: GraoCrudComponent
   },
   {
     path: 'grao/create',
@@ -86,6 +111,11 @@ const routes: Routes = [
   {
     path:'**',
     component:NotFoundComponent
+  },
+  {  
+    path: 'home',
+    component: HomeComponent
+
   }
 ];
 

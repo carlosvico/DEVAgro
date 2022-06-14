@@ -43,13 +43,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FazendaCrudComponent } from './views/fazenda-crud/fazenda-crud.component';
 
-//
 import { SidebarComponent } from "./components/templates/sidebar/sidebar.component";
 import { HeaderComponent } from './components/templates/header/header.component';
 import { LoginViewComponent } from './views/login-view/login-view.component';
 import { HomeComponent } from './views/home/home.component';
+
 import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
+import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
+
 
 
 @NgModule({
@@ -78,7 +80,9 @@ import { NotFoundComponent } from './views/not-found/not-found.component';
     HeaderComponent,
     FazendaCrudComponent,
     FuncionarioCrudComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    GraoCrudComponent
+
   ],
   imports: [
     BrowserModule,
