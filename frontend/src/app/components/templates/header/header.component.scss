@@ -1,7 +1,7 @@
 header{
   background-color: #E5E5E5;
   height: 128px;
-  width: 100vw;
+  width: 95vw;
   display: flex;
   justify-content: space-between;
 }
@@ -62,4 +62,10 @@ header{
   margin-right:70px ;
 }
 
+a {
+  cursor: default;
+}
 
+a:hover {
+  text-decoration: none;
+}

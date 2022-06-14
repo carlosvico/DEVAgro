@@ -41,6 +41,10 @@ export class FuncionarioCreateComponent implements OnInit {
     }
   }
 
+  teste(){
+    document.querySelector('')
+  }
+
   changeFarm(){
     this.funcionario.fazenda = document.querySelector('select').value;
   }
@@ -56,7 +60,6 @@ export class FuncionarioCreateComponent implements OnInit {
     }else{
       this.funcionarioService.showMessage('ERRO: Verifique se todos os campos estão preenchidos!', true);
     }
-
   }
 
   cancel(): void {
