@@ -49,6 +49,7 @@ import { HeaderComponent } from './components/templates/header/header.component'
 import { LoginViewComponent } from './views/login-view/login-view.component';
 import { HomeComponent } from './views/home/home.component';
 import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-c
     HomeComponent,
     HeaderComponent,
     FazendaCrudComponent,
-    FuncionarioCrudComponent
+    FuncionarioCrudComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

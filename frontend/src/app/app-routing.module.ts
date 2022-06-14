@@ -15,7 +15,7 @@ import { FazendaCrudComponent } from './views/fazenda-crud/fazenda-crud.componen
 import { SidebarComponent } from './components/templates/sidebar/sidebar.component';
 import { FuncionarioDeleteComponent } from './components/funcionario/funcionario-delete/funcionario-delete.component';
 import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.component';
-
+import {NotFoundComponent} from './views/not-found/not-found.component'
 
 const routes: Routes = [
   {
@@ -82,6 +82,10 @@ const routes: Routes = [
   {
     path: 'empresa/create',
     component: EmpresaCreateComponent
+  },
+  {
+    path:'**',
+    component:NotFoundComponent
   }
 ];
 
