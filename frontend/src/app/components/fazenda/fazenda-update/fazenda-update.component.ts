@@ -22,13 +22,17 @@ export class FazendaUpdateComponent implements OnInit {
   }
 
   updateFazenda(): void {
-    this.fazendaService.update(this.fazenda).subscribe(() => {
-      this.fazendaService.showMessage('Fazenda Alterada com Sucesso!');
-      this.router.navigate(["/fazenda"]);
-    })
+    if((this.fazenda.name != '' && this.fazenda.endereco != '' && this.fazenda.grao != '' && this.fazenda.ultimaColheita != '')){
+      this.fazendaService.update(this.fazenda).subscribe(() => {
+        this.fazendaService.showMessage('Fazenda Alterada com Sucesso!');
+        this.router.navigate(["/fazenda"]);
+      });
+    }else{
+      this.fazendaService.showMessage('ERRO: Verifique se todos os campos estão preenchidos!', true);
+    }
   }
 
   cancel(): void {
-    this.router.navigate(['/fazenda'])
+    this.router.navigate(['/fazenda']);
   }
 }

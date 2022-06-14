@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { FuncionarioService } from './../funcionario.service';
+import { Component, OnInit, Output } from '@angular/core';
+import { Funcionario } from '../funcionario.model';
 
 @Component({
   selector: 'app-funcionario-read',
@@ -7,76 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FuncionarioReadComponent implements OnInit {
 
-  funcionarios: any = [
-    {
-      id: 1,
-      nome: 'Ramon Santos',
-      data: '11/02/2022',
-      fazenda: 'Estância das vivências',
-      dataFazenda: '04/05/2022',
-      funcao: 'Colheita',
-      ativo: 'não'
-    },
-    {
-      id: 2,
-      nome: 'Cláudia Santos',
-      data: '20/02/2022',
-      fazenda: 'Arrozeira do futuro',
-      dataFazenda: '03/03/2022',
-      funcao: 'Plantação',
-      ativo: 'sim'
-    },
-    {
-      id: 2,
-      nome: 'Cláudia Santos',
-      data: '20/02/2022',
-      fazenda: 'Arrozeira do futuro',
-      dataFazenda: '03/03/2022',
-      funcao: 'Plantação',
-      ativo: 'sim'
-    },
-    {
-      id: 2,
-      nome: 'Cláudia Santos',
-      data: '20/02/2022',
-      fazenda: 'Arrozeira do futuro',
-      dataFazenda: '03/03/2022',
-      funcao: 'Plantação',
-      ativo: 'sim'
-    },
-    {
-      id: 2,
-      nome: 'Cláudia Santos',
-      data: '20/02/2022',
-      fazenda: 'Arrozeira do futuro',
-      dataFazenda: '03/03/2022',
-      funcao: 'Plantação',
-      ativo: 'sim'
-    },
-    {
-      id: 2,
-      nome: 'Cláudia Santos',
-      data: '20/02/2022',
-      fazenda: 'Arrozeira do futuro',
-      dataFazenda: '03/03/2022',
-      funcao: 'Plantação',
-      ativo: 'sim'
-    },
-    {
-      id: 2,
-      nome: 'Cláudia Santos',
-      data: '20/02/2022',
-      fazenda: 'Arrozeira do futuro',
-      dataFazenda: '03/03/2022',
-      funcao: 'Plantação',
-      ativo: 'sim'
-    },
+  @Output() headerTitle = 'Funcionario';
 
-  ];
+  funcionarios: Funcionario[];
 
-  constructor() { }
+  constructor( private funcionarioService: FuncionarioService) { }
 
   ngOnInit(): void {
+    this.funcionarioService.read().subscribe(funcionario => {
+      this.funcionarios = funcionario;
+    })
   }
 
 }
