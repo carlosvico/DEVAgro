@@ -96,12 +96,12 @@ form input {
     padding: 0;
     height: 20px;
     width: 20px;
-    
+
     position: relative;
 
     bottom: 103px;
     left: 318px;
-    
+
     cursor: pointer;
 }
 
@@ -114,9 +114,10 @@ form input {
     background: #375F24;
 
     border: none;
+    outline: none;
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
-
+    outline: none;
     transition: all 0.5s ease;
 }
 
