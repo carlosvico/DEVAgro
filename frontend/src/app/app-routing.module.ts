@@ -1,4 +1,4 @@
-import { HomeComponent } from './components/home/home.component';
+import { HomeViewComponent } from './views/home-view/home-view.component';
 import { LoginViewComponent } from './views/login-view/login-view.component';
 import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
 import { EmpresaCreateComponent } from './components/empresa/empresa-create/empresa-create.component';
@@ -92,7 +92,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeViewComponent
   },
   {
     path:'**',

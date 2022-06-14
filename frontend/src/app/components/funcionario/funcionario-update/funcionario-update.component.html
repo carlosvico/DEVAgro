@@ -2,17 +2,17 @@
   <form>
     <div class="input-fields">
       <label class="descricao-input">NOME</label>
-      <input type="text" name="nome" class="input-field" [(ngModel)]="funcionario.nome">
+      <input type="text" name="nome" id="nome" class="input-field" [(ngModel)]="funcionario.nome">
     </div>
     <div class="select-fields">
-      <label class="descricao-input">FAZENDA</label>
+      <label class="descricao-input" id="fazenda">FAZENDA</label>
       <select class="select-field" (change)="changeFarm()">
         <option *ngFor="let fazenda of fazendas" value="{{ fazenda.name }}" [attr.selected]="(fazenda.name === funcionario.fazenda) ? true: null">{{ fazenda.name }}</option>
       </select>
     </div>
     <div class="input-fields">
       <label class="descricao-input">FUNÇÃO PRINCIPAL</label>
-      <input type="text" name="funcao" class="input-field"  [(ngModel)]="funcionario.cargo">
+      <input type="text" name="funcao" class="input-field" id="cargo" [(ngModel)]="funcionario.cargo">
     </div>
     <div class="switch-toggle">
       <label class="descricao-input">ATIVO</label>
