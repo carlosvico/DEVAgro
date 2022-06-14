@@ -1,8 +1,9 @@
+import { LoginViewComponent } from './views/login-view/login-view.component';
 import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
 import { EmpresaCreateComponent } from './components/empresa/empresa-create/empresa-create.component';
 import { GraoCreateComponent } from './components/grao/grao-create/grao-create.component';
 import { GraoReadComponent } from './components/grao/grao-read/grao-read.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FazendaCreateComponent } from './components/fazenda/fazenda-create/fazenda-create.component';
 import { FazendaDeleteComponent } from './components/fazenda/fazenda-delete/fazenda-delete.component';
@@ -18,6 +19,19 @@ import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.c
 
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginViewComponent
+  },
+  {
+    path: 'singup',
+    component: EmpresaCreateComponent
+  },
   {
     path: 'funcionario',
     component: FuncionarioCrudComponent
@@ -78,10 +92,6 @@ const routes: Routes = [
   {
     path: 'grao/delete/:id',
     component: GraoDeleteComponent
-  },
-  {
-    path: 'empresa/create',
-    component: EmpresaCreateComponent
   }
 ];
 
