@@ -47,11 +47,15 @@ import { FazendaCrudComponent } from './views/fazenda-crud/fazenda-crud.componen
 import { SidebarComponent } from "./components/templates/sidebar/sidebar.component";
 import { HeaderComponent } from './components/templates/header/header.component';
 import { LoginViewComponent } from './views/login-view/login-view.component';
-import { HomeComponent } from './views/home/home.component';
 
 import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
+import { HomeComponent } from './components/home/home.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { LayoutModule } from '@angular/cdk/layout';
+import { HomeViewComponent } from './views/home-view/home-view.component';
 
 
 
@@ -77,12 +81,13 @@ import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
     EmpresaDeleteComponent,
     LoginViewComponent,
     EmpresaDeleteComponent,
-    HomeComponent,
     HeaderComponent,
     FazendaCrudComponent,
     FuncionarioCrudComponent,
     NotFoundComponent,
-    GraoCrudComponent
+    GraoCrudComponent,
+    HomeComponent,
+    HomeViewComponent
 
   ],
   imports: [
@@ -101,7 +106,13 @@ import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+<<<<<<< HEAD
     MatSelectModule
+=======
+    MatGridListModule,
+    MatMenuModule,
+    LayoutModule
+>>>>>>> 9ebd1558e49f15227dbd2ea4fca7953b4d4a4c5b
   ],
   providers: [],
   bootstrap: [AppComponent]

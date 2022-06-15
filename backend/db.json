@@ -44,6 +44,27 @@
       "ultimaColheita": "01/01/1000",
       "endereco": "Rua Do Renan, 69",
       "id": 4
+    },
+    {
+      "name": "Fazenda Santa Helena",
+      "endereco": "Rua Brasil",
+      "grao": "Soja",
+      "ultimaColheita": "12/12/2021",
+      "id": 5
+    },
+    {
+      "name": "Fazenda de Dentro",
+      "endereco": "Rua Uruguai",
+      "grao": "Café",
+      "ultimaColheita": "01/11/2021",
+      "id": 6
+    },
+    {
+      "name": "Fazenda Cardoso",
+      "endereco": "Rua das Gaivotas",
+      "grao": "Milho",
+      "ultimaColheita": "12/01/2022",
+      "id": 7
     }
   ],
   "funcionarios": [
@@ -68,6 +89,17 @@
       "telefone": "Lembrar de pedir dps",
       "cargo": "Estagiário (compositor)",
       "ativo": false
+    },
+    {
+      "nome": "Kelvin Bacon",
+      "fazenda": "Fazenda Santa Helena",
+      "data": "14/06/2022",
+      "update": "14/06/2022",
+      "cpf": "12345622222",
+      "telefone": "48987661223",
+      "cargo": "Encarregado",
+      "ativo": true,
+      "id": 3
     }
   ],
   "empresas": [
@@ -78,6 +110,14 @@
       "email": "blablabla@email.com",
       "endereco": "Rua do Senai, 24",
       "senha": "123456"
+    },
+    {
+      "nome": "Amorim Administração de Fazenda Ltda",
+      "email": "amorim@amorim.com.br",
+      "cnpj": "23321987000110",
+      "endereco": "Rua Joaquim Coelho de Arruda",
+      "senha": "123456",
+      "id": 2
     }
   ]
 }

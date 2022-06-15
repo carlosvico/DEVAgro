@@ -1,8 +1,9 @@
+import { HomeViewComponent } from './views/home-view/home-view.component';
+import { LoginViewComponent } from './views/login-view/login-view.component';
 import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
 import { EmpresaCreateComponent } from './components/empresa/empresa-create/empresa-create.component';
 import { GraoCreateComponent } from './components/grao/grao-create/grao-create.component';
-import { GraoReadComponent } from './components/grao/grao-read/grao-read.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FazendaCreateComponent } from './components/fazenda/fazenda-create/fazenda-create.component';
 import { FazendaDeleteComponent } from './components/fazenda/fazenda-delete/fazenda-delete.component';
@@ -12,14 +13,10 @@ import { FuncionarioCreateComponent } from './components/funcionario/funcionario
 import { FuncionarioUpdateComponent } from './components/funcionario/funcionario-update/funcionario-update.component';
 import { GraoUpdateComponent } from './components/grao/grao-update/grao-update.component';
 import { FazendaCrudComponent } from './views/fazenda-crud/fazenda-crud.component';
-import { SidebarComponent } from './components/templates/sidebar/sidebar.component';
 import { FuncionarioDeleteComponent } from './components/funcionario/funcionario-delete/funcionario-delete.component';
 import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.component';
-import {NotFoundComponent} from './views/not-found/not-found.component'
-import { LoginViewComponent } from './views/login-view/login-view.component';
-import { HomeComponent } from './views/home/home.component';
 import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
-
+import { NotFoundComponent } from './views/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -36,28 +33,12 @@ const routes: Routes = [
     component: EmpresaCreateComponent
   },
   {
-
-
-    path: "grao",
-    component: GraoReadComponent
-  },
-  {
-    path: "grao/create",
-    component: GraoCreateComponent
-  },
-  {
-
     path: 'funcionario',
     component: FuncionarioCrudComponent
   },
   {
     path: 'funcionario/read',
     component: FuncionarioReadComponent
-  },
-  {
-
-    path: 'sidebar',
-    component: SidebarComponent
   },
   {
     path: 'funcionario/create',
@@ -109,13 +90,12 @@ const routes: Routes = [
     component: EmpresaCreateComponent
   },
   {
-    path:'**',
-    component:NotFoundComponent
-  },
-  {  
     path: 'home',
-    component: HomeComponent
-
+    component: HomeViewComponent
+  },
+  {
+    path: '**',
+    component:NotFoundComponent
   }
 ];
 
