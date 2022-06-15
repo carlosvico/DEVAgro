@@ -15,7 +15,9 @@ export class GraoCreateComponent implements OnInit {
     nome: '',
     previsaoColheita: '',
     informacoes: '',
-    fazenda: ''
+    fazenda: '',
+    ativo: false
+
 
   }
 
@@ -23,7 +25,7 @@ export class GraoCreateComponent implements OnInit {
   constructor(private sGrao: GraoService, private router: Router) { }
 
   ngOnInit(): void {
-   
+
   }
   cancel(): void {
   }
@@ -73,7 +75,7 @@ export class GraoCreateComponent implements OnInit {
 
 
     // Popula dropdown de fazendas no grao-create
-   
+
 
   }
 }

@@ -106,13 +106,10 @@ import { HomeViewComponent } from './views/home-view/home-view.component';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-<<<<<<< HEAD
-    MatSelectModule
-=======
+    MatSelectModule,
     MatGridListModule,
     MatMenuModule,
     LayoutModule
->>>>>>> 9ebd1558e49f15227dbd2ea4fca7953b4d4a4c5b
   ],
   providers: [],
   bootstrap: [AppComponent]
