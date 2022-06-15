@@ -17,6 +17,12 @@
   display: flex;
   justify-content: space-between;
 }
+p.detalhes-date{
+  color: #293dce;
+  font-size: 15px;
+  font-weight: 700;
+
+}
 
 .read header .title h3 {
   width: 400px;
@@ -189,4 +195,13 @@ footer {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+.modal-options {
+  position: absolute;
+  padding-right: 13px;
+  padding-left: 5px;
+  background: #E5E5E5;
+  border: 1px solid #9FA2B4;
+  border-radius: 8px;
 }

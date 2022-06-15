@@ -1,3 +1,42 @@
-<p>grao-create works!</p>
-<button (click)="createGrain()">Salvar</button>
+<div class="content">
+    <mat-card class="create">
+        <form>
+          <div class="input-fields">
+            <label class="descricao-input">NOME</label>
+            <input type="text" name="nome" class="input-field"placeholder="Nome do Geão" required>
+            <!-- <input type="text" name="nome" class="input-field" [(ngModel)]="fazenda.name" placeholder="Nome da Fazenda" required> -->
+          </div>
+          <div class="input-fields">
+            <label class="descricao-input">FAZENDA QUE PRODUZ</label>
+            <select class="input-field"  placeholder="Endereço da Fazenda" required>
+                <option value="0">-- Selecione a Fazenda --</option>
+                <option *ngFor="let fazenda of fazendas" [value]="fazenda.id">{{fazenda.name}}</option>
+
+            </select>
+            <!-- <input type="text" name="endereco" class="input-field" [(ngModel)]="fazenda.endereco" placeholder="Endereço da Fazenda" required> -->
+          </div>
+          <div class="input-fields">
+            <label class="descricao-input">PREVISÃO DE COLHEITA</label>
+            <input type="text" name="grao" class="input-field"  placeholder="dd/mm/aaaa" required>
+            <!-- <input type="text" name="grao" class="input-field" [(ngModel)]="fazenda.grao" placeholder="Grão" required> -->
+          </div>
+          <div class="input-fields">
+            <label class="descricao-input">INFORMAÇÕES ADICIONAIS</label>
+            <input type="text" name="ultimaColheita" class="input-field"  placeholder="informações" required>
+            <!-- <input type="text" name="ultimaColheita" class="input-field" [(ngModel)]="fazenda.ultimaColheita" placeholder="Data da Última Colheita" required> -->
+          </div>
+        </form>
+        <p>foto</p>
+        <button id="btn-img">
+            <a>
+                <mat-icon class="mat-18">description</mat-icon>
+            </a>
+        </button>
+      </mat-card>
+      <mat-card class="button-position">
+        <button (click)="createGrain()">CADASTRAR</button>
+        <button id="cancel" (click)="cancel()">CANCELAR</button>
+      </mat-card>
+</div>
+  
 
