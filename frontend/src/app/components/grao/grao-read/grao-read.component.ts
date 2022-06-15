@@ -1,3 +1,6 @@
+import { Fazenda } from './../../fazenda/fazenda.model';
+import { GraoService } from './../grao.service';
+import { Grao } from './../grao.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 
@@ -8,20 +11,15 @@ import { Router } from '@angular/router'
 })
 export class GraoReadComponent implements OnInit {
 
-  graos: any = [
-    {
-      id: 1,
-      nome: 'Soja',
-      tipo: 'Soja tipo A',
-      fazenda: 'Estância das vivências',
-      dataFazenda: '04/05/2022',
-      ativo: 'não'
-    }
-  ];
+  graos: Grao[]
+  fazenda: Fazenda[]
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private gService: GraoService) { }
 
   ngOnInit(): void {
+    this.gService.pegaGraos().subscribe(graos => {
+      this.graos = graos
+    })
 
   }
 
@@ -29,5 +27,21 @@ export class GraoReadComponent implements OnInit {
     this.router.navigate(['/grao/create'])
     // alert("Teste")
   }
+
+  randomInteger = Math.floor(Math.random() * (5095 - 1 + 1)) + 1;
+
+  getClass(){
+    if(this.randomInteger % 2 == 0 ){
+
+      return 'true'
+    }else{
+      return 'true'
+
+    }
+  }
+
+
+
+
 
 }

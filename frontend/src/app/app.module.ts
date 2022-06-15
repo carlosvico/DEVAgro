@@ -18,6 +18,7 @@ import { GraoCreateComponent } from './components/grao/grao-create/grao-create.c
 import { GraoUpdateComponent } from './components/grao/grao-update/grao-update.component';
 import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.component';
 import { GraoReadComponent } from './components/grao/grao-read/grao-read.component';
+import { MatSelectModule } from '@angular/material/select';
 
 //EMPRESA COMPONENT IMPORT
 import { EmpresaCreateComponent } from './components/empresa/empresa-create/empresa-create.component';
@@ -99,7 +100,8 @@ import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
     MatSnackBarModule,
     MatButtonModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
