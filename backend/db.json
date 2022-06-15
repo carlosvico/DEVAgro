@@ -3,23 +3,37 @@
     {
       "id": 1,
       "nome": "milho",
-      "quantidade": 1
+      "quantidade": 1,
+      "fazenda": "Farm Boa ventura",
+      "informacoes": "Amarelo "
     },
     {
       "id": 2,
       "nome": "feijão",
-      "quantidade": 2
+      "quantidade": 2,
+      "fazenda": "Farm Djavta",
+      "informacoes": "Carioca "
     },
     {
       "id": 3,
       "nome": "soja",
-      "quantidade": 40
+      "quantidade": 40,
+      "fazenda": "Farm Hero",
+      "informacoes": "Sulista "
+    },
+    {
+      "nome": "B2W",
+      "previsaoColheita": "11/22/1212",
+      "informacoes": "Recreação",
+      "fazenda": "",
+      "ativo": true,
+      "id": 4
     }
   ],
   "fazendas": [
     {
       "name": "hfgdfgdhdfg",
-      "grao": "gfdhfgfdg",
+      "grao": "feijão",
       "ultimaColheita": "12/12/2121",
       "endereco": "Rua do Diego, 6924",
       "id": 3
