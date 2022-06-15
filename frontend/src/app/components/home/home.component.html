@@ -1,50 +1,61 @@
-<div class="grid-container">
-  <mat-grid-list cols="2" rowHeight="70px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="dashboard-card">
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>  
-  </mat-grid-list>
-</div>
-<mat-card class="read">
-  <header>
-    <section class="title">
-      <h3>Propriedades cadastradas</h3>
-    </section>
-  </header>
-
-  <main>
-    <div class="table-responsive">
-      <table class="table table-hover">
-
-        <thead>
-          <tr>
-            <th scope="col">Nome da Propriedade</th>
-            <th scope="col">Previsão de colheita</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- detalhes -->
-          <tr *ngFor="let fazenda of fazendas">
-            <td>
-              <div class="detalhes-linha">
-                <div class="detalhes-content">
-                  <span class="detalhes-name">{{ fazenda.name }}</span>
+<header>
+  <mat-card class="card1">
+    <span class="farm-title">Total de propriedades</span>
+    <span class="numbers">5</span>
+  </mat-card>
+  <mat-card class="card2">
+    <span class="farm-title">Total de Funcionários</span>
+    <span class="numbers">38</span>
+  </mat-card>
+</header>
+<main class="principal-main">
+  <mat-card class="read">
+    <header class="header-table">
+      <section class="title">
+        <h3>Propriedades cadastradas</h3>
+      </section>
+    </header>
+    <main class="main-table">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Nome da Propriedade</th>
+              <th scope="col">Previsão de colheita</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- detalhes -->
+            <tr *ngFor="let fazenda of fazendas">
+              <td>
+                <div class="detalhes-linha">
+                  <div class="detalhes-content">
+                    <span class="detalhes-name">{{ fazenda.name }}</span>
+                  </div>
                 </div>
-              </div>
-            </td>
-            <!-- alocado #### OBS: TROCAR POR PRóXIMA COLHEITA #####-->
-            <td>
-              <div class="detalhes-linha">
-                <span class="detalhes-name">{{ fazenda.ultimaColheita }}</span>
-              </div>
-            </td>
-        </tbody>
-
-      </table>
-    </div>
-  </main>
-</mat-card>
+              </td>
+              <!-- alocado #### OBS: TROCAR POR PRóXIMA COLHEITA #####-->
+              <td>
+                <div class="detalhes-linha">
+                  <span class="detalhes-name">{{
+                    fazenda.ultimaColheita
+                  }}</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </mat-card>
+</main>
+<footer>
+  <mat-card class="card3">
+    <span class="farm-title">Previsão do tempo propriedadesspan</span>
+    <span class="numbers">5</span>
+  </mat-card>
+  <mat-card class="card4">
+    <span class="farm-title">Estoque de grãos</span>
+    <span class="numbers">38</span>
+  </mat-card>
+</footer>
