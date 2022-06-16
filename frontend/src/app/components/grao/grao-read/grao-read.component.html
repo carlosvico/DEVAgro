@@ -22,10 +22,9 @@
 
         <thead>
           <tr>
-            <th scope="col">Detalhes dos Funcionários</th>
-            <th scope="col">Fazenda alocado</th>
-            <th scope="col">Função principal</th>
-            <th scope="col">Ativo</th>
+            <th scope="col">Grãos</th>
+            <th scope="col">Fazenda Plantada</th>
+            <th scope="col">Colhida</th>
             <th scope="col"> </th>
           </tr>
         </thead>
@@ -39,7 +38,7 @@
                 </div>
                 <div class="detalhes-content">
                   <span class="detalhes-name">{{ grao.nome }}</span>
-                  <p class="detalhes-date">Cadastrado em {{ grao.tipo }}</p>
+                  <p class="detalhes-date tcor"> {{ grao.informacoes }}</p>
                 </div>
               </div>
             </td>
@@ -48,7 +47,7 @@
               <div class="detalhes-linha">
                 <div class="detalhes-content">
                   <span class="detalhes-name">{{ grao.fazenda }}</span>
-                  <p class="detalhes-date">{{ grao.dataFazenda}}</p>
+                  <p class="detalhes-date">{{ grao.previsao_colheita}}</p>
                 </div>
               </div>
             </td>
@@ -56,7 +55,7 @@
             <!-- ativo -->
             <td>
               <div class="detalhes-linha">
-                <div class="active  {{ grao.ativo }}">{{ grao.ativo }}</div>
+                <div class="active  {{ grao.ativo }}">{{ grao.ativo? 'sim': 'não' }}</div>
               </div>
             </td>
 

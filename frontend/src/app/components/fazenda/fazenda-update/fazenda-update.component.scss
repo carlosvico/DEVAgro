@@ -213,4 +213,7 @@ button:hover {
 
 .obrigatory {
   border: 1px solid #a31d1d;
+  display: inline-block;
+  animation: shakeX;
+  animation-duration: 1s;
 }
