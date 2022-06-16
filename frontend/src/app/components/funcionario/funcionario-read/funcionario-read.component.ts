@@ -20,5 +20,4 @@ export class FuncionarioReadComponent implements OnInit {
       this.funcionarios = funcionario;
     })
   }
-
 }

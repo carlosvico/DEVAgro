@@ -1,3 +1,6 @@
+import { Fazenda } from './../../fazenda/fazenda.model';
+import { GraoService } from './../grao.service';
+import { Grao } from './../grao.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 
@@ -8,20 +11,18 @@ import { Router } from '@angular/router'
 })
 export class GraoReadComponent implements OnInit {
 
-  graos: any = [
-    {
-      id: 1,
-      nome: 'Soja',
-      tipo: 'Soja tipo A',
-      fazenda: 'Estância das vivências',
-      dataFazenda: '04/05/2022',
-      ativo: 'não'
-    }
-  ];
+  graos: Grao[]
 
-  constructor(private router: Router) { }
+
+  constructor(private router: Router, private gService: GraoService) { }
 
   ngOnInit(): void {
+    this.gService.read().subscribe(graos => {
+      this.graos = graos
+      // console.log(this.graos.filter(f=>f.previsao_colheita!= ''));
+
+    })
+
 
   }
 
@@ -29,5 +30,13 @@ export class GraoReadComponent implements OnInit {
     this.router.navigate(['/grao/create'])
     // alert("Teste")
   }
+
+
+
+
+
+
+
+
 
 }

@@ -1,1 +1,43 @@
-<p>grao-delete works!</p>
+<div class="content">
+  <mat-card class="create">
+    <form>
+      <div class="input-fields">
+        <label class="descricao-input">NOME</label>
+        <input type="text" id="nome" name="nome" class="input-field" placeholder="Nome do Geão" [(ngModel)]="grao.nome" disabled="">
+      </div>
+
+      <div class="input-fields">
+        <label class="descricao-input">FAZENDA QUE PRODUZ</label>
+        <select class="input-field" id="fazenda" placeholder="Endereço da Fazenda"   disabled="">
+          <option>{{grao.fazenda}}</option>
+
+        </select>
+      </div>
+
+      <div class="input-fields">
+        <label class="descricao-input">PREVISÃO DE COLHEITA</label>
+        <input type="text" id="previsaoColheita" name="grao" class="input-field" placeholder="dd/mm/aaaa" [(ngModel)]="grao.previsao_colheita" disabled="">
+      </div>
+
+      <div class="input-fields">
+        <label class="descricao-input">INFORMAÇÕES ADICIONAIS</label>
+        <input type="text" id="informacoes" name="ultimaColheita" class="input-field" placeholder="informações" [(ngModel)]="grao.informacoes" disabled="">
+      </div>
+
+      <!-- Switch-toggle -->
+      <div class="switch-toggle">
+        <label class="descricao-input">ATIVO</label>
+        <label class="switch">
+          <input type="checkbox" id="ativo" (change)="isActive($event)" [attr.checked]="grao.ativo ? true: null" disabled="">
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+    </form>
+
+  </mat-card>
+  <mat-card class="button-position">
+    <button mat-raised-button (click)="deletarGrao()">DELETAR</button>
+    <button id="cancel" (click)="cancel()">CANCELAR</button>
+  </mat-card>
+</div>

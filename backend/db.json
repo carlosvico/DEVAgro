@@ -1,25 +1,34 @@
 {
   "graos": [
     {
-      "id": 1,
-      "nome": "milho",
-      "quantidade": 1
-    },
-    {
-      "id": 2,
-      "nome": "feijão",
-      "quantidade": 2
-    },
-    {
       "id": 3,
-      "nome": "soja",
-      "quantidade": 40
+      "nome": "Arroz",
+      "previsao_colheita": "29/11/2022",
+      "informacoes": "Tipo 1 ",
+      "fazenda": "Fazenda do Amaral",
+      "ativo": false
+    },
+    {
+      "nome": "Arroz",
+      "previsao_colheita": "11/22/1212",
+      "informacoes": "teste",
+      "fazenda": "Fazenda Feliz",
+      "ativo": false,
+      "id": 6
+    },
+    {
+      "nome": "Milho",
+      "previsao_colheita": "11/22/1212",
+      "informacoes": "Pipoca",
+      "fazenda": "Fazenda Feliz",
+      "ativo": true,
+      "id": 7
     }
   ],
   "fazendas": [
     {
       "name": "hfgdfgdhdfg",
-      "grao": "gfdhfgfdg",
+      "grao": "feijão",
       "ultimaColheita": "12/12/2121",
       "endereco": "Rua do Diego, 6924",
       "id": 3
@@ -30,6 +39,27 @@
       "ultimaColheita": "01/01/1000",
       "endereco": "Rua Do Renan, 69",
       "id": 4
+    },
+    {
+      "name": "Fazenda Santa Helena",
+      "endereco": "Rua Brasil",
+      "grao": "Soja",
+      "ultimaColheita": "12/12/2021",
+      "id": 5
+    },
+    {
+      "name": "Fazenda de Dentro",
+      "endereco": "Rua Uruguai",
+      "grao": "Café",
+      "ultimaColheita": "01/11/2021",
+      "id": 6
+    },
+    {
+      "name": "Fazenda Cardoso",
+      "endereco": "Rua das Gaivotas",
+      "grao": "Milho",
+      "ultimaColheita": "12/01/2022",
+      "id": 7
     }
   ],
   "funcionarios": [
@@ -54,6 +84,17 @@
       "telefone": "Lembrar de pedir dps",
       "cargo": "Estagiário (compositor)",
       "ativo": false
+    },
+    {
+      "nome": "Kelvin Bacon",
+      "fazenda": "Fazenda Santa Helena",
+      "data": "14/06/2022",
+      "update": "14/06/2022",
+      "cpf": "12345622222",
+      "telefone": "48987661223",
+      "cargo": "Encarregado",
+      "ativo": true,
+      "id": 3
     }
   ],
   "empresas": [
@@ -64,6 +105,14 @@
       "email": "blablabla@email.com",
       "endereco": "Rua do Senai, 24",
       "senha": "123456"
+    },
+    {
+      "nome": "Amorim Administração de Fazenda Ltda",
+      "email": "amorim@amorim.com.br",
+      "cnpj": "23321987000110",
+      "endereco": "Rua Joaquim Coelho de Arruda",
+      "senha": "123456",
+      "id": 2
     }
   ]
 }

@@ -1,10 +1,13 @@
 export interface Grao {
     id?: number
-    nome: string    
-    previsaoColheita: Date
-    informacoesAdicionais: string
-    fazenda: {
-        id: number
-    }
+    nome: string
+    previsao_colheita: string
+    informacoes: string
+    fazenda?: string
+    ativo:boolean
+    // fazenda: {
+    //     id: number
+    // }
+
+
 }
-    
