@@ -59,6 +59,7 @@ import { HomeViewComponent } from './views/home-view/home-view.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -109,7 +110,8 @@ import { HomeViewComponent } from './views/home-view/home-view.component';
     MatSelectModule,
     MatGridListModule,
     MatMenuModule,
-    LayoutModule
+    LayoutModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
