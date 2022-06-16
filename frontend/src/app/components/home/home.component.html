@@ -1,11 +1,11 @@
 <header>
   <mat-card class="card1">
     <span class="farm-title">Total de propriedades</span>
-    <span class="numbers">5</span>
+    <span class="numbers">{{ fazendas.length }}</span>
   </mat-card>
   <mat-card class="card2">
     <span class="farm-title">Total de Funcionários</span>
-    <span class="numbers">38</span>
+    <span class="numbers">{{ funcionarios.length }}</span>
   </mat-card>
 </header>
 <main class="principal-main">
@@ -50,9 +50,53 @@
   </mat-card>
 </main>
 <footer>
-  <mat-card class="card3">
-    <span class="farm-title">Previsão do tempo propriedadesspan</span>
-    <span class="numbers">5</span>
+  <mat-card class="card3" *ngIf="weatherData">
+    <span class="farm-title-temp">Previsão do tempo propriedades</span>
+    <div class="table-responsive-temp">
+      <table class="table table-hover">
+        <thead>
+        </thead>
+        <tbody>
+          <!-- detalhes -->
+          <tr *ngFor="let fazenda of fazendas">
+            <td>
+              <div class="detalhes-linha">
+                <div class="detalhes-content">
+                  <span class="detalhes-name-temp">{{ fazenda.name }}</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="detalhes-linha-temp">
+                <span class="numbers-temp">{{ weatherData.main.temp | number: '1.0-0'}}˚C</span>
+              </div>
+            </td>
+            <td>
+              <div class="detalhes-linha">
+                <span class="weather-icon">Teste<img src=""></span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+    <!-- <span class="farm-title">Previsão do tempo propriedades</span>
+    <tr *ngFor="let fazenda of fazendas">
+      <td>
+        <div class="detalhes-linha">
+          <div class="detalhes-content">
+            <span class="temperatura-name">{{ fazenda.name }}</span>
+            <span class="numbers">{{ weatherData.main.temp | number: '1.0-0'}}˚C</span>
+            <span class="weather-icon">Teste<img src=""></span>
+          </div>
+        </div>
+      </td>
+    </tr> -->
+    
   </mat-card>
   <mat-card class="card4">
     <span class="farm-title">Estoque de grãos</span>
