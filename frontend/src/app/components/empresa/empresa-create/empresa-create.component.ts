@@ -16,7 +16,7 @@ export class EmpresaCreateComponent implements OnInit {
 
   empresa: Empresa = {
     nome: '',
-    email:'',
+    email: '',
     cnpj: '',
     endereco: '',
     senha: ''
@@ -49,15 +49,88 @@ export class EmpresaCreateComponent implements OnInit {
   }
 
   createEmpresa(): void {
-    this.empresaService.create(this.empresa).subscribe(() => {
-      this.empresaService.showMessage("Empresa cadastrada com sucesso!");
-      this.router.navigate(['/']);
-    })
-
+    let senha = document.getElementById('senha2') as HTMLInputElement;
+    if (!this.validatePassword(this.empresa.senha, senha.value.trim())) {
+      this.empresaService.showMessage("Senhas não conferem");
+      throw new Error('Senhas não conferem');
+    }
+    if (this.inputValidator()) {
+      this.empresaService.create(this.empresa).subscribe(() => {
+        this.empresaService.showMessage("Empresa cadastrada com sucesso!");
+        this.router.navigate(['/']);
+      })
+    } else {
+      this.empresaService.showMessage("Preencha todos os campos!");
+    }
   }
 
-  navigateToLogiIn(): void{
+  navigateToLogiIn(): void {
     this.router.navigate(['/']);
   }
 
+  private inputValidator(): boolean {
+    let senha2 = document.getElementById('senha2') as HTMLInputElement;
+    console.log(senha2.value.trim());
+
+    if (this.empresa.nome.trim() === '' || this.empresa.email.trim() === '' || this.empresa.cnpj.trim() === '' || this.empresa.endereco.trim() === '' || this.empresa.senha.trim() === '' || senha2.value.trim() === '') {
+      if (this.empresa.nome.trim() === '') {
+        document.getElementById('nome').classList.add('required');
+      }
+      else {
+        document.getElementById('nome').classList.remove('required');
+      }
+
+      if (this.empresa.email.trim() === '') {
+        document.getElementById('email').classList.add('required');
+      }
+      else {
+        document.getElementById('email').classList.remove('required');
+      }
+
+      if (this.empresa.cnpj.trim() === '') {
+        document.getElementById('cnpj').classList.add('required');
+      }
+      else {
+        document.getElementById('cnpj').classList.remove('required');
+      }
+
+      if (this.empresa.endereco.trim() === '') {
+        document.getElementById('endereco').classList.add('required');
+      }
+      else {
+        document.getElementById('endereco').classList.remove('required');
+      }
+
+      if (this.empresa.senha.trim() === '') {
+        document.getElementById('senha').classList.add('required');
+      }
+      else {
+        document.getElementById('senha').classList.remove('required');
+      }
+      if (senha2.value.trim() === '') {
+        document.getElementById('senha2').classList.add('required');
+      }
+      else {
+        document.getElementById('senha2').classList.remove('required');
+      }
+      return false;
+    }
+    else {
+      return true;
+    }
+
+  }
+
+  private validatePassword(senha: string, senha2: string) {
+    if (senha !== senha2) {
+      document.getElementById('senha2').classList.add('required');
+      return false;
+    }
+    else {
+      document.getElementById('senha2').classList.remove('required');
+      return true;
+    }
+  }
+
 }
+
