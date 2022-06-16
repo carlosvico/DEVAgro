@@ -1,5 +1,5 @@
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Observable } from 'rxjs';
+import { catchError, EMPTY, map, Observable } from 'rxjs';
 import { Empresa } from './empresa.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -17,11 +17,24 @@ export class EmpresaService {
     return this.http.post<Empresa>(this.baseUrl, empresa);
   }
 
-  showMessage(msg: string): void {
+  read(): Observable<Empresa[]>{
+    return this.http.get<Empresa[]>(this.baseUrl).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
+  } 
+
+  showMessage(msg: string, isError: boolean = false): void{
     this.snackBar.open(msg, 'X', {
-      duration: 3000,
+      duration: 2000,
       horizontalPosition: "right",
-      verticalPosition: "top"
+      verticalPosition: "top",
+      panelClass: isError ? ['msg-error'] : ['msg-success']
     })
+  }
+
+  errorHandler(e: any): Observable<any> {
+    this.showMessage('Ocorreu um erro!', true);
+    return EMPTY;
   }
 }
