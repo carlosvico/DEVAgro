@@ -1,34 +1,28 @@
 {
   "graos": [
     {
-      "id": 1,
-      "nome": "milho",
-      "quantidade": 1,
-      "fazenda": "Farm Boa ventura",
-      "informacoes": "Amarelo "
-      "ativo": true
-    },
-    {
-      "id": 2,
-      "nome": "feijão",
-      "quantidade": 2,
-      "fazenda": "Farm Djavta",
-      "informacoes": "Carioca "
-    },
-    {
       "id": 3,
-      "nome": "soja",
-      "quantidade": 40,
-      "fazenda": "Farm Hero",
-      "informacoes": "Sulista "
+      "nome": "Arroz",
+      "previsao_colheita": "29/11/2022",
+      "informacoes": "Tipo 1 ",
+      "fazenda": "Fazenda do Amaral",
+      "ativo": false
     },
     {
-      "nome": "B2W",
-      "previsaoColheita": "11/22/1212",
-      "informacoes": "Recreação",
-      "fazenda": "",
+      "nome": "Arroz",
+      "previsao_colheita": "11/22/1212",
+      "informacoes": "teste",
+      "fazenda": "Fazenda Feliz",
+      "ativo": false,
+      "id": 6
+    },
+    {
+      "nome": "Milho",
+      "previsao_colheita": "11/22/1212",
+      "informacoes": "Pipoca",
+      "fazenda": "Fazenda Feliz",
       "ativo": true,
-      "id": 4
+      "id": 7
     }
   ],
   "fazendas": [
