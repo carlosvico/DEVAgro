@@ -17,6 +17,27 @@ export class GraoService {
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
+  // metodo que lança mensagens no snackbar
+  showMessage(msg: string, isError: boolean = false): void{
+    this.snackBar.open(msg, 'X', {
+      duration: 2000,
+      horizontalPosition: "right",
+      verticalPosition: "top",
+      panelClass: isError ? ['msg-error'] : ['msg-success']
+    })
+  }
+
+
+  // Cria novo Grão
+   create(grao: Grao): Observable<Grao> {
+    return this.http.post<Grao>(this.url_Grao, grao).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+      );
+    }
+
+
+
 
   pegaGraos(): Observable<Grao[]>{
     return this.http.get<Grao[]>(this.url_Grao).pipe(
@@ -50,29 +71,15 @@ export class GraoService {
   }
 
 
-  create(grao: Grao): Observable<Grao> {
-    return this.http.post<Grao>(this.url_Grao, grao).pipe(
-      map((obj) => obj),
-      catchError((e) => this.errorHandler(e))
-      );
-    }
+
 
     // Preenche o dropdown em grao-create
-    pegaFazendas(): Observable<Fazenda[]>{
-      return this.http.get<Fazenda[]>(this.url_fazenda).pipe(
-        map((obj) => obj),
-        catchError((e) => this.errorHandler(e))
-      );
+    
+
+    read(): Observable<Grao[]>{
+      return this.http.get<Grao[]>(this.url_Grao)
     }
 
-    showMessage(msg: string, isError: boolean = false): void{
-      this.snackBar.open(msg, 'X', {
-        duration: 2000,
-        horizontalPosition: "right",
-        verticalPosition: "top",
-        panelClass: isError ? ['msg-error'] : ['msg-success']
-      })
-    }
 
   errorHandler(e: any): Observable<any> {
     this.showMessage('Ocorreu um erro!', true);

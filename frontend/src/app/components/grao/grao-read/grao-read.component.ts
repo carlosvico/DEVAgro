@@ -12,14 +12,17 @@ import { Router } from '@angular/router'
 export class GraoReadComponent implements OnInit {
 
   graos: Grao[]
-  fazenda: Fazenda[]
+
 
   constructor(private router: Router, private gService: GraoService) { }
 
   ngOnInit(): void {
-    this.gService.pegaGraos().subscribe(graos => {
+    this.gService.read().subscribe(graos => {
       this.graos = graos
+      // console.log(this.graos.filter(f=>f.previsao_colheita!= ''));
+
     })
+
 
   }
 
@@ -28,17 +31,9 @@ export class GraoReadComponent implements OnInit {
     // alert("Teste")
   }
 
-  randomInteger = Math.floor(Math.random() * (5095 - 1 + 1)) + 1;
 
-  getClass(){
-    if(this.randomInteger % 2 == 0 ){
 
-      return 'true'
-    }else{
-      return 'true'
 
-    }
-  }
 
 
 
