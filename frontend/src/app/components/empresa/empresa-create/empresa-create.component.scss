@@ -150,3 +150,10 @@ input[type=submit]:hover {
 .fa{
     font-size: 20px;
 }
+
+.obrigatory {
+    border: 1px solid #a31d1d;
+    display: inline-block;
+    animation: shakeX;
+    animation-duration: 1s;
+  }
