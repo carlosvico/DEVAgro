@@ -7,7 +7,6 @@ import { HomeService } from './home.service';
 import { Weather, WeatherData } from './weatherModel/weather.model';
 import Chart from 'chart.js/auto';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
