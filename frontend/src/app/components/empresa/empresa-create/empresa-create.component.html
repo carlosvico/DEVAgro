@@ -16,7 +16,7 @@
             <label for="endereco">ENDEREÇO DA SEDE</label>
             <input type="text" placeholder="Endereço" [(ngModel)]="empresa.endereco" name="endereco" required/>
             <label for="email">E-MAIL</label>
-            <input type="email" placeholder="E-mail" [(ngModel)]="empresa.email" name="email" required/>
+            <input type="email" placeholder="E-mail" [(ngModel)]="empresa.email" name="email" id="email" required/>
             <label for="password">SENHA</label>
             <input [type]="passwordType" placeholder="Senha" [(ngModel)]="empresa.senha" name="senha" required/>
             <div class="icone" (click)="togglePassword()">

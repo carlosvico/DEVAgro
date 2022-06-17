@@ -14,6 +14,7 @@ export class FazendaCreateComponent implements OnInit {
     name: '',
     endereco: '',
     grao: '',
+    previsaoColheita: '',
     ultimaColheita: ''
   }
 

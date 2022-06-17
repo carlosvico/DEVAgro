@@ -1,168 +1,69 @@
-main{
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-.principal-main{
-  border: green solid;
-  border-radius: 10px;
-}
-
-.read {
-  height: 43vh;
-  width: 83.46vw;
-  margin: 0px 0px 0px 0px;
-  border: 2px solid #DFE0EB;
-  border-radius: 8px;
-  background: #FFFFFF;
-  position: relative;
-}
-
-.read .header-table {
-  line-height: 24px;
-  margin: 0px 10px 0px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.read .header-table .title h3 {
-  width: 400px;
-  line-height: 24px;
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 24px;
-  letter-spacing: 0.4px;
-}
-
-.read .header-table .filters {
+header{
   display: flex;
   justify-content: space-between;
-  gap: 7px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.2px;
-  color: #4B506D;
+  gap: 191px;
+  padding: 0 30px 30px 30px;
 }
 
-.read .header-table .filters .filter, .read .header-table .filters .order {
-  cursor: pointer;
+.card-content {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.read .header-table .filters .filter:hover, .read .header-table .filters .order:hover {
-  transform: scale(1.1);
-}
-
-.table{
-  margin-top: 45px;
-
-}
-
-.mat-card{
-  margin: 0px 0px 0px 0px;
+  flex-direction: column;
+  width: 100%;
   height: 100%;
+  text-align: center;
 }
 
-.table-responsive {
-  height: 300px;
-  overflow: hidden;
-  overflow-y: scroll;
+.numbers {
+  margin-top: 12px;
 }
 
 .card1{
-  height: 120px;
-  width: 40%;
-  background-color: #FFF;
+  height: 134px;
+  width: 426px;
   border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 200px;
-  border: green solid;
+  border: 1px solid #375F24;
 }
 
 .card2{
-  height: 120px;
-  width: 40%;
-  background-color: #FFF;
+  height: 134px;
+  width: 505px;
   border-radius: 8px;
+  border: 1px solid #DFE0EB;
+}
+
+main {
+  padding: 0 30px 30px 30px;
+}
+
+.read {
+  height: 317px;
+  width: 100%;
+  border: 1px solid #375F24;
+  border-radius: 8px;
+}
+
+.read .header-table {
+  width: 100%;
+  line-height: 24px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border: green solid;
+  text-align: center;
 }
 
-.card3{
-  height: 120px;
-  width: 40%;
-  background-color: #FFF;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  
-  margin-right: 50px;
-  border: green solid;
-}
-
-.card4{
-  height: 120px;
-  width: 40%;
-  background-color: #FFF;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: green solid;
-}
-
-.card1 span, .card2 span{
-  margin-top: 30px;
-}
-
-.farm-title {
-  font-family: 'Mulish';
-  font-style: normal;
+.read .header-table .title h3 {
+  line-height: 24px;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
   letter-spacing: 0.4px;
-  color: #375F24;
 }
 
-.numbers{
-  font-family: 'Mulish';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 50px;
-  letter-spacing: 1px;
-  color: #375F24;
-  align-items: center;
-}
-
-header {
-  margin-top: -20px;
-  display: flex;
-}
-
-mat-card {
-  margin-left: 35px;
-  margin-right: 35px;
-  margin-top: 25px;
-  
-}
-
-header mat-card {
-  height: 17vh;
-  width: 100%;
-}
-
-.table {
-  height: 300px;
+.table-responsive {
+  height: 226px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 footer {
@@ -227,3 +128,49 @@ footer mat-card {
   color: blue;
   align-items: flex-start;
 }
+
+.card3{
+  height: 100%;
+  width: 624px;
+  background-color: #FFF;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  
+  margin-right: 50px;
+  border: green solid;
+}
+
+.card4{
+  height: 120px;
+  width: 464px;
+  background-color: #FFF;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: green solid;
+}
+
+
+.farm-title {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: #375F24;
+}
+
+.numbers{
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #375F24;
+  align-items: center;
+}
+

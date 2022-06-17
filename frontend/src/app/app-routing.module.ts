@@ -1,3 +1,4 @@
+import { AuthGuard } from './auth.guard';
 import { HomeViewComponent } from './views/home-view/home-view.component';
 import { LoginViewComponent } from './views/login-view/login-view.component';
 import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
@@ -17,6 +18,7 @@ import { FuncionarioDeleteComponent } from './components/funcionario/funcionario
 import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.component';
 import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
+import { AuthLoggedGuard } from './auth-logged.guard';
 
 const routes: Routes = [
   {
@@ -26,64 +28,79 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginViewComponent
+    component: LoginViewComponent,
+    canActivate: [AuthLoggedGuard]
   },
   {
     path: 'singup',
-    component: EmpresaCreateComponent
+    component: EmpresaCreateComponent,
+    canActivate: [AuthLoggedGuard]
   },
   {
     path: 'funcionario',
-    component: FuncionarioCrudComponent
+    component: FuncionarioCrudComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'funcionario/read',
-    component: FuncionarioReadComponent
+    component: FuncionarioReadComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'funcionario/create',
-    component: FuncionarioCreateComponent
+    component: FuncionarioCreateComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'funcionario/update/:id',
-    component: FuncionarioUpdateComponent
+    component: FuncionarioUpdateComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'funcionario/delete/:id',
-    component: FuncionarioDeleteComponent
+    component: FuncionarioDeleteComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'fazenda',
-    component: FazendaCrudComponent
+    component: FazendaCrudComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'fazenda/create',
-    component: FazendaCreateComponent
+    component: FazendaCreateComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'fazenda/update/:id',
-    component: FazendaUpdateComponent
+    component: FazendaUpdateComponent,
+    canActivate: [AuthGuard]
 
   },
   {
     path: 'fazenda/delete/:id',
-    component: FazendaDeleteComponent
+    component: FazendaDeleteComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'grao',
-    component: GraoCrudComponent
+    component: GraoCrudComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'grao/create',
-    component: GraoCreateComponent
+    component: GraoCreateComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'grao/update/:id',
-    component: GraoUpdateComponent
+    component: GraoUpdateComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'grao/delete/:id',
-    component: GraoDeleteComponent
+    component: GraoDeleteComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'empresa/create',
@@ -91,7 +108,8 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeViewComponent
+    component: HomeViewComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '**',

@@ -22,10 +22,15 @@ export class EmpresaCreateComponent implements OnInit {
     senha: ''
   }
 
+  empresas: Empresa[];
+
 
   constructor(private empresaService: EmpresaService, private router: Router) { }
 
   ngOnInit(): void {
+    this.empresaService.read().subscribe(empresas => {
+      this.empresas = empresas;
+    });
   }
 
   togglePassword() {
@@ -49,11 +54,15 @@ export class EmpresaCreateComponent implements OnInit {
   }
 
   createEmpresa(): void {
-    this.empresaService.create(this.empresa).subscribe(() => {
-      this.empresaService.showMessage("Empresa cadastrada com sucesso!");
-      this.router.navigate(['/']);
-    })
-
+    let email = document.getElementById('email') as HTMLInputElement;
+    if(this.empresas.find(empresa => empresa.email == email.value.trim()) != undefined){
+      this.empresaService.showMessage('Email cadastrado ou inválido!', true);
+    }else{
+      this.empresaService.create(this.empresa).subscribe(() => {
+        this.empresaService.showMessage("Empresa cadastrada com sucesso!");
+        this.router.navigate(['/']);
+     })
+    }
   }
 
   navigateToLogiIn(): void{

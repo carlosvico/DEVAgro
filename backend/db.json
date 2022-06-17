@@ -6,7 +6,7 @@
       "previsao_colheita": "29/11/2022",
       "informacoes": "Tipo 1 ",
       "fazenda": "Fazenda do Amaral",
-      "ativo": false
+      "ativo": true
     },
     {
       "nome": "Arroz",
@@ -23,6 +23,14 @@
       "fazenda": "Fazenda Feliz",
       "ativo": true,
       "id": 7
+    },
+    {
+      "nome": "Café",
+      "previsao_colheita": "31/04/2023",
+      "informacoes": "Café",
+      "fazenda": "Fazenda Santa Helena",
+      "ativo": true,
+      "id": 8
     }
   ],
   "fazendas": [
@@ -113,6 +121,14 @@
       "endereco": "Rua Joaquim Coelho de Arruda",
       "senha": "123456",
       "id": 2
+    },
+    {
+      "nome": "a",
+      "email": "adm@adm.com",
+      "cnpj": "a",
+      "endereco": "a",
+      "senha": "a",
+      "id": 3
     }
   ]
 }

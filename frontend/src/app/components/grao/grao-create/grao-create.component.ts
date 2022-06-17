@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GraoCreateComponent implements OnInit {
 
-  fazendas: Fazenda[] = []
+  fazendas: Fazenda[]
   graos: Grao = {
       nome: '',
       previsao_colheita: '',
@@ -86,8 +86,8 @@ export class GraoCreateComponent implements OnInit {
 
 
   criaGrao(): void {
-
     if(this.validatorInputs() == true){
+      this.fazendas.find(fazenda => fazenda.name === this.graos.fazenda)
       this.sGrao.create(this.graos).subscribe(() => {
         this.sGrao.showMessage('Grão Criado!');
         this.router.navigate(['/grao']);
