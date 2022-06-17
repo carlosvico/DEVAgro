@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Grao } from '../../grao/grao.model';
 import { GraoService } from '../../grao/grao.service';
 import { Fazenda } from '../fazenda.model';
@@ -18,18 +18,19 @@ export class FazendaReadComponent implements OnInit {
   constructor(private fazendaService: FazendaService, private graoService: GraoService) { }
 
   ngOnInit(): void {
+
     this.graoService.read().subscribe(graos => {
       this.graos = graos;
     })
     this.fazendaService.read().subscribe(fazendas => {
       this.fazendas = fazendas;
       fazendas.forEach(fazenda => {
-        if(this.graos.find(grao => grao.nome == fazenda.grao)){
-          fazenda.previsaoColheita == this.graos.find(grao => grao.nome == fazenda.grao).previsao_colheita
-          //console.log(this.graos.find(grao => grao.nome == fazenda.grao))
-        }
+        this.graos.forEach(grao => {{
+          if(fazenda.grao == grao.nome){
+            fazenda.previsaoColheita = grao.previsao_colheita
+          }
+        }})
       })
     })
   }
-
 }

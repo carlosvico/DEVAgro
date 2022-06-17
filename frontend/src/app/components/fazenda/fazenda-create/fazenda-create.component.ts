@@ -17,7 +17,8 @@ export class FazendaCreateComponent implements OnInit {
     endereco: '',
     grao: '',
     ultimaColheita: '',
-    cidade: ''
+    cidade: '',
+    estoque: null,
   }
 
   graos: Grao[];

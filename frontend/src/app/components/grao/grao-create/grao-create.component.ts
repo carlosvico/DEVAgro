@@ -19,22 +19,15 @@ export class GraoCreateComponent implements OnInit {
       informacoes: '',
       fazenda: '',
       ativo: true
-
   }
-
 
   constructor(private sGrao: GraoService, private router: Router, private fazendaService:FazendaService) { }
 
-
-
   ngOnInit(): void {
-
     this.fazendaService.read().subscribe(fazenda => {
-      this.fazendas = fazenda
+      this.fazendas = fazenda;
     })
-
   }
-
 
   isActive(event): void {
     if(event.target.checked){
@@ -43,8 +36,6 @@ export class GraoCreateComponent implements OnInit {
       this.graos.ativo = false;
     }
   }
-
-
 
   validatorInputs(): boolean {
     if (this.graos.nome.trim() === '' || this.graos.previsao_colheita.trim() === '' || this.graos.informacoes.trim() === '' || this.graos.fazenda.trim() === '') {
@@ -71,7 +62,6 @@ export class GraoCreateComponent implements OnInit {
       } else {
         document.getElementById('fazenda').classList.remove('obrigatory');
       }
-
       return false;
     } else {
       return true;
@@ -81,12 +71,9 @@ export class GraoCreateComponent implements OnInit {
   changeGrain(){
     this.graos.fazenda = document.querySelector('select').value;
     console.log(document.querySelector('select').value);
-
   }
 
-
   criaGrao(): void {
-
     if(this.validatorInputs() == true){
       this.sGrao.create(this.graos).subscribe(() => {
         this.sGrao.showMessage('Grão Criado!');
@@ -95,7 +82,6 @@ export class GraoCreateComponent implements OnInit {
     }else{
       this.fazendaService.showMessage('ERRO: Verifique se todos os campos estão preenchidos!', true);
     }
-
   }
 
   cancel(): void {

@@ -9,12 +9,20 @@
       <input type="text" id="endereco" name="endereco" class="input-field" [(ngModel)]="fazenda.endereco">
     </div>
     <div class="input-fields">
+      <label class="descricao-input">CIDADE</label>
+      <input type="text" id="cidade" name="cidade" class="input-field" [(ngModel)]="fazenda.cidade">
+    </div>
+    <div class="input-fields">
       <label class="descricao-input">GRÃO</label>
       <input type="text" id="grao" name="grao" class="input-field" [(ngModel)]="fazenda.grao">
     </div>
     <div class="input-fields">
-      <label class="descricao-input">DATA DA ÚLTIMA COLHEITA</label>
-      <input type="text" id="ultimaColheita" name="ultimaColheita" class="input-field" [(ngModel)]="fazenda.ultimaColheita">
+      <label class="descricao-input">PREVISÃO DE COLHEITA</label>
+      <input type="text" id="ultimaColheita" name="previsaoColheita" class="input-field" [(ngModel)]="fazenda.previsaoColheita">
+    </div>
+    <div class="input-fields">
+      <label class="descricao-input">ESTOQUE</label>
+      <input type="text" id="estoque" name="estoque" class="input-field" [(ngModel)]="fazenda.estoque">
     </div>
   </form>
 </mat-card>

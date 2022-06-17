@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { catchError, EMPTY, map, Observable } from 'rxjs';
+import { Grao } from '../grao/grao.model';
+import { GraoService } from '../grao/grao.service';
 import { Fazenda } from './fazenda.model';
 
 @Injectable({
@@ -11,7 +13,7 @@ export class FazendaService {
 
   baseUrl = "http://localhost:3001/fazendas"
 
-  constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
+  constructor(private snackBar: MatSnackBar, private http: HttpClient, private graoService: GraoService) { }
 
   showMessage(msg: string, isError: boolean = false): void{
     this.snackBar.open(msg, 'X', {
@@ -35,6 +37,13 @@ export class FazendaService {
       catchError((e) => this.errorHandler(e))
     );
   } //Função responsável por ler a listagem de fazendas do backend
+
+  readGrao(): Observable<Grao[]>{
+    return this.http.get<Grao[]>(this.baseUrl).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    )
+  }
 
   readById(id: number): Observable<Fazenda> {
     const url = `${this.baseUrl}/${id}`
