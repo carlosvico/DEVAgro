@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Empresa } from 'src/app/components/empresa/empresa.model';
+import { EmpresaService } from 'src/app/components/empresa/empresa.service';
 
 @Component({
   selector: 'app-login-view',
@@ -13,7 +15,7 @@ export class LoginViewComponent implements OnInit {
 
   empresa: Empresa;
 
-  constructor() { }
+  constructor(private empresaService: EmpresaService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -30,5 +32,20 @@ export class LoginViewComponent implements OnInit {
   }
 
   login() {
+    let email = document.getElementById('email') as HTMLInputElement;
+    let password = document.getElementById('senha') as HTMLInputElement;
+    this.empresaService.read().subscribe(empresas => {
+      if(empresas.find(e => e.email == email.value.trim())){
+        this.empresa = empresas.find(e => e.email === email.value.trim());
+        if(this.empresa.senha === password.value.trim()){
+          this.router.navigate(['/home']);
+          localStorage.setItem('status', 'logged');
+        }else{
+          this.empresaService.showMessage('ERROR: Senha incorreta!', true);
+        }
+      }else{
+        this.empresaService.showMessage('ERROR: Email não cadastrado!', true);
+      }
+    })
   }
 }
