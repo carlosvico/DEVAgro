@@ -13,30 +13,15 @@ export class GraoReadComponent implements OnInit {
 
   graos: Grao[]
 
-
   constructor(private router: Router, private gService: GraoService) { }
 
   ngOnInit(): void {
     this.gService.read().subscribe(graos => {
-      this.graos = graos
-      // console.log(this.graos.filter(f=>f.previsao_colheita!= ''));
-
+      this.graos = graos;
     })
-
-
   }
 
   navigateToGrainCrete(): void {
     this.router.navigate(['/grao/create'])
-    // alert("Teste")
   }
-
-
-
-
-
-
-
-
-
 }

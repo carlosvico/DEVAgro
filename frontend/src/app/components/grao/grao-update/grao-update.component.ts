@@ -27,8 +27,6 @@ export class GraoUpdateComponent implements OnInit {
       this.oldFarm = fazendas.find(f => f.name === this.graos.fazenda)
       this.fazendas = fazendas;
     });
-
-
   }
 
   isActive(event): void {
@@ -42,7 +40,6 @@ export class GraoUpdateComponent implements OnInit {
   changeFarm(){
     this.graos.fazenda = document.querySelector('select').value;
     console.log(this.graos);
-
   }
 
   validatorInputs(): boolean {
@@ -70,7 +67,6 @@ export class GraoUpdateComponent implements OnInit {
       } else {
         document.getElementById('fazenda').classList.remove('obrigatory');
       }
-
       return false;
     } else {
       return true;
@@ -86,8 +82,6 @@ export class GraoUpdateComponent implements OnInit {
     }else{
       this.gService.showMessage('ERRO: Verifique se todos os campos estão preenchidos!', true);
     }
-
-
   }
 
   cancel(): void {
