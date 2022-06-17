@@ -68,6 +68,7 @@ main{
 }
 
 .table-responsive {
+  margin-top: -10px;
   height: 300px;
   overflow: hidden;
   overflow-y: scroll;
@@ -144,6 +145,21 @@ main{
   align-items: center;
 }
 
+.detalhes-name{
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: blue;
+  align-items: flex-start;
+}
+
+.harvest-title, .farm-title-table{
+  font-size: 20px;
+}
+
 header {
   margin-top: -20px;
   display: flex;
@@ -217,6 +233,17 @@ footer mat-card {
   align-items: flex-start;
 }
 
+.icons-temp{
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: blue;
+  align-items: flex-start;
+}
+
 .detalhes-name-temp{
   font-family: 'Mulish';
   font-style: normal;
@@ -226,4 +253,35 @@ footer mat-card {
   letter-spacing: 1px;
   color: blue;
   align-items: flex-start;
+}
+
+canvas{
+  width: 26vw;
+  height: 26vh
+}
+
+.material-symbols-outlined {
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 1px;
+  align-items: flex-start;
+  font-size: 34px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48,
+}
+
+.material-symbols-sharp {
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 1px;
+  align-items: flex-start;
+  font-size: 34px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
