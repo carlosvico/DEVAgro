@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Empresa } from 'src/app/components/empresa/empresa.model';
 import { EmpresaService } from 'src/app/components/empresa/empresa.service';
-import { Router } from '@angular/router';
-import { AuthGuard } from 'src/app/auth.guard';
 
 @Component({
   selector: 'app-login-view',
@@ -16,7 +15,7 @@ export class LoginViewComponent implements OnInit {
 
   empresa: Empresa;
 
-  constructor(private router: Router, auth: AuthGuard, private empresaService: EmpresaService) { }
+  constructor(private empresaService: EmpresaService, private router: Router) { }
 
   ngOnInit(): void {
   }

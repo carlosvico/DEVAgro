@@ -14,8 +14,8 @@ export class FazendaCreateComponent implements OnInit {
     name: '',
     endereco: '',
     grao: '',
-    previsaoColheita: '',
-    ultimaColheita: ''
+    ultimaColheita: '',
+    cidade: ''
   }
 
   constructor(private fazendaService: FazendaService, private router: Router) {}
@@ -46,6 +46,12 @@ export class FazendaCreateComponent implements OnInit {
         document.getElementById('ultimaColheita').classList.add('obrigatory');
       }else{
         document.getElementById('ultimaColheita').classList.remove('obrigatory');
+      }
+
+      if(this.fazenda.cidade.trim() === ''){
+        document.getElementById('cidade').classList.add('obrigatory');
+      }else{
+        document.getElementById('cidade').classList.remove('obrigatory');
       }
 
       return false;

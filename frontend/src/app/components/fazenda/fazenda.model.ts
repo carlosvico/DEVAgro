@@ -5,11 +5,5 @@ export interface Fazenda {
     estoque?: number
     ultimaColheita: string
     grao: string
-    previsaoColheita: string
-    /*
-    empresa?: {
-        id: number
-    }
-    */
+    cidade: string
 }
-

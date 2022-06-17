@@ -1,4 +1,3 @@
-import { AuthGuard } from './auth.guard';
 import { HomeViewComponent } from './views/home-view/home-view.component';
 import { LoginViewComponent } from './views/login-view/login-view.component';
 import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
@@ -18,7 +17,8 @@ import { FuncionarioDeleteComponent } from './components/funcionario/funcionario
 import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.component';
 import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
-import { AuthLoggedGuard } from './auth-logged.guard';
+import { AuthGuard } from './views/login-view/auth-guard.guard';
+import { AuthLoggedGuard } from './views/login-view/auth-logged.guard';
 
 const routes: Routes = [
   {
@@ -75,7 +75,6 @@ const routes: Routes = [
     path: 'fazenda/update/:id',
     component: FazendaUpdateComponent,
     canActivate: [AuthGuard]
-
   },
   {
     path: 'fazenda/delete/:id',
@@ -104,7 +103,8 @@ const routes: Routes = [
   },
   {
     path: 'empresa/create',
-    component: EmpresaCreateComponent
+    component: EmpresaCreateComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'home',
