@@ -1,10 +1,10 @@
 .create {
-  display: flex;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  justify-content: center;
-  background: #375F24;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background: #375F24;
 }
 
 .sign-up {
@@ -20,7 +20,7 @@
     flex-direction: column;
 }
 
-.logo-container{
+.logo-container {
     width: 100%;
     height: 69px;
 }
@@ -119,7 +119,7 @@ input[type=submit]:hover {
     box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
 }
 
-.icone{
+.icone {
     margin: 0;
     padding: 0;
     height: 20px;
@@ -133,7 +133,7 @@ input[type=submit]:hover {
     cursor: pointer;
 }
 
-.icone2{
+.icone2 {
     margin: 0;
     padding: 0;
     height: 20px;
@@ -147,7 +147,7 @@ input[type=submit]:hover {
     cursor: pointer;
 }
 
-.fa{
+.fa {
     font-size: 20px;
 }
 
@@ -156,4 +156,4 @@ input[type=submit]:hover {
     display: inline-block;
     animation: shakeX;
     animation-duration: 1s;
-  }
+}
