@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Grao } from '../../grao/grao.model';
+import { GraoService } from '../../grao/grao.service';
 import { Fazenda } from '../fazenda.model';
 import { FazendaService } from '../fazenda.service';
 
@@ -17,9 +19,15 @@ export class FazendaCreateComponent implements OnInit {
     ultimaColheita: ''
   }
 
-  constructor(private fazendaService: FazendaService, private router: Router) {}
+  graos: Grao[];
 
-  ngOnInit(): void {}
+  constructor(private fazendaService: FazendaService, private graoService: GraoService, private router: Router) {}
+
+  ngOnInit(): void {
+    this.graoService.read().subscribe(graos => {
+      this.graos = graos;
+    })
+  }
 
   validatorInputs(): boolean{
     if(this.fazenda.name.trim() === '' || this.fazenda.endereco.trim() === '' || this.fazenda.grao.trim() === '' || this.fazenda.ultimaColheita.trim() === ''){

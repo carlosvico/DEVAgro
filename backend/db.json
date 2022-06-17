@@ -28,8 +28,9 @@
   "fazendas": [
     {
       "name": "hfgdfgdhdfg",
-      "grao": "feijão",
+      "grao": "Feijão",
       "ultimaColheita": "12/12/2121",
+      "previsaoColheita": "01/01/2001",
       "endereco": "Rua do Diego, 6924",
       "id": 3
     },
@@ -37,6 +38,7 @@
       "name": "Fazenda Feliz",
       "grao": "Soja",
       "ultimaColheita": "01/01/1000",
+      "previsaoColheita": "01/01/2002",
       "endereco": "Rua Do Renan, 69",
       "id": 4
     },
@@ -45,6 +47,7 @@
       "endereco": "Rua Brasil",
       "grao": "Soja",
       "ultimaColheita": "12/12/2021",
+      "previsaoColheita": "01/01/2002",
       "id": 5
     },
     {
@@ -52,6 +55,7 @@
       "endereco": "Rua Uruguai",
       "grao": "Café",
       "ultimaColheita": "01/11/2021",
+      "previsaoColheita": "01/01/2003",
       "id": 6
     },
     {
@@ -59,7 +63,15 @@
       "endereco": "Rua das Gaivotas",
       "grao": "Milho",
       "ultimaColheita": "12/01/2022",
+      "previsaoColheita": "11/22/1212",
       "id": 7
+    },
+    {
+      "name": "fasdfsadfsda",
+      "endereco": "fsdafsadfsd",
+      "grao": "Milho",
+      "ultimaColheita": "01/01/2001",
+      "id": 8
     }
   ],
   "funcionarios": [
