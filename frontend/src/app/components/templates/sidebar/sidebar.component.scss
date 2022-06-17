@@ -83,3 +83,52 @@ left: 1px;
   position: absolute;
   left: 1px;
 }
+
+.top-icon {
+  width: 30px;
+  padding: 15px;
+}
+
+.top-icon i{
+  transform: scale(1.3);
+}
+
+.top-icon, .top-icon i {
+  display: none;
+}
+
+@media only screen and (max-width: 1090px) {
+  
+  .sidebar {
+    position: relative;
+  }
+
+  .ng-tns-c114-0 {
+    overflow: hidden;
+  }
+
+  .sidenav {
+    transition: width 1s ease;
+    pointer-events: auto;
+    width: 55px;
+  }
+
+  .active {
+    transition: width 1s ease;
+    pointer-events: auto;
+    width: 70%;
+  }
+
+  .sidenav i {
+    padding-left: 0px;
+  }
+
+  .top-icon, .top-icon i {
+    position: fixed;
+    cursor: pointer;
+    display: block;
+  }
+
+}
+
+

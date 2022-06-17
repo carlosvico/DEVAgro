@@ -20,8 +20,8 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th scope="col">Nome da Propriedade</th>
-              <th scope="col">Previsão de colheita</th>
+              <th class="farm-title-table" scope="col">Nome da Propriedade</th>
+              <th class="harvest-title" scope="col">Previsão de colheita</th>
             </tr>
           </thead>
           <tbody>
@@ -58,48 +58,47 @@
         </thead>
         <tbody>
           <!-- detalhes -->
-          <tr *ngFor="let fazenda of fazendas">
+          <tr>
             <td>
               <div class="detalhes-linha">
-                <div class="detalhes-content">
-                  <span class="detalhes-name-temp">{{ fazenda.name }}</span>
+                <div  *ngFor="let fazenda let weather of fazendas"class="detalhes-content">
+                  <span  class="detalhes-name-temp">{{ fazenda.name }}</span>
                 </div>
               </div>
             </td>
             <td>
-              <div class="detalhes-linha-temp">
-                <span class="numbers-temp">{{ weatherData.main.temp | number: '1.0-0'}}˚C</span>
+              <div *ngFor="let weather of weatherTemp" class="detalhes-linha-temp">
+                <span class="numbers-temp">{{ weather.main.temp| number: '1.0-0'}}˚C</span>
               </div>
             </td>
             <td>
-              <div class="detalhes-linha">
-                <span class="weather-icon">Teste<img src=""></span>
+              <div *ngFor="let weather of weatherIcon" class="detalhes-linha">
+                <div *ngIf="weather == 'Clouds'">
+                  <span class="material-symbols-outlined">
+                    cloud
+                  </span>
+                </div>
+                <div *ngIf="weather == 'Clear'">
+                  <span class="material-symbols-sharp">
+                    clear_day
+                  </span>
+                </div>
+                <div *ngIf="weather == 'Rain'">
+                  <span class="material-symbols-sharp">
+                    rainy
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
         </tbody>
       </table>
-    </div>
-
-
-
-
-    <!-- <span class="farm-title">Previsão do tempo propriedades</span>
-    <tr *ngFor="let fazenda of fazendas">
-      <td>
-        <div class="detalhes-linha">
-          <div class="detalhes-content">
-            <span class="temperatura-name">{{ fazenda.name }}</span>
-            <span class="numbers">{{ weatherData.main.temp | number: '1.0-0'}}˚C</span>
-            <span class="weather-icon">Teste<img src=""></span>
-          </div>
-        </div>
-      </td>
-    </tr> -->
-    
+    </div>    
   </mat-card>
   <mat-card class="card4">
     <span class="farm-title">Estoque de grãos</span>
-    <span class="numbers">38</span>
+    <div class="graphic">
+      <canvas #graintGraphic></canvas>
+    </div>
   </mat-card>
 </footer>

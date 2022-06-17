@@ -14,6 +14,16 @@ export class EmpresaService {
 
   constructor(private http: HttpClient, private snackBar: MatSnackBar) { }
 
+  create(empresa: Empresa): Observable<Empresa> {
+    return this.http.post<Empresa>(this.baseUrl, empresa);
+  }
+
+  read(): Observable<Empresa[]>{
+    return this.http.get<Empresa[]>(this.baseUrl).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
+  } 
 
   showMessage(msg: string, isError: boolean = false): void{
     this.snackBar.open(msg, 'X', {
@@ -24,24 +34,8 @@ export class EmpresaService {
     })
   }
 
-  create(empresa: Empresa): Observable<Empresa> {
-    return this.http.post<Empresa>(this.baseUrl, empresa).pipe(
-      map((obj) => obj),
-      catchError((e) => this.errorHandler(e)));
-  }
-
-  read(): Observable<Empresa[]> {
-    return this.http.get<Empresa[]>(this.baseUrl).pipe(
-      map((obj) => obj),
-      catchError((e) => this.errorHandler(e))
-    );
-  }
-  
   errorHandler(e: any): Observable<any> {
     this.showMessage('Ocorreu um erro!', true);
     return EMPTY;
   }
- }
-  
-
-
+}
