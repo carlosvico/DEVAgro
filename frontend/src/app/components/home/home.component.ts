@@ -81,7 +81,7 @@ export class HomeComponent implements OnInit{
           ]
         },
         options: {
-          backgroundColor: '#066610',
+          backgroundColor: '#066610'
         }
       });
     }, 2000);
