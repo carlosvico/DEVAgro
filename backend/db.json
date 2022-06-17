@@ -134,6 +134,30 @@
       "endereco": "Rua Joaquim Coelho de Arruda",
       "senha": "123456",
       "id": 2
+    },
+    {
+      "nome": "",
+      "email": "",
+      "cnpj": "",
+      "endereco": "",
+      "senha": "",
+      "id": 3
+    },
+    {
+      "nome": "",
+      "email": "",
+      "cnpj": "",
+      "endereco": "",
+      "senha": "",
+      "id": 4
+    },
+    {
+      "nome": "",
+      "email": "",
+      "cnpj": "",
+      "endereco": "",
+      "senha": "",
+      "id": 5
     }
   ]
 }
