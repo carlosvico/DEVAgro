@@ -5,9 +5,4 @@ export interface Grao {
     informacoes: string
     fazenda?: string
     ativo:boolean
-    // fazenda: {
-    //     id: number
-    // }
-
-
 }
