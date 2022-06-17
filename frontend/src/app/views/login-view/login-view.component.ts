@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Empresa } from 'src/app/components/empresa/empresa.model';
 
 @Component({
   selector: 'app-login-view',
@@ -9,6 +10,8 @@ export class LoginViewComponent implements OnInit {
 
   passwordType: string = 'password';
   passwordShow: boolean = false;
+
+  empresa: Empresa;
 
   constructor() { }
 
@@ -24,5 +27,8 @@ export class LoginViewComponent implements OnInit {
       this.passwordShow = true;
       this.passwordType = 'text';
     }
+  }
+
+  login() {
   }
 }

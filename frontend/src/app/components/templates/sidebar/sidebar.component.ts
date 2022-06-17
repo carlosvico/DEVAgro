@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+  responsive: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  callSideNav(): void {
+    if(this.responsive === true){
+      this.responsive = false;
+    }else{
+      this.responsive = true;
+    }
   }
 
 }

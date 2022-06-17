@@ -1,5 +1,5 @@
 .read {
-  height: 80vh;
+  height: 740px;
   margin: 0 35px 0 35px;
   border: 2px solid #DFE0EB;
   border-radius: 8px;
@@ -183,11 +183,67 @@ footer {
   width: 100%;
 }
 
-.modal-options {
-  position: absolute;
-  padding-right: 13px;
-  padding-left: 5px;
-  background: #E5E5E5;
-  border: 1px solid #9FA2B4;
-  border-radius: 8px;
+@media only screen and (max-width: 1090px) {
+
+  .read{
+    margin: 0;
+    height: 70vh;
+  }
+
+  .read header {
+    line-height: 24px;
+    margin: 15px;
+    display: inline;
+  }
+
+  .read header .title h3 {
+    width: 100%; 
+  }
+
+  .read header .filters {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .read header .filters .filter {
+    margin-left: 15px;
+  }
+
+  .button-add {
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+
+  .table-responsive {
+    height: 450px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr{
+    display: none;
+  }
+
+  tr {
+    border-top: 1px solid #252733;
+    border-bottom: 1px solid #252733;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    height: 70px;
+  }
+
+  .detalhes-linha {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer span {
+    padding-left: 85px;
+  }
+  
 }
