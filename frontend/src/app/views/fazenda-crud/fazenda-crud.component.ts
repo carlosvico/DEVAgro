@@ -5,18 +5,15 @@ import { HeaderService } from 'src/app/components/templates/header/header.servic
 @Component({
   selector: 'app-fazenda-crud',
   templateUrl: './fazenda-crud.component.html',
-  styleUrls: ['./fazenda-crud.component.scss']
+  styleUrls: ['./fazenda-crud.component.scss'],
 })
 export class FazendaCrudComponent implements OnInit {
-
-  constructor(private router: Router, private headerService: HeaderService) { 
+  constructor(private router: Router, private headerService: HeaderService) {
     headerService.headerData = {
       title: 'Fazenda',
-      routeUrl: '/fazenda'
-    }
+      routeUrl: '/fazenda',
+    };
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { /* TODO document why this method 'ngOnInit' is empty */ }
 }

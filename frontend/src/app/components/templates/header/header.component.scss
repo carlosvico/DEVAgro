@@ -1,12 +1,12 @@
-header{
-  background-color: #E5E5E5;
+header {
+  background-color: #e5e5e5;
   height: 128px;
   width: 95vw;
   display: flex;
   justify-content: space-between;
 }
 
-.title{
+.title {
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -17,11 +17,11 @@ header{
 
 .vertical {
   width: 0px;
-  border: 1px solid #DFE0EB;
+  border: 1px solid #dfe0eb;
   height: 32px;
   margin-right: 60px;
 }
-.span-profile{
+.span-profile {
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
@@ -29,9 +29,9 @@ header{
   letter-spacing: 0.2px;
   color: #222222;
 }
-.border-img{
+.border-img {
   padding: 2px;
-  border: 2px solid #DFE0EB;
+  border: 2px solid #dfe0eb;
   border-radius: 100%;
   min-width: 55px;
   min-height: 55px;
@@ -40,26 +40,26 @@ header{
   justify-content: center;
   align-items: center;
 }
-.img-profile{
+.img-profile {
   border-radius: 100%;
   max-width: 50px;
   max-height: 50px;
 }
 
-.div-left{
+.div-left {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left:285px ;
+  margin-left: 285px;
 }
 
-.div-right{
+.div-right {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right:70px ;
+  margin-right: 70px;
 }
 
 a {
@@ -70,13 +70,12 @@ a:hover {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 1090px){
-  
+@media only screen and (max-width: 1090px) {
   header {
     width: 100%;
     position: relative;
   }
-  
+
   .div-left {
     transition: margin-left 1s ease;
     margin-left: 70px;
@@ -95,7 +94,7 @@ a:hover {
     display: none;
   }
 
-  .border-img{
+  .border-img {
     min-width: 45px;
     min-height: 45px;
   }
@@ -105,7 +104,8 @@ a:hover {
     max-height: 40px;
   }
 
-  .border-img, .img-profile{
+  .border-img,
+  .img-profile {
     cursor: pointer;
   }
 }
