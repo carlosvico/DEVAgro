@@ -41,6 +41,7 @@ export class LoginViewComponent implements OnInit {
         if(this.empresa.senha === password.value.trim()){
           this.router.navigate(['/home']);
           localStorage.setItem('status', 'logged');
+          localStorage.setItem('company_name', this.empresa.nome)
           location.reload();
         } else {
           this.empresaService.showMessage('ERROR: Senha incorreta!', true);

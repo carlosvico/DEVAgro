@@ -23,6 +23,7 @@ export class SidebarComponent implements OnInit {
   logout(){
     localStorage.removeItem('status');	
     localStorage.removeItem('login');
+    localStorage.removeItem('company_name');
     location.reload();
   }
 }
