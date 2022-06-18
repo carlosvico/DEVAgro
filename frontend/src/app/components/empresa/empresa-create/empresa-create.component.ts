@@ -155,7 +155,7 @@ export class EmpresaCreateComponent implements OnInit {
   }
 
   private validateCnpj(cnpj: string): boolean {
-    var cnpjRegex = /^\d{15}$/;
+    var cnpjRegex = /^\d{14}$/;
     if (!cnpjRegex.test(cnpj)) {
       return false;
     }
