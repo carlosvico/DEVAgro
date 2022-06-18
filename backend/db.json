@@ -177,6 +177,14 @@
       "endereco": "Rua Uruguai",
       "senha": "123456",
       "id": 6
+    },
+    {
+      "nome": "Joealma Administração de Fazendas Ltda",
+      "email": "barbosa@12345",
+      "cnpj": "66555222333399",
+      "endereco": "Rua da Base",
+      "senha": "123456",
+      "id": 7
     }
   ]
 }

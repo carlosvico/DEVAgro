@@ -98,6 +98,12 @@ export class FuncionarioCreateComponent implements OnInit {
 
   createFuncionario(): void {
     if (this.validatorInputs() === true) {
+
+      if (!this.validateCpf(this.funcionario.cpf.trim())) {
+        this.funcionarioService.showMessage('Formato de CPF inválido', true);
+        throw new Error('Formato de CPF inválido');
+      }
+
       this.funcionario.data = new Date(Date.now()).toLocaleDateString();
       this.funcionario.update = this.funcionario.data;
       this.funcionarioService.create(this.funcionario).subscribe(() => {
@@ -114,5 +120,13 @@ export class FuncionarioCreateComponent implements OnInit {
 
   cancel(): void {
     this.router.navigate(['/funcionario']);
+  }
+
+  private validateCpf(cpf: string): boolean {
+    var cpfRegex = /^\d{11}$/;
+    if (!cpfRegex.test(cpf)) {
+      return false;
+    }
+    return true;
   }
 }
