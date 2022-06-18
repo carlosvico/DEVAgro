@@ -14,11 +14,9 @@
       </div>
     </section>
   </header>
-
   <main>
     <div class="table-responsive">
       <table class="table table-hover">
-
         <thead>
           <tr>
             <th scope="col">Nome da Propriedade</th>
@@ -51,7 +49,7 @@
             <!-- cargo -->
             <td>
               <div class="detalhes-linha">
-                <span class="title-min" >Grão - </span>
+                <span class="title-min">Grão - </span>
                 <span class="detalhes-name">{{ fazenda.grao }}</span>
               </div>
             </td>
@@ -59,29 +57,35 @@
             <td>
               <div class="detalhes-linha">
                 <span class="title-min">Previsão de Colheita - </span>
-                <span class="detalhes-name">{{ fazenda.previsaoColheita }}</span>
+                <span class="detalhes-name">{{
+                  fazenda.previsaoColheita
+                }}</span>
               </div>
             </td>
 
             <td>
               <div class="detalhes-linha">
-                <div class="icone" routerLink="/fazenda/update/{{ fazenda.id }}">
+                <div
+                  class="icone"
+                  routerLink="/fazenda/update/{{ fazenda.id }}"
+                >
                   <mat-icon>edit</mat-icon>
                 </div>
-                <div class="icone" routerLink="/fazenda/delete/{{ fazenda.id }}">
+                <div
+                  class="icone"
+                  routerLink="/fazenda/delete/{{ fazenda.id }}"
+                >
                   <mat-icon>delete</mat-icon>
                 </div>
               </div>
+            </td>
           </tr>
         </tbody>
-
       </table>
     </div>
   </main>
 
-  <div class="button-add" routerLink="/fazenda/create">
-    +
-  </div>
+  <div class="button-add" routerLink="/fazenda/create">+</div>
 
   <footer>
     <div class="footer-text">

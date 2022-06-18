@@ -8,42 +8,51 @@ import { Grao } from '../grao.model';
 @Component({
   selector: 'app-grao-update',
   templateUrl: './grao-update.component.html',
-  styleUrls: ['./grao-update.component.scss']
+  styleUrls: ['./grao-update.component.scss'],
 })
 export class GraoUpdateComponent implements OnInit {
-
   graos: Grao;
-  fazendas: Fazenda [];
+  fazendas: Fazenda[];
   oldFarm: Fazenda;
 
-  constructor(private gService: GraoService, private router:Router, private route: ActivatedRoute, private fazendaService: FazendaService) { }
+  constructor(
+    private gService: GraoService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private fazendaService: FazendaService
+  ) {}
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.gService.readById(id).subscribe(funcionario => {
+    this.gService.readById(id).subscribe((funcionario) => {
       this.graos = funcionario;
     });
-    this.fazendaService.read().subscribe(fazendas => {
-      this.oldFarm = fazendas.find(f => f.name === this.graos.fazenda)
+    this.fazendaService.read().subscribe((fazendas) => {
+      this.oldFarm = fazendas.find((f) => f.name === this.graos.fazenda);
       this.fazendas = fazendas;
     });
   }
 
   isActive(event): void {
-    if(event.target.checked){
+    if (event.target.checked) {
       this.graos.ativo = true;
-    }else{
+    } else {
       this.graos.ativo = false;
     }
   }
 
-  changeFarm(){
+  changeFarm() {
     this.graos.fazenda = document.querySelector('select').value;
     console.log(this.graos);
   }
 
   validatorInputs(): boolean {
-    if (this.graos.nome.trim() === '' || this.graos.previsao_colheita.trim() === '' || this.graos.informacoes.trim() === '' || this.graos.fazenda.trim() === '') {
+    if (
+      this.graos.nome.trim() === '' ||
+      this.graos.previsao_colheita.trim() === '' ||
+      this.graos.informacoes.trim() === '' ||
+      this.graos.fazenda.trim() === ''
+    ) {
       if (this.graos.nome.trim() === '') {
         document.getElementById('nome').classList.add('obrigatory');
       } else {
@@ -53,7 +62,9 @@ export class GraoUpdateComponent implements OnInit {
       if (this.graos.previsao_colheita.trim() === '') {
         document.getElementById('previsaoColheita').classList.add('obrigatory');
       } else {
-        document.getElementById('previsaoColheita').classList.remove('obrigatory');
+        document
+          .getElementById('previsaoColheita')
+          .classList.remove('obrigatory');
       }
 
       if (this.graos.informacoes.trim() === '') {
@@ -73,18 +84,20 @@ export class GraoUpdateComponent implements OnInit {
     }
   }
   updateGrao(): void {
-
-    if(this.validatorInputs() === true){
+    if (this.validatorInputs() === true) {
       this.gService.update(this.graos).subscribe(() => {
         this.gService.showMessage('Grão Alterado com Sucesso!');
-        this.router.navigate(["/grao"]);
-      })
-    }else{
-      this.gService.showMessage('ERRO: Verifique se todos os campos estão preenchidos!', true);
+        this.router.navigate(['/grao']);
+      });
+    } else {
+      this.gService.showMessage(
+        'ERRO: Verifique se todos os campos estão preenchidos!',
+        true
+      );
     }
   }
 
   cancel(): void {
-    this.router.navigate(['/grao'])
+    this.router.navigate(['/grao']);
   }
 }

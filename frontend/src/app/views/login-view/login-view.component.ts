@@ -16,7 +16,9 @@ export class LoginViewComponent implements OnInit {
 
   constructor(private empresaService: EmpresaService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    /* TODO document why this method 'ngOnInit' is empty */
+  }
 
   togglePassword() {
     if (this.passwordShow) {

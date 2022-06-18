@@ -3,38 +3,73 @@
     <form>
       <div class="input-fields">
         <label class="descricao-input">NOME</label>
-        <input type="text" id="nome" name="nome" class="input-field" placeholder="Nome do Grão" [(ngModel)]="graos.nome" required>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          class="input-field"
+          placeholder="Nome do Grão"
+          [(ngModel)]="graos.nome"
+          required
+        />
       </div>
 
       <div class="input-fields">
         <label class="descricao-input">FAZENDA QUE PRODUZ</label>
-        <select class="input-field" id="fazenda" placeholder="Endereço da Fazenda"  (change)="changeGrain()" required>
+        <select
+          class="input-field"
+          id="fazenda"
+          placeholder="Endereço da Fazenda"
+          (change)="changeGrain()"
+          required
+        >
           <option value="" selected hidden>-- Selecione uma Fazenda --</option>
-          <option *ngFor="let fazenda of fazendas" [value]="fazenda.name">{{fazenda.name}}</option>
+          <option *ngFor="let fazenda of fazendas" [value]="fazenda.name">
+            {{ fazenda.name }}
+          </option>
         </select>
       </div>
 
       <div class="input-fields">
         <label class="descricao-input">PREVISÃO DE COLHEITA</label>
-        <input type="text" id="previsaoColheita" name="grao" class="input-field" placeholder="dd/mm/aaaa" [(ngModel)]="graos.previsao_colheita" required>
+        <input
+          type="text"
+          id="previsaoColheita"
+          name="grao"
+          class="input-field"
+          placeholder="dd/mm/aaaa"
+          [(ngModel)]="graos.previsao_colheita"
+          required
+        />
       </div>
 
       <div class="input-fields">
         <label class="descricao-input">INFORMAÇÕES ADICIONAIS</label>
-        <input type="text" id="informacoes" name="ultimaColheita" class="input-field" placeholder="informações" [(ngModel)]="graos.informacoes" required>
+        <input
+          type="text"
+          id="informacoes"
+          name="ultimaColheita"
+          class="input-field"
+          placeholder="informações"
+          [(ngModel)]="graos.informacoes"
+          required
+        />
       </div>
 
       <!-- Switch-toggle -->
       <div class="switch-toggle">
         <label class="descricao-input">ATIVO</label>
         <label class="switch">
-          <input type="checkbox" id="ativo" (change)="isActive($event)" [attr.checked]="graos.ativo ? true: null">
+          <input
+            type="checkbox"
+            id="ativo"
+            (change)="isActive($event)"
+            [attr.checked]="graos.ativo ? true : null"
+          />
           <span class="slider round"></span>
         </label>
       </div>
-
     </form>
-
   </mat-card>
   <mat-card class="button-position">
     <button mat-raised-button (click)="criaGrao()">CADASTRAR</button>

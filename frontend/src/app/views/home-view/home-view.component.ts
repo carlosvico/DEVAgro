@@ -5,18 +5,15 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home-view',
   templateUrl: './home-view.component.html',
-  styleUrls: ['./home-view.component.scss']
+  styleUrls: ['./home-view.component.scss'],
 })
 export class HomeViewComponent implements OnInit {
-
-  constructor(private router: Router, private headerService: HeaderService) { 
+  constructor(private router: Router, private headerService: HeaderService) {
     headerService.headerData = {
       title: 'Início',
-      routeUrl: '/home'
-    }
+      routeUrl: '/home',
+    };
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { /* TODO document why this method 'ngOnInit' is empty */ }
 }

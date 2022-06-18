@@ -5,18 +5,15 @@ import { HeaderService } from 'src/app/components/templates/header/header.servic
 @Component({
   selector: 'app-grao-crud',
   templateUrl: './grao-crud.component.html',
-  styleUrls: ['./grao-crud.component.scss']
+  styleUrls: ['./grao-crud.component.scss'],
 })
 export class GraoCrudComponent implements OnInit {
-
-  constructor(private router: Router, private headerService: HeaderService) { 
+  constructor(private router: Router, private headerService: HeaderService) {
     headerService.headerData = {
       title: 'Grão',
-      routeUrl: '/grao'
-    }
+      routeUrl: '/grao',
+    };
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { /* TODO document why this method 'ngOnInit' is empty */ }
 }

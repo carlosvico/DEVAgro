@@ -54,46 +54,47 @@
     <span class="farm-title-temp">Previsão do tempo propriedades</span>
     <div class="table-responsive-temp">
       <table class="table table-hover">
-        <thead>
-        </thead>
+        <thead></thead>
         <tbody>
           <!-- detalhes -->
           <tr>
             <td>
               <div class="detalhes-linha">
-                <div  *ngFor="let fazenda let weather of fazendas"class="detalhes-content">
-                  <span  class="detalhes-name-temp">{{ fazenda.name }}</span>
+                <div
+                  *ngFor="let fazenda; let weather; of: fazendas"
+                  class="detalhes-content"
+                >
+                  <span class="detalhes-name-temp">{{ fazenda.name }}</span>
                 </div>
               </div>
             </td>
             <td>
-              <div *ngFor="let weather of weatherTemp" class="detalhes-linha-temp">
-                <span class="numbers-temp">{{ weather.main.temp| number: '1.0-0'}}˚C</span>
+              <div
+                *ngFor="let weather of weatherTemp"
+                class="detalhes-linha-temp"
+              >
+                <span class="numbers-temp"
+                  >{{ weather.main.temp | number: "1.0-0" }}˚C</span
+                >
               </div>
             </td>
             <td>
               <div *ngFor="let weather of weatherIcon" class="detalhes-linha">
                 <div *ngIf="weather == 'Clouds'">
-                  <span class="material-symbols-outlined">
-                    cloud
-                  </span>
+                  <span class="material-symbols-outlined"> cloud </span>
                 </div>
                 <div *ngIf="weather == 'Clear'">
-                  <span class="material-symbols-sharp">
-                    clear_day
-                  </span>
+                  <span class="material-symbols-sharp"> clear_day </span>
                 </div>
                 <div *ngIf="weather == 'Rain'">
-                  <span class="material-symbols-sharp">
-                    rainy
-                  </span>
+                  <span class="material-symbols-sharp"> rainy </span>
                 </div>
               </div>
             </td>
           </tr>
         </tbody>
       </table>
-    </div>    
+    </div>
   </mat-card>
   <mat-card class="card4">
     <span class="farm-title">Estoque de grãos</span>

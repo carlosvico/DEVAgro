@@ -10,14 +10,16 @@ import Chart from 'chart.js/auto';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit{
-  
-  @ViewChild("graintGraphic", {static: true}) elementGraphic: ElementRef;
+export class HomeComponent implements OnInit {
+  @ViewChild('graintGraphic', { static: true }) elementGraphic: ElementRef;
 
-  constructor( private fazendaService: FazendaService, 
-    private funcionarioService: FuncionarioService, private weatherService: HomeService) {}
+  constructor(
+    private fazendaService: FazendaService,
+    private funcionarioService: FuncionarioService,
+    private weatherService: HomeService
+  ) {}
 
   fazendas: Fazenda[];
   funcionarios: Funcionario[];
@@ -28,46 +30,43 @@ export class HomeComponent implements OnInit{
   graintGraphicQuantity: number[] = [];
 
   ngOnInit(): void {
-    this.fazendaService.read().subscribe(fazendas => {
+    this.fazendaService.read().subscribe((fazendas) => {
       this.fazendas = fazendas;
-    })
+    });
 
-    this.funcionarioService.read().subscribe(funcionario => {
+    this.funcionarioService.read().subscribe((funcionario) => {
       this.funcionarios = funcionario;
-    })
+    });
 
-    this.fazendaService.read().subscribe(fazendas => {
+    this.fazendaService.read().subscribe((fazendas) => {
       fazendas.forEach((name) => {
         this.graintGraphicName.push(name.grao);
         console.log(this.graintGraphicName);
-        
-      })
-    })
-
-    this.fazendaService.read().subscribe(fazendas => {
-        fazendas.forEach((inventory) => {
-          this.graintGraphicQuantity.push(inventory.estoque);
-        console.log(this.graintGraphicQuantity);
-                
       });
-    })
+    });
+
+    this.fazendaService.read().subscribe((fazendas) => {
+      fazendas.forEach((inventory) => {
+        this.graintGraphicQuantity.push(inventory.estoque);
+        console.log(this.graintGraphicQuantity);
+      });
+    });
 
     setTimeout(() => {
-    this.fazendaService.read().subscribe(fazendaName => {
-      fazendaName.forEach(fazenda => {
-        this.weatherService.getWeatherData(fazenda.cidade)
-        .subscribe({
-          next: (response) => {
-            this.weatherData = response;
-            this.weatherTemp.push(response);
-            response.weather.forEach((w) => {
-            this.weatherIcon.push(w.main);
-            console.log(w.main);
-            })
-          }
+      this.fazendaService.read().subscribe((fazendaName) => {
+        fazendaName.forEach((fazenda) => {
+          this.weatherService.getWeatherData(fazenda.cidade).subscribe({
+            next: (response) => {
+              this.weatherData = response;
+              this.weatherTemp.push(response);
+              response.weather.forEach((w) => {
+                this.weatherIcon.push(w.main);
+                console.log(w.main);
+              });
+            },
+          });
         });
-      })
-    })
+      });
 
       new Chart(this.elementGraphic.nativeElement, {
         type: 'bar',
@@ -76,13 +75,13 @@ export class HomeComponent implements OnInit{
           datasets: [
             {
               label: 'Toneladas',
-              data: this.graintGraphicQuantity
+              data: this.graintGraphicQuantity,
             },
-          ]
+          ],
         },
         options: {
-          backgroundColor: '#066610'
-        }
+          backgroundColor: '#066610',
+        },
       });
     }, 2000);
   }
