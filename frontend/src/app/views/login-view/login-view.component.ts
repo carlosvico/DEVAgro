@@ -6,21 +6,18 @@ import { EmpresaService } from 'src/app/components/empresa/empresa.service';
 @Component({
   selector: 'app-login-view',
   templateUrl: './login-view.component.html',
-  styleUrls: ['./login-view.component.scss']
+  styleUrls: ['./login-view.component.scss'],
 })
 export class LoginViewComponent implements OnInit {
-
   passwordType: string = 'password';
   passwordShow: boolean = false;
 
   empresa: Empresa;
 
-  constructor(private empresaService: EmpresaService, private router: Router) { }
+  constructor(private empresaService: EmpresaService, private router: Router) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  // ========== MÉTODOS ==========
   togglePassword() {
     if (this.passwordShow) {
       this.passwordShow = false;
@@ -34,20 +31,20 @@ export class LoginViewComponent implements OnInit {
   login() {
     let email = document.getElementById('email') as HTMLInputElement;
     let password = document.getElementById('senha') as HTMLInputElement;
-    this.empresaService.read().subscribe(empresas => {
-      if(empresas.find(e => e.email == email.value.trim())){
-        this.empresa = empresas.find(e => e.email === email.value.trim());
-        if(this.empresa.senha === password.value.trim()){
+    this.empresaService.read().subscribe((empresas) => {
+      if (empresas.find((e) => e.email == email.value.trim())) {
+        this.empresa = empresas.find((e) => e.email === email.value.trim());
+        if (this.empresa.senha === password.value.trim()) {
           localStorage.setItem('login', 'true');
           this.router.navigate(['/home']);
           localStorage.setItem('status', 'logged');
           location.reload();
-        }else{
+        } else {
           this.empresaService.showMessage('ERROR: Senha incorreta!', true);
         }
-      }else{
+      } else {
         this.empresaService.showMessage('ERROR: Email não cadastrado!', true);
       }
-    })
+    });
   }
 }

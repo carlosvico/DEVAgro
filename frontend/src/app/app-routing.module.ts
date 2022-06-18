@@ -3,7 +3,7 @@ import { LoginViewComponent } from './views/login-view/login-view.component';
 import { FuncionarioCrudComponent } from './views/funcionario-crud/funcionario-crud.component';
 import { EmpresaCreateComponent } from './components/empresa/empresa-create/empresa-create.component';
 import { GraoCreateComponent } from './components/grao/grao-create/grao-create.component';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FazendaCreateComponent } from './components/fazenda/fazenda-create/fazenda-create.component';
 import { FazendaDeleteComponent } from './components/fazenda/fazenda-delete/fazenda-delete.component';
@@ -24,101 +24,101 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'login',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'login',
     component: LoginViewComponent,
-    canActivate: [AuthLoggedGuard]
+    canActivate: [AuthLoggedGuard],
   },
   {
     path: 'singup',
     component: EmpresaCreateComponent,
-    canActivate: [AuthLoggedGuard]
+    canActivate: [AuthLoggedGuard],
   },
   {
     path: 'funcionario',
     component: FuncionarioCrudComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'funcionario/read',
     component: FuncionarioReadComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'funcionario/create',
     component: FuncionarioCreateComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'funcionario/update/:id',
     component: FuncionarioUpdateComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'funcionario/delete/:id',
     component: FuncionarioDeleteComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'fazenda',
     component: FazendaCrudComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'fazenda/create',
     component: FazendaCreateComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'fazenda/update/:id',
     component: FazendaUpdateComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'fazenda/delete/:id',
     component: FazendaDeleteComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'grao',
     component: GraoCrudComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'grao/create',
     component: GraoCreateComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'grao/update/:id',
     component: GraoUpdateComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'grao/delete/:id',
     component: GraoDeleteComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'empresa/create',
     component: EmpresaCreateComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'home',
     component: HomeViewComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: '**',
-    component:NotFoundComponent
-  }
+    component: NotFoundComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
