@@ -17,17 +17,10 @@
       "id": 7
     },
     {
-<<<<<<< HEAD
-      "nome": "Café",
-      "previsao_colheita": "31/04/2023",
-      "informacoes": "Café",
-      "fazenda": "Fazenda Santa Helena",
-=======
       "nome": "Feijão",
       "previsao_colheita": "17/06/2022",
       "informacoes": "CU",
       "fazenda": "Fazenda de Dentro",
->>>>>>> e02a383efc88347dba185bd1f67acfac40b4db70
       "ativo": true,
       "id": 8
     }
