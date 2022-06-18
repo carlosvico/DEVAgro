@@ -6,7 +6,7 @@
       "previsao_colheita": "29/11/2022",
       "informacoes": "Tipo 1 ",
       "fazenda": "Fazenda do Amaral",
-      "ativo": false
+      "ativo": true
     },
     {
       "nome": "Milho",

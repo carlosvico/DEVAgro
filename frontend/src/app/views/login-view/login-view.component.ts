@@ -30,14 +30,15 @@ export class LoginViewComponent implements OnInit {
     }
   }
 
+  //validaCampos():boolean 
+
   login() {
     let email = document.getElementById('email') as HTMLInputElement;
     let password = document.getElementById('senha') as HTMLInputElement;
-    this.empresaService.read().subscribe((empresas) => {
-      if (empresas.find((e) => e.email == email.value.trim())) {
-        this.empresa = empresas.find((e) => e.email === email.value.trim());
-        if (this.empresa.senha === password.value.trim()) {
-          localStorage.setItem('login', 'true');
+    this.empresaService.read().subscribe(empresas => {
+      if(empresas.find(e => e.email == email.value.trim())){
+        this.empresa = empresas.find(e => e.email === email.value.trim());
+        if(this.empresa.senha === password.value.trim()){
           this.router.navigate(['/home']);
           localStorage.setItem('status', 'logged');
           location.reload();

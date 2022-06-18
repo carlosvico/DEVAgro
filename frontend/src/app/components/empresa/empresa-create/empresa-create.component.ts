@@ -21,10 +21,9 @@ export class EmpresaCreateComponent implements OnInit {
     email: '',
     cnpj: '',
     endereco: '',
-    senha: '',
-  };
-
-  constructor(private empresaService: EmpresaService, private router: Router) {}
+    senha: ''
+  }
+  constructor(private empresaService: EmpresaService, private router: Router) { }
 
   ngOnInit(): void {
     this.empresaService.read().subscribe((empresas) => {

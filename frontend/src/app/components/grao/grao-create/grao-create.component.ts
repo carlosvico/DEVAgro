@@ -11,7 +11,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grao-create.component.scss'],
 })
 export class GraoCreateComponent implements OnInit {
-  fazendas: Fazenda[] = [];
+
+  fazendas: Fazenda[]
   graos: Grao = {
     nome: '',
     previsao_colheita: '',

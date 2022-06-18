@@ -3,7 +3,7 @@
     [disableClose]="true"
     class="sidenav {{ responsive ? 'active' : '' }}"
     mode="side"
-    opened
+farm-title-    opened
     fixedInViewport="true"
   >
     <a mat-list-item (click)="callSideNav()" class="top-icon">
@@ -30,7 +30,13 @@
         <i class="material-icons"> grain </i>
         Grão </a
       ><br />
+      <a mat-list-item (click)="logout()" class="bottom-icon">
+        <span class="material-symbols-outlined">
+          logout
+        </span>
+      Log out</a>
     </mat-nav-list>
+
   </mat-sidenav>
   <mat-sidenav-content class="content">
     <router-outlet></router-outlet>
