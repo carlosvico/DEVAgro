@@ -6,18 +6,16 @@ import { EmpresaService } from './components/empresa/empresa.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-
 export class AppComponent implements OnInit {
-
   title = 'frontend';
   @Input() headerTitle: string = 'Inicio';
 
   empresa: Empresa;
   logged: boolean;
 
-  constructor(private empresaService: EmpresaService, private router: Router) { }
+  constructor(private empresaService: EmpresaService, private router: Router) {}
 
   ngOnInit(): void {
     if (localStorage.getItem('login') == 'true') {

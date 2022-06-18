@@ -1,29 +1,57 @@
-
 <mat-card class="update">
   <form>
     <div class="input-fields">
       <label class="descricao-input">NOME</label>
-      <input type="text" name="nome" id="nome" class="input-field" [(ngModel)]="graos.nome">
+      <input
+        type="text"
+        name="nome"
+        id="nome"
+        class="input-field"
+        [(ngModel)]="graos.nome"
+      />
     </div>
     <div class="select-fields">
       <label class="descricao-input" id="fazenda">FAZENDA</label>
-      <select class="select-field" (change)="changeFarm   ()">
-        <option *ngFor="let fazenda of fazendas" value="{{ fazenda.name }}" [attr.selected]="(graos.nome === graos.fazenda) ? true: null">{{ fazenda.name }}</option>
+      <select class="select-field" (change)="changeFarm()">
+        <option
+          *ngFor="let fazenda of fazendas"
+          value="{{ fazenda.name }}"
+          [attr.selected]="graos.nome === graos.fazenda ? true : null"
+        >
+          {{ fazenda.name }}
+        </option>
       </select>
     </div>
     <div class="input-fields">
       <label class="descricao-input">INFORMAÇÕES ADICIONAIS</label>
-      <input type="text" name="funcao" class="input-field" id="informacoes" [(ngModel)]="graos.informacoes">
+      <input
+        type="text"
+        name="funcao"
+        class="input-field"
+        id="informacoes"
+        [(ngModel)]="graos.informacoes"
+      />
     </div>
     <div class="input-fields">
       <label class="descricao-input">PREVISÃO DE COLHEITA</label>
-      <input type="text" name="previsao" id="nome" class="input-field" [(ngModel)]="graos.previsao_colheita">
+      <input
+        type="text"
+        name="previsao"
+        id="nome"
+        class="input-field"
+        [(ngModel)]="graos.previsao_colheita"
+      />
     </div>
 
     <div class="switch-toggle">
       <label class="descricao-input">ATIVO</label>
       <label class="switch">
-        <input type="checkbox" id="ativo" (change)="isActive($event)" [attr.checked]="graos.ativo ? true: null">
+        <input
+          type="checkbox"
+          id="ativo"
+          (change)="isActive($event)"
+          [attr.checked]="graos.ativo ? true : null"
+        />
         <span class="slider round"></span>
       </label>
     </div>

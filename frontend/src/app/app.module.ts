@@ -44,7 +44,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FazendaCrudComponent } from './views/fazenda-crud/fazenda-crud.component';
 
-import { SidebarComponent } from "./components/templates/sidebar/sidebar.component";
+import { SidebarComponent } from './components/templates/sidebar/sidebar.component';
 import { HeaderComponent } from './components/templates/header/header.component';
 import { LoginViewComponent } from './views/login-view/login-view.component';
 
@@ -56,7 +56,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HomeViewComponent } from './views/home-view/home-view.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,8 +84,7 @@ import { HomeViewComponent } from './views/home-view/home-view.component';
     NotFoundComponent,
     GraoCrudComponent,
     HomeComponent,
-    HomeViewComponent
-
+    HomeViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -108,9 +106,8 @@ import { HomeViewComponent } from './views/home-view/home-view.component';
     MatGridListModule,
     MatMenuModule,
     LayoutModule,
-
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -5,14 +5,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EmpresaService {
+  baseUrl = 'http://localhost:3001/empresas/';
 
-
-  baseUrl = "http://localhost:3001/empresas/"
-
-  constructor(private http: HttpClient, private snackBar: MatSnackBar) { }
+  constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
 
   create(empresa: Empresa): Observable<Empresa> {
     return this.http.post<Empresa>(this.baseUrl, empresa);
@@ -28,10 +26,10 @@ export class EmpresaService {
   showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, 'X', {
       duration: 2000,
-      horizontalPosition: "right",
-      verticalPosition: "top",
-      panelClass: isError ? ['msg-error'] : ['msg-success']
-    })
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+      panelClass: isError ? ['msg-error'] : ['msg-success'],
+    });
   }
 
   errorHandler(e: any): Observable<any> {

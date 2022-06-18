@@ -10,7 +10,7 @@ import {
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuard implements CanActivate {
+export class AuthLoggedGuard implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate(
@@ -18,11 +18,8 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot
   ): boolean {
     if (localStorage.getItem('status') != null) {
-      localStorage.setItem('login', 'true');
-      return true;
-    } else {
-      this.router.navigateByUrl('/login');
-      return false;
+      localStorage.removeItem('status');
     }
+    return true;
   }
 }

@@ -6,25 +6,28 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-grao-delete',
   templateUrl: './grao-delete.component.html',
-  styleUrls: ['./grao-delete.component.scss']
+  styleUrls: ['./grao-delete.component.scss'],
 })
 export class GraoDeleteComponent implements OnInit {
-
   grao: Grao;
 
-  constructor(private gService: GraoService, private router: Router, private route: ActivatedRoute) { }
+  constructor(
+    private gService: GraoService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.gService.readById(id).subscribe(grao => {
+    this.gService.readById(id).subscribe((grao) => {
       this.grao = grao;
     });
   }
 
   isActive(event): void {
-    if(event.target.checked){
+    if (event.target.checked) {
       this.grao.ativo = true;
-    }else{
+    } else {
       this.grao.ativo = false;
     }
   }
@@ -32,11 +35,11 @@ export class GraoDeleteComponent implements OnInit {
   deletarGrao(): void {
     this.gService.delete(this.grao.id).subscribe(() => {
       this.gService.showMessage('Grão Excluído com Sucesso!');
-      this.router.navigate(["/grao"]);
-    })
+      this.router.navigate(['/grao']);
+    });
   }
 
   cancel(): void {
-    this.router.navigate(['/grao'])
+    this.router.navigate(['/grao']);
   }
 }

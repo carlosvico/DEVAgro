@@ -4,29 +4,21 @@ import { HeaderService } from './header.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  @Input() nomeEmpresa: string = 'Rafael';
 
-  @Input() nomeEmpresa:string="Rafael"
+  constructor(private headerService: HeaderService) {}
 
-  constructor(private headerService: HeaderService) { }
+  ngOnInit(): void { /* TODO document why this method 'ngOnInit' is empty */ }
 
-  ngOnInit(): void {
+  get title(): string {
+    return this.headerService.headerData.title;
   }
 
-  get title(): string{
-    return this.headerService.headerData.title
-  }
-
-  get routeUrl(): string{
-    return this.headerService.headerData.routeUrl
-  }
-
-  logout(){
-    localStorage.removeItem('status');
-    localStorage.removeItem('login');
-    location.reload();
+  get routeUrl(): string {
+    return this.headerService.headerData.routeUrl;
   }
 
 }

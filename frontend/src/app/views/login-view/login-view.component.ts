@@ -6,21 +6,20 @@ import { EmpresaService } from 'src/app/components/empresa/empresa.service';
 @Component({
   selector: 'app-login-view',
   templateUrl: './login-view.component.html',
-  styleUrls: ['./login-view.component.scss']
+  styleUrls: ['./login-view.component.scss'],
 })
 export class LoginViewComponent implements OnInit {
-
   passwordType: string = 'password';
   passwordShow: boolean = false;
 
   empresa: Empresa;
 
-  constructor(private empresaService: EmpresaService, private router: Router) { }
+  constructor(private empresaService: EmpresaService, private router: Router) {}
 
   ngOnInit(): void {
+    /* TODO document why this method 'ngOnInit' is empty */
   }
 
-  // ========== MÉTODOS ==========
   togglePassword() {
     if (this.passwordShow) {
       this.passwordShow = false;
@@ -43,13 +42,12 @@ export class LoginViewComponent implements OnInit {
           this.router.navigate(['/home']);
           localStorage.setItem('status', 'logged');
           location.reload();
-        }else{
+        } else {
           this.empresaService.showMessage('ERROR: Senha incorreta!', true);
         }
-      }else{
+      } else {
         this.empresaService.showMessage('ERROR: Email não cadastrado!', true);
       }
-    })
+    });
   }
-
 }
