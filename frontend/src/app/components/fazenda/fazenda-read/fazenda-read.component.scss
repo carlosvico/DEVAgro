@@ -192,8 +192,25 @@ footer {
   border-radius: 8px;
 }
 
+.title-min{
+  display: none;
+}
+
 @media only screen and (max-width: 1090px) {
 
+  .detalhes-content{
+    width: 50%;
+  }
+  .detalhes-name{
+    width: 50%;
+   }
+
+  .title-min{
+    text-align: left;
+    display: block;   
+    width: 50%;    
+  }
+  
   .read{
     margin: 0;
     height: 70vh;
