@@ -36,9 +36,10 @@
           <tr *ngFor="let funcionario of funcionarios">
             <td>
               <div class="detalhes-linha">
+                <span class="title-min">Detalhes dos Funcionários- </span>
                 <div class="imagem">
                   <img src="assets/img/funcionario-default-photo.png" alt="perfil">
-                </div>
+                </div>                
                 <div class="detalhes-content">
                   <span class="detalhes-name">{{ funcionario.nome }}</span>
                   <p class="detalhes-date">Cadastrado em {{ funcionario.data }}</p>
@@ -48,6 +49,7 @@
             <!-- alocado -->
             <td>
               <div class="detalhes-linha">
+                <span class="title-min">Fazenda alocado - </span>
                 <div class="detalhes-content">
                   <span class="detalhes-name">{{ funcionario.fazenda }}</span>
                   <p class="detalhes-date">{{ funcionario.update}}</p>
@@ -57,13 +59,17 @@
             <!-- cargo -->
             <td>
               <div class="detalhes-linha">
+                <span class="title-min">Função principal - </span>
                 <span class="detalhes-name">{{ funcionario.cargo }}</span>
               </div>
             </td>
             <!-- ativo -->
             <td>
               <div class="detalhes-linha">
+                <span class="title-min">Ativo - </span>
+                <div class="div-active">
                 <div class="active  {{ funcionario.ativo }}">{{ funcionario.ativo? 'sim': 'não' }}</div>
+                </div>
               </div>
             </td>
 

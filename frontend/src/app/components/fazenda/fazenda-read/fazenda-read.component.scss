@@ -192,12 +192,29 @@ footer {
   border-radius: 8px;
 }
 
+<<<<<<< HEAD
 .title-table {
+=======
+.title-min{
+>>>>>>> e02a383efc88347dba185bd1f67acfac40b4db70
   display: none;
 }
 
 @media only screen and (max-width: 1090px) {
 
+  .detalhes-content{
+    width: 50%;
+  }
+  .detalhes-name{
+    width: 50%;
+   }
+
+  .title-min{
+    text-align: left;
+    display: block;   
+    width: 50%;    
+  }
+  
   .read{
     margin: 0;
     height: 70vh;

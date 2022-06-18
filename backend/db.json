@@ -9,14 +9,6 @@
       "ativo": true
     },
     {
-      "nome": "Arroz",
-      "previsao_colheita": "11/22/1212",
-      "informacoes": "teste",
-      "fazenda": "Fazenda Feliz",
-      "ativo": false,
-      "id": 6
-    },
-    {
       "nome": "Milho",
       "previsao_colheita": "11/22/1212",
       "informacoes": "Pipoca",
@@ -25,10 +17,17 @@
       "id": 7
     },
     {
+<<<<<<< HEAD
       "nome": "Café",
       "previsao_colheita": "31/04/2023",
       "informacoes": "Café",
       "fazenda": "Fazenda Santa Helena",
+=======
+      "nome": "Feijão",
+      "previsao_colheita": "17/06/2022",
+      "informacoes": "CU",
+      "fazenda": "Fazenda de Dentro",
+>>>>>>> e02a383efc88347dba185bd1f67acfac40b4db70
       "ativo": true,
       "id": 8
     }
@@ -38,6 +37,7 @@
       "name": "Fazenda Feliz",
       "grao": "Soja",
       "ultimaColheita": "01/01/1000",
+      "previsaoColheita": "01/01/2002",
       "endereco": "Rua Do Renan, 69",
       "id": 4,
       "estoque": 30,
@@ -48,6 +48,7 @@
       "endereco": "Rua Brasil",
       "grao": "Soja",
       "ultimaColheita": "12/12/2021",
+      "previsaoColheita": "01/01/2002",
       "id": 5,
       "estoque": 60,
       "cidade": "Urupema"
@@ -57,6 +58,7 @@
       "endereco": "Rua Uruguai",
       "grao": "Café",
       "ultimaColheita": "01/11/2021",
+      "previsaoColheita": "01/01/2002",
       "id": 6,
       "estoque": 10,
       "cidade": "Chapecó"
@@ -66,6 +68,7 @@
       "endereco": "Rua das Gaivotas",
       "grao": "Milho",
       "ultimaColheita": "12/01/2022",
+      "previsaoColheita": "01/01/2002",
       "id": 7,
       "estoque": 80,
       "cidade": "Santa Maria"
@@ -75,9 +78,27 @@
       "endereco": "Rua João Moura, 22",
       "grao": "Arroz",
       "ultimaColheita": "12/11/2021",
+      "previsaoColheita": "11/22/1212",
       "cidade": "Campo Grande",
       "estoque": 70,
       "id": 8
+    },
+    {
+      "name": "gfdgdf",
+      "endereco": "gfdsgfsd",
+      "grao": "Milho",
+      "ultimaColheita": "01/01/2201",
+      "cidade": "Rio Branco",
+      "id": 9
+    },
+    {
+      "name": "fasdfasd",
+      "endereco": "fdasfsda",
+      "grao": "Feijão",
+      "ultimaColheita": "01/01/2011",
+      "cidade": "Santa Maria",
+      "estoque": "7000000000",
+      "id": 10
     }
   ],
   "funcionarios": [

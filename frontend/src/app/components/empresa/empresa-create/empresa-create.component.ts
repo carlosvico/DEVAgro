@@ -23,10 +23,14 @@ export class EmpresaCreateComponent implements OnInit {
     endereco: '',
     senha: ''
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e02a383efc88347dba185bd1f67acfac40b4db70
   constructor(private empresaService: EmpresaService, private router: Router) { }
 
   ngOnInit(): void {
-    this.empresaService.read().subscribe(empresas=> {
+    this.empresaService.read().subscribe(empresas => {
       this.empresas = empresas;
     })
   }
@@ -170,7 +174,6 @@ export class EmpresaCreateComponent implements OnInit {
     document.getElementById('email').classList.remove('obrigatory');
     return true;
   }
-
 
   private validateEmailFormat(email: string): boolean {
     var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;

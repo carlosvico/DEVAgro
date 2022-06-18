@@ -33,6 +33,7 @@
           <tr *ngFor="let grao of graos">
             <td>
               <div class="detalhes-linha">
+                <span class="title-min">Detalhes dos Funcionários- </span>
                 <div class="imagem">
                   <img src="assets/img/funcionario-default-photo.png" alt="perfil">
                 </div>
@@ -45,6 +46,7 @@
             <!-- alocado -->
             <td>
               <div class="detalhes-linha">
+                <span class="title-min">Detalhes dos Funcionários- </span>
                 <div class="detalhes-content">
                   <span class="detalhes-name">{{ grao.fazenda }}</span>
                   <p class="detalhes-date">{{ grao.previsao_colheita}}</p>
@@ -55,7 +57,10 @@
             <!-- ativo -->
             <td>
               <div class="detalhes-linha">
+                <span class="title-min">Detalhes dos Funcionários- </span>
+                <div class="div-active">
                 <div class="active  {{ grao.ativo }}">{{ grao.ativo? 'sim': 'não' }}</div>
+                </div>
               </div>
             </td>
 

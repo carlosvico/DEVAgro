@@ -18,14 +18,14 @@ export class EmpresaService {
     return this.http.post<Empresa>(this.baseUrl, empresa);
   }
 
-  read(): Observable<Empresa[]>{
+  read(): Observable<Empresa[]> {
     return this.http.get<Empresa[]>(this.baseUrl).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
-  } 
+  }
 
-  showMessage(msg: string, isError: boolean = false): void{
+  showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, 'X', {
       duration: 2000,
       horizontalPosition: "right",

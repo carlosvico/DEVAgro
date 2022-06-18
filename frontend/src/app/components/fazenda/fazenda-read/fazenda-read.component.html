@@ -24,7 +24,7 @@
             <th scope="col">Nome da Propriedade</th>
             <th scope="col">Endereço</th>
             <th scope="col">Grão</th>
-            <th scope="col">Data da Última Colheita</th>
+            <th scope="col">Previsão de Colheita</th>
             <th scope="col">Ações</th>
           </tr>
         </thead>
@@ -33,7 +33,11 @@
           <tr *ngFor="let fazenda of fazendas">
             <td>
               <div class="detalhes-linha">
+<<<<<<< HEAD
                 <span class="title-table">Nome da Propriedade: </span>
+=======
+                <span class="title-min">Nome da Propriedade - </span>
+>>>>>>> e02a383efc88347dba185bd1f67acfac40b4db70
                 <div class="detalhes-content">
                   <span class="detalhes-name">{{ fazenda.name }}</span>
                 </div>
@@ -42,6 +46,7 @@
             <!-- alocado -->
             <td>
               <div class="detalhes-linha">
+                <span class="title-min">Endereço - </span>
                 <div class="detalhes-content">
                   <span class="detalhes-name">{{ fazenda.endereco }}</span>
                 </div>
@@ -50,13 +55,15 @@
             <!-- cargo -->
             <td>
               <div class="detalhes-linha">
+                <span class="title-min" >Grão - </span>
                 <span class="detalhes-name">{{ fazenda.grao }}</span>
               </div>
             </td>
             <!-- ativo -->
             <td>
               <div class="detalhes-linha">
-                <span class="detalhes-name">{{ fazenda.ultimaColheita }}</span>
+                <span class="title-min">Previsão de Colheita - </span>
+                <span class="detalhes-name">{{ fazenda.previsaoColheita }}</span>
               </div>
             </td>
 
