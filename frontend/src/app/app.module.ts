@@ -51,6 +51,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HomeViewComponent } from './views/home-view/home-view.component';
+
 @NgModule({
   declarations: [
     AppComponent,

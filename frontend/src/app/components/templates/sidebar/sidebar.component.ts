@@ -19,4 +19,11 @@ export class SidebarComponent implements OnInit {
       this.responsive = true;
     }
   }
+
+  logout(){
+    localStorage.removeItem('status');	
+    localStorage.removeItem('login');
+    localStorage.removeItem('company_name');
+    location.reload();
+  }
 }

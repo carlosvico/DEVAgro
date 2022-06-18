@@ -263,9 +263,14 @@ footer {
     height: 70px;
   }
 
+  .title-table {
+    display: flex;
+  }
+
   .detalhes-linha {
     display: flex;
     justify-content: center;
+    position: relative;
   }
 
   footer span {
