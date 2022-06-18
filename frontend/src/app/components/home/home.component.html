@@ -8,7 +8,7 @@
   <mat-card class="card2">
     <div class="card-content">
       <span class="farm-title">Total de Funcionários</span>
-      <span class="numbers">{{ funcionarios.length }}</span>
+      <span class="numbers paint">{{ funcionarios.length }}</span>
     </div>
   </mat-card>
 </header>
@@ -33,6 +33,7 @@
             <tr *ngFor="let fazenda of fazendas">
               <td>
                 <div class="detalhes-linha">
+                  <span class="title-min">Nome da propriedade</span>
                   <div class="detalhes-content">
                     <span class="detalhes-name">{{ fazenda.name }}</span>
                   </div>
@@ -41,6 +42,7 @@
               <!-- alocado #### OBS: TROCAR POR PRóXIMA COLHEITA #####-->
               <td>
                 <div class="detalhes-linha">
+                  <span class="title-min">Previsão colheita</span>
                   <span class="detalhes-name">{{
                     fazenda.ultimaColheita
                   }}</span>
@@ -55,7 +57,7 @@
 </main>
 <footer>
   <mat-card class="card3" *ngIf="weatherData">
-    <span class="farm-title-temp">Previsão do tempo propriedades</span>
+    <span class="farm-title side paint">Previsão do tempo propriedades</span>
     <div class="table-responsive-temp">
       <table class="table table-hover">
         <thead>
@@ -100,7 +102,7 @@
     </div>    
   </mat-card>
   <mat-card class="card4">
-    <span class="farm-title">Estoque de grãos</span>
+    <span class="farm-title side paint">Estoque de grãos</span>
     <div class="graphic">
       <canvas #graintGraphic></canvas>
     </div>

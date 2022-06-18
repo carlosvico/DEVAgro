@@ -23,4 +23,10 @@ export class HeaderComponent implements OnInit {
     return this.headerService.headerData.routeUrl
   }
 
+  logout(){
+    localStorage.removeItem('status');
+    localStorage.removeItem('login');
+    location.reload();
+  }
+
 }

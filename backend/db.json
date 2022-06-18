@@ -131,8 +131,6 @@
       "endereco": "Rua Joaquim Coelho de Arruda",
       "senha": "123456",
       "id": 2
-<<<<<<< HEAD
-=======
     },
     {
       "nome": "Joel Administração de Fazendas Ltda",
@@ -157,7 +155,6 @@
       "endereco": "Estrada Geral dos Búzios",
       "senha": "123456",
       "id": 5
->>>>>>> 9c18f5e77cd09c071029e8c1ae45c227f4b17645
     }
   ]
 }

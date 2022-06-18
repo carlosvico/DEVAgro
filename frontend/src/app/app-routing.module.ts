@@ -18,7 +18,6 @@ import { GraoDeleteComponent } from './components/grao/grao-delete/grao-delete.c
 import { GraoCrudComponent } from './views/grao-crud/grao-crud.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { AuthGuard } from './views/login-view/auth-guard.guard';
-import { AuthLoggedGuard } from './views/login-view/auth-logged.guard';
 
 const routes: Routes = [
   {
@@ -28,13 +27,11 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginViewComponent,
-    canActivate: [AuthLoggedGuard]
+    component: LoginViewComponent
   },
   {
     path: 'singup',
-    component: EmpresaCreateComponent,
-    canActivate: [AuthLoggedGuard]
+    component: EmpresaCreateComponent
   },
   {
     path: 'funcionario',

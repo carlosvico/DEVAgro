@@ -40,7 +40,6 @@ export class LoginViewComponent implements OnInit {
       if(empresas.find(e => e.email == email.value.trim())){
         this.empresa = empresas.find(e => e.email === email.value.trim());
         if(this.empresa.senha === password.value.trim()){
-          localStorage.setItem('login', 'true');
           this.router.navigate(['/home']);
           localStorage.setItem('status', 'logged');
           location.reload();
