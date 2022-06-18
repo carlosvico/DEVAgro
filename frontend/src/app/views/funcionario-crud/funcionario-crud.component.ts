@@ -5,18 +5,15 @@ import { HeaderService } from 'src/app/components/templates/header/header.servic
 @Component({
   selector: 'app-funcionario-crud',
   templateUrl: './funcionario-crud.component.html',
-  styleUrls: ['./funcionario-crud.component.scss']
+  styleUrls: ['./funcionario-crud.component.scss'],
 })
 export class FuncionarioCrudComponent implements OnInit {
-
-  constructor(private router: Router, private headerService: HeaderService) { 
+  constructor(private router: Router, private headerService: HeaderService) {
     headerService.headerData = {
       title: 'Funcionário',
-      routeUrl: '/funcionario'
-    }
+      routeUrl: '/funcionario',
+    };
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { /* TODO document why this method 'ngOnInit' is empty */ }
 }

@@ -1,7 +1,7 @@
 <mat-card class="read">
   <header>
     <section class="title">
-        <h3>Lista de Graos</h3>
+      <h3>Lista de Graos</h3>
     </section>
     <section class="filters">
       <div class="order">
@@ -15,17 +15,15 @@
     </section>
   </header>
 
-
   <main>
     <div class="table-responsive">
       <table class="table table-hover">
-
         <thead>
           <tr>
             <th scope="col">Grãos</th>
             <th scope="col">Fazenda Plantada</th>
             <th scope="col">Colhida</th>
-            <th scope="col"> </th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -35,11 +33,14 @@
               <div class="detalhes-linha">
                 <span class="title-min">Detalhes dos Funcionários- </span>
                 <div class="imagem">
-                  <img src="assets/img/funcionario-default-photo.png" alt="perfil">
+                  <img
+                    src="assets/img/funcionario-default-photo.png"
+                    alt="perfil"
+                  />
                 </div>
                 <div class="detalhes-content">
                   <span class="detalhes-name">{{ grao.nome }}</span>
-                  <p class="detalhes-date tcor"> {{ grao.informacoes }}</p>
+                  <p class="detalhes-date tcor">{{ grao.informacoes }}</p>
                 </div>
               </div>
             </td>
@@ -49,7 +50,7 @@
                 <span class="title-min">Detalhes dos Funcionários- </span>
                 <div class="detalhes-content">
                   <span class="detalhes-name">{{ grao.fazenda }}</span>
-                  <p class="detalhes-date">{{ grao.previsao_colheita}}</p>
+                  <p class="detalhes-date">{{ grao.previsao_colheita }}</p>
                 </div>
               </div>
             </td>
@@ -59,7 +60,9 @@
               <div class="detalhes-linha">
                 <span class="title-min">Detalhes dos Funcionários- </span>
                 <div class="div-active">
-                <div class="active  {{ grao.ativo }}">{{ grao.ativo? 'sim': 'não' }}</div>
+                  <div class="active  {{ grao.ativo }}">
+                    {{ grao.ativo ? "sim" : "não" }}
+                  </div>
                 </div>
               </div>
             </td>
@@ -76,20 +79,15 @@
             </td>
           </tr>
         </tbody>
-
       </table>
     </div>
-
   </main>
 
+  <div class="button-add" routerLink="/grao/create">+</div>
 
-  <div class="button-add" routerLink="/grao/create">
-    +
-  </div>
-
-    <footer>
-      <div class="footer-text">
-        <span>{{ graos.length}} grãos </span>
-      </div>
-    </footer>
+  <footer>
+    <div class="footer-text">
+      <span>{{ graos.length }} grãos </span>
+    </div>
+  </footer>
 </mat-card>

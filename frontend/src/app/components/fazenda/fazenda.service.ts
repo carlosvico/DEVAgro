@@ -7,21 +7,24 @@ import { GraoService } from '../grao/grao.service';
 import { Fazenda } from './fazenda.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FazendaService {
+  baseUrl = 'http://localhost:3001/fazendas';
 
-  baseUrl = "http://localhost:3001/fazendas"
+  constructor(
+    private snackBar: MatSnackBar,
+    private http: HttpClient,
+    private graoService: GraoService
+  ) {}
 
-  constructor(private snackBar: MatSnackBar, private http: HttpClient, private graoService: GraoService) { }
-
-  showMessage(msg: string, isError: boolean = false): void{
+  showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, 'X', {
       duration: 2000,
-      horizontalPosition: "right",
-      verticalPosition: "top",
-      panelClass: isError ? ['msg-error'] : ['msg-success']
-    })
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+      panelClass: isError ? ['msg-error'] : ['msg-success'],
+    });
   }
 
   create(fazenda: Fazenda): Observable<Fazenda> {
@@ -29,44 +32,44 @@ export class FazendaService {
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
-  } //Função responsável por inserir, no backend, uma nova fazenda
+  }
 
-  read(): Observable<Fazenda[]>{
+  read(): Observable<Fazenda[]> {
     return this.http.get<Fazenda[]>(this.baseUrl).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
-  } //Função responsável por ler a listagem de fazendas do backend
+  }
 
-  readGrao(): Observable<Grao[]>{
+  readGrao(): Observable<Grao[]> {
     return this.http.get<Grao[]>(this.baseUrl).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
-    )
+    );
   }
 
   readById(id: number): Observable<Fazenda> {
-    const url = `${this.baseUrl}/${id}`
+    const url = `${this.baseUrl}/${id}`;
     return this.http.get<Fazenda>(url).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
-  } //Função responsável por ler a fazenda pelo id
+  }
 
   update(fazendas: Fazenda): Observable<Fazenda> {
-    const url = `${this.baseUrl}/${fazendas.id}`
+    const url = `${this.baseUrl}/${fazendas.id}`;
     return this.http.put<Fazenda>(url, fazendas).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
-  } //Função responsável por atualizar, no backend, uma fazenda
+  }
 
   delete(id: number): Observable<Fazenda> {
-    const url = `${this.baseUrl}/${id}`
+    const url = `${this.baseUrl}/${id}`;
     return this.http.delete<Fazenda>(url).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
-    ); //Deletar uma fazenda
+    );
   }
 
   errorHandler(e: any): Observable<any> {

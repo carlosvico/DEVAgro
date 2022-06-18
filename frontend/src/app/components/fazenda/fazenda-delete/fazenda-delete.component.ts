@@ -6,17 +6,20 @@ import { FazendaService } from '../fazenda.service';
 @Component({
   selector: 'app-fazenda-delete',
   templateUrl: './fazenda-delete.component.html',
-  styleUrls: ['./fazenda-delete.component.scss']
+  styleUrls: ['./fazenda-delete.component.scss'],
 })
 export class FazendaDeleteComponent implements OnInit {
-
   fazenda: Fazenda;
 
-  constructor(private fazendaService: FazendaService, private router: Router, private route: ActivatedRoute) { }
+  constructor(
+    private fazendaService: FazendaService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.fazendaService.readById(id).subscribe(fazenda => {
+    this.fazendaService.readById(id).subscribe((fazenda) => {
       this.fazenda = fazenda;
     });
   }
@@ -24,11 +27,11 @@ export class FazendaDeleteComponent implements OnInit {
   deleteFazenda(): void {
     this.fazendaService.delete(this.fazenda.id).subscribe(() => {
       this.fazendaService.showMessage('Fazenda Excluída com Sucesso!');
-      this.router.navigate(["/fazenda"]);
-    })
+      this.router.navigate(['/fazenda']);
+    });
   }
 
   cancel(): void {
-    this.router.navigate(['/fazenda'])
+    this.router.navigate(['/fazenda']);
   }
 }

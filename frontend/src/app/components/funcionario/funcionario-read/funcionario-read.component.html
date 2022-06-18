@@ -1,6 +1,3 @@
-<!--
-  <p>funcionario-read works!</p>
--->
 <mat-card class="read">
   <header>
     <section class="title">
@@ -21,14 +18,13 @@
   <main>
     <div class="table-responsive">
       <table class="table table-hover">
-
         <thead>
           <tr>
             <th scope="col">Detalhes dos Funcionários</th>
             <th scope="col">Fazenda alocado</th>
             <th scope="col">Função principal</th>
             <th scope="col">Ativo</th>
-            <th scope="col"> </th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -38,11 +34,16 @@
               <div class="detalhes-linha">
                 <span class="title-min">Detalhes dos Funcionários- </span>
                 <div class="imagem">
-                  <img src="assets/img/funcionario-default-photo.png" alt="perfil">
-                </div>                
+                  <img
+                    src="assets/img/funcionario-default-photo.png"
+                    alt="perfil"
+                  />
+                </div>
                 <div class="detalhes-content">
                   <span class="detalhes-name">{{ funcionario.nome }}</span>
-                  <p class="detalhes-date">Cadastrado em {{ funcionario.data }}</p>
+                  <p class="detalhes-date">
+                    Cadastrado em {{ funcionario.data }}
+                  </p>
                 </div>
               </div>
             </td>
@@ -52,7 +53,7 @@
                 <span class="title-min">Fazenda alocado - </span>
                 <div class="detalhes-content">
                   <span class="detalhes-name">{{ funcionario.fazenda }}</span>
-                  <p class="detalhes-date">{{ funcionario.update}}</p>
+                  <p class="detalhes-date">{{ funcionario.update }}</p>
                 </div>
               </div>
             </td>
@@ -68,30 +69,36 @@
               <div class="detalhes-linha">
                 <span class="title-min">Ativo - </span>
                 <div class="div-active">
-                <div class="active  {{ funcionario.ativo }}">{{ funcionario.ativo? 'sim': 'não' }}</div>
+                  <div class="active  {{ funcionario.ativo }}">
+                    {{ funcionario.ativo ? "sim" : "não" }}
+                  </div>
                 </div>
               </div>
             </td>
 
             <td>
               <div class="detalhes-linha">
-                <div class="icone" routerLink="/funcionario/update/{{ funcionario.id }}">
+                <div
+                  class="icone"
+                  routerLink="/funcionario/update/{{ funcionario.id }}"
+                >
                   <mat-icon>edit</mat-icon>
                 </div>
-                <div class="icone" routerLink="/funcionario/delete/{{ funcionario.id }}">
+                <div
+                  class="icone"
+                  routerLink="/funcionario/delete/{{ funcionario.id }}"
+                >
                   <mat-icon>delete</mat-icon>
                 </div>
               </div>
+            </td>
           </tr>
         </tbody>
-
       </table>
     </div>
   </main>
 
-  <div class="button-add" routerLink="/funcionario/create">
-    +
-  </div>
+  <div class="button-add" routerLink="/funcionario/create">+</div>
 
   <footer>
     <div class="footer-text">

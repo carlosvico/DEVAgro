@@ -2,31 +2,70 @@
   <form>
     <div class="input-fields">
       <label class="descricao-input">NOME</label>
-      <input type="text" id="nome" name="nome" class="input-field" [(ngModel)]="funcionario.nome" placeholder="Nome" required>
+      <input
+        type="text"
+        id="nome"
+        name="nome"
+        class="input-field"
+        [(ngModel)]="funcionario.nome"
+        placeholder="Nome"
+        required
+      />
     </div>
     <div class="select-fields">
       <label class="descricao-input">FAZENDA</label>
       <select class="select-field" (change)="changeFarm()" id="fazenda">
         <option value="" selected hidden>Escolha a sua fazenda</option>
-        <option *ngFor="let fazenda of fazendas" value="{{ fazenda.name }}">{{ fazenda.name }}</option>
+        <option *ngFor="let fazenda of fazendas" value="{{ fazenda.name }}">
+          {{ fazenda.name }}
+        </option>
       </select>
     </div>
     <div class="input-fields">
       <label class="descricao-input">CPF</label>
-      <input type="text" id="cpf" name="cpf" class="input-field"  [(ngModel)]="funcionario.cpf" placeholder="CPF" required>
+      <input
+        type="text"
+        id="cpf"
+        name="cpf"
+        class="input-field"
+        [(ngModel)]="funcionario.cpf"
+        placeholder="CPF"
+        required
+      />
     </div>
     <div class="input-fields">
       <label class="descricao-input">TELEFONE</label>
-      <input type="text" id="telefone" name="telefone" class="input-field"  [(ngModel)]="funcionario.telefone" placeholder="Telefone" required>
+      <input
+        type="text"
+        id="telefone"
+        name="telefone"
+        class="input-field"
+        [(ngModel)]="funcionario.telefone"
+        placeholder="Telefone"
+        required
+      />
     </div>
     <div class="input-fields">
       <label class="descricao-input">FUNÇÃO PRINCIPAL</label>
-      <input type="text" id="cargo" name="funcao" class="input-field"  [(ngModel)]="funcionario.cargo" placeholder="Função principal" required>
+      <input
+        type="text"
+        id="cargo"
+        name="funcao"
+        class="input-field"
+        [(ngModel)]="funcionario.cargo"
+        placeholder="Função principal"
+        required
+      />
     </div>
     <div class="switch-toggle">
       <label class="descricao-input">ATIVO</label>
       <label class="switch">
-        <input type="checkbox" id="ativo" (change)="isActive($event)" [attr.checked]="funcionario.ativo ? true: null">
+        <input
+          type="checkbox"
+          id="ativo"
+          (change)="isActive($event)"
+          [attr.checked]="funcionario.ativo ? true : null"
+        />
         <span class="slider round"></span>
       </label>
     </div>
@@ -36,4 +75,3 @@
   <button (click)="createFuncionario()">CADASTRAR</button>
   <button id="cancel" (click)="cancel()">CANCELAR</button>
 </mat-card>
-
