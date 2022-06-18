@@ -192,6 +192,10 @@ footer {
   border-radius: 8px;
 }
 
+.title-table {
+  display: none;
+}
+
 @media only screen and (max-width: 1090px) {
 
   .read{
@@ -246,9 +250,14 @@ footer {
     height: 70px;
   }
 
+  .title-table {
+    display: flex;
+  }
+
   .detalhes-linha {
     display: flex;
     justify-content: center;
+    position: relative;
   }
 
   footer span {

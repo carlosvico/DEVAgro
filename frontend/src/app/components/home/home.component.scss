@@ -2,7 +2,7 @@ header{
   display: flex;
   justify-content: space-between;
   gap: 191px;
-  padding: 0 30px 30px 30px;
+  margin: 0 30px 30px 30px;
 }
 
 .card-content {
@@ -33,7 +33,7 @@ header{
 }
 
 main {
-  padding: 0 30px 30px 30px;
+  margin: 0 30px 30px 30px;
 }
 
 .read {
@@ -67,25 +67,14 @@ main {
 }
 
 footer {
-  height: 2%;
+  height: 230px;
   display: flex;
+  margin: 0 30px 0 30px;
 }
 
 footer mat-card {
-  height: 30vh;
+  height: 230px;
   width: 100%;
-}
-
-.temperatura-name{
-  font-family: 'Mulish';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
-  text-align: left;
-  letter-spacing: 1px;
-  color: blue;
-  align-items: flex-start;
 }
 
 .table-responsive-temp {
@@ -106,21 +95,8 @@ footer mat-card {
 }
 
 .numbers-temp{
-  font-family: 'Mulish';
-  font-style: normal;
   font-weight: 700;
-  font-size: 25px;
-  line-height: 50px;
-  letter-spacing: 1px;
-  color: blue;
-  align-items: flex-start;
-}
-
-.icons-temp{
-  font-family: 'Mulish';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 25px;
+  font-size: 18px;
   line-height: 50px;
   letter-spacing: 1px;
   color: blue;
@@ -128,10 +104,8 @@ footer mat-card {
 }
 
 .detalhes-name-temp{
-  font-family: 'Mulish';
-  font-style: normal;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 18px;
   line-height: 50px;
   letter-spacing: 1px;
   color: blue;
@@ -145,7 +119,6 @@ footer mat-card {
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  
   margin-right: 50px;
   border: green solid;
 }
