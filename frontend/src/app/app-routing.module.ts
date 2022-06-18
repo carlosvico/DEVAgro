@@ -109,6 +109,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeViewComponent,
+    //resolve:{},
     canActivate: [AuthGuard]
   },
   {

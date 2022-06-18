@@ -1,5 +1,5 @@
-
-<!--<app-login-view></app-login-view>-->
-<app-header [title]="headerTitle"></app-header>
-<app-sidebar></app-sidebar>
+<div *ngIf="logged == true" style="display: inline">
+    <app-header></app-header>
+    <app-sidebar></app-sidebar>
+</div>
 <router-outlet></router-outlet>
