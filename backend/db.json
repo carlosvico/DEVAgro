@@ -23,6 +23,14 @@
       "fazenda": "Fazenda Almeida",
       "ativo": true,
       "id": 8
+    },
+    {
+      "nome": "Soja",
+      "previsao_colheita": "21/07/2022",
+      "informacoes": "Próxima Colheita",
+      "fazenda": "Fazenda Almeida",
+      "ativo": true,
+      "id": 9
     }
   ],
   "fazendas": [
@@ -57,23 +65,22 @@
       "cidade": "Chapecó"
     },
     {
-      "name": "Fazenda Quinta da Boa Vista",
-      "endereco": "Rua João Moura, 22",
-      "grao": "Arroz",
-      "ultimaColheita": "12/11/2021",
-      "previsaoColheita": "11/22/1212",
-      "cidade": "Campo Grande",
-      "estoque": 70,
-      "id": 8
-    },
-    {
-      "name": "Fazenda Almeida",
+      "name": "Fazenda Almeida Café",
       "endereco": "Rua da Cachoeira",
       "grao": "Café",
       "ultimaColheita": "01032022",
       "cidade": "Londrina",
       "estoque": "20",
       "id": 9
+    },
+    {
+      "name": "Fazenda Do Arroizal",
+      "endereco": "Rua do Arroz",
+      "grao": "Arroz",
+      "ultimaColheita": "21/02/2022",
+      "cidade": "Campos Novos",
+      "estoque": "60",
+      "id": 10
     }
   ],
   "funcionarios": [
@@ -100,17 +107,6 @@
       "id": 3
     },
     {
-      "nome": "Maria Rosa",
-      "fazenda": "Fazenda de Dentro",
-      "data": "16/06/2022",
-      "update": "16/06/2022",
-      "cpf": "32145632111",
-      "telefone": "48987655522",
-      "cargo": "Secretária",
-      "ativo": true,
-      "id": 4
-    },
-    {
       "nome": "Rafael Souza",
       "fazenda": "Fazenda Quinta da Boa Vista",
       "data": "18/06/2022",
@@ -120,6 +116,17 @@
       "cargo": "Caseiro",
       "ativo": true,
       "id": 5
+    },
+    {
+      "nome": "Maria Rita Almeida Dos Santos",
+      "fazenda": "Fazenda de Dentro",
+      "data": "18/06/2022",
+      "update": "18/06/2022",
+      "cpf": "34509867888",
+      "telefone": "48922336677",
+      "cargo": "Gerente de produção",
+      "ativo": true,
+      "id": 6
     }
   ],
   "empresas": [
