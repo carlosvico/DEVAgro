@@ -7,7 +7,7 @@ import { HeaderService } from './header.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Input() nomeEmpresa: string = 'Rafael';
+  @Input() nomeEmpresa: string = localStorage.getItem('company_name');
 
   constructor(private headerService: HeaderService) {}
 

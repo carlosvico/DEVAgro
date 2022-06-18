@@ -148,7 +148,6 @@ footer mat-card {
   border: 1px solid #375F24;
 }
 
-
 canvas{
   width: 354px;
   height: 90px
@@ -181,7 +180,7 @@ canvas{
 }
 
 .title-min{
-  display: block;   
+  display: none;   
 }
 
 @media only screen and (max-width: 1090px) {
