@@ -15,14 +15,6 @@
       "fazenda": "Fazenda Feliz",
       "ativo": true,
       "id": 7
-    },
-    {
-      "nome": "Feijão",
-      "previsao_colheita": "17/06/2022",
-      "informacoes": "CU",
-      "fazenda": "Fazenda de Dentro",
-      "ativo": true,
-      "id": 8
     }
   ],
   "fazendas": [
@@ -31,7 +23,7 @@
       "grao": "Soja",
       "ultimaColheita": "01/01/1000",
       "previsaoColheita": "01/01/2002",
-      "endereco": "Rua Do Renan, 69",
+      "endereco": "Rua Do Jabuti, 69",
       "id": 4,
       "estoque": 30,
       "cidade": "Mossoró"
@@ -75,23 +67,6 @@
       "cidade": "Campo Grande",
       "estoque": 70,
       "id": 8
-    },
-    {
-      "name": "gfdgdf",
-      "endereco": "gfdsgfsd",
-      "grao": "Milho",
-      "ultimaColheita": "01/01/2201",
-      "cidade": "Rio Branco",
-      "id": 9
-    },
-    {
-      "name": "fasdfasd",
-      "endereco": "fdasfsda",
-      "grao": "Feijão",
-      "ultimaColheita": "01/01/2011",
-      "cidade": "Santa Maria",
-      "estoque": "7000000000",
-      "id": 10
     }
   ],
   "funcionarios": [
@@ -101,8 +76,8 @@
       "fazenda": "Fazenda Feliz",
       "data": "01/02/2022",
       "update": "13/06/2022",
-      "cpf": "Sem CPF aqui palhaço",
-      "telefone": "Lembrar de pedir dps",
+      "cpf": "34565412333",
+      "telefone": "31923454321",
       "cargo": "Administração",
       "ativo": true
     },
@@ -112,8 +87,8 @@
       "fazenda": "Fazenda Feliz",
       "data": "01/02/2020",
       "update": "03/05/2022",
-      "cpf": "Sem CPF aqui palhaço",
-      "telefone": "Lembrar de pedir dps",
+      "cpf": "76544478998",
+      "telefone": "84921223490",
       "cargo": "Estagiário (compositor)",
       "ativo": false
     },
@@ -143,7 +118,7 @@
   "empresas": [
     {
       "id": 1,
-      "nome": "Empresa 1",
+      "nome": "Cardoso Administração Fazendária Ltda",
       "cnpj": "12345678901234",
       "email": "blablabla@email.com",
       "endereco": "Rua do Senai, 24",
@@ -160,10 +135,26 @@
     {
       "nome": "Joel Administração de Fazendas Ltda",
       "email": "joel@joel.com.br",
-      "cnpj": "224567650001102",
+      "cnpj": "22456765000110",
       "endereco": "Rua Da Chuva",
       "senha": "12345",
       "id": 3
+    },
+    {
+      "nome": "Barbosa Administração Fazendária",
+      "email": "barbosa@barbosaa.com.br",
+      "cnpj": "14321981000111",
+      "endereco": "Rua Alemanha",
+      "senha": "123456",
+      "id": 4
+    },
+    {
+      "nome": "Farm Administração de Fazendas e Chácaras",
+      "email": "farm@farm.com.br",
+      "cnpj": "34543111000230",
+      "endereco": "Estrada Geral dos Búzios",
+      "senha": "123456",
+      "id": 5
     }
   ]
 }
