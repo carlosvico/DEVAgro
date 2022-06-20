@@ -6,7 +6,7 @@
       "previsao_colheita": "29/11/2022",
       "informacoes": "Tipo 1 ",
       "fazenda": "Fazenda do Amaral",
-      "ativo": true
+      "ativo": false
     },
     {
       "nome": "Milho",
@@ -29,7 +29,7 @@
       "previsao_colheita": "21/07/2022",
       "informacoes": "Próxima Colheita",
       "fazenda": "Fazenda Almeida",
-      "ativo": true,
+      "ativo": false,
       "id": 9
     }
   ],
@@ -87,7 +87,7 @@
     {
       "id": 2,
       "nome": "Kevin Richardson",
-      "fazenda": "Fazenda Feliz",
+      "fazenda": "Fazenda Santa Helena",
       "data": "01/02/2020",
       "update": "03/05/2022",
       "cpf": "76544478998",
@@ -177,6 +177,22 @@
       "endereco": "Rua Uruguai",
       "senha": "123456",
       "id": 6
+    },
+    {
+      "nome": "Joealma Administração de Fazendas Ltda",
+      "email": "barbosa@12345",
+      "cnpj": "66555222333399",
+      "endereco": "Rua da Base",
+      "senha": "123456",
+      "id": 7
+    },
+    {
+      "nome": "Gonçalves Administração Fazendária Ltda",
+      "email": "goncalves@go.com.br",
+      "cnpj": "45667234000110",
+      "endereco": "Rua Das Canoas",
+      "senha": "123456",
+      "id": 8
     }
   ]
 }

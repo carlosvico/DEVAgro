@@ -23,7 +23,7 @@ Para executrar a aplicação, siga os seguintes passos:
 * Acesse o terminal e clone o projeto ***git clone git@github.com:DEVin-Senior/M2P2-DEVAgro-Squad03.git***
 * Acesse a pasta ***M2P2-DEVAgro-Squad03/backend*** e execute o comando ***NPM INSTALL***
 * Após a aplicação finalizar a instalação das dependências, execute o comando ***NPM START***
-* Retorne para a pasta ***M2P2-DEVAgro-Squad03/frontend***
+* Acesse a pasta ***M2P2-DEVAgro-Squad03/frontend***
 * Dentro da pasta frontend, execute o comando ***NPM INSTALL***
 * Após a aplicação finalizar a instalação das dependências, execute o comando ***NG SERVE***
 * Abra um navegador de sua preferência e acesse o endereço ***http://localhost:4200/***
