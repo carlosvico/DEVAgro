@@ -10,8 +10,8 @@ import { FazendaService } from '../fazenda.service';
   styleUrls: ['./fazenda-read.component.scss'],
 })
 export class FazendaReadComponent implements OnInit {
-  graos: Grao[];
-  fazendas: Fazenda[];
+  graos: Grao[] = [];
+  fazendas: Fazenda[] = [];
   previsao: string[];
 
   constructor(

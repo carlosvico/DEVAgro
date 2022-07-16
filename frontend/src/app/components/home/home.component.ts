@@ -21,8 +21,8 @@ export class HomeComponent implements OnInit {
     private weatherService: HomeService
   ) {}
 
-  fazendas: Fazenda[];
-  funcionarios: Funcionario[];
+  fazendas: Fazenda[] = [];
+  funcionarios: Funcionario[] = [];
   weatherData?: WeatherData;
   weatherTemp: WeatherData[] = [];
   weatherIcon: string[] = [];

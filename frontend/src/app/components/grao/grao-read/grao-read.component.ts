@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./grao-read.component.scss'],
 })
 export class GraoReadComponent implements OnInit {
-  graos: Grao[];
+  graos: Grao[] = [];
 
   constructor(private router: Router, private gService: GraoService) {}
 

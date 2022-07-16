@@ -11,7 +11,13 @@ import { Grao } from '../grao.model';
   styleUrls: ['./grao-update.component.scss'],
 })
 export class GraoUpdateComponent implements OnInit {
-  graos: Grao;
+  graos: Grao = {
+    nome: '',
+    previsao_colheita: '',
+    informacoes: '',
+    fazenda: '',
+    ativo: true,
+  };
   fazendas: Fazenda[];
   oldFarm: Fazenda;
 

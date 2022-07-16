@@ -11,9 +11,20 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./funcionario-update.component.scss'],
 })
 export class FuncionarioUpdateComponent implements OnInit {
-  funcionario: Funcionario;
+  funcionario: Funcionario = {
+    nome: '',
+    fazenda: '',
+    data: '',
+    update: '',
+    cpf: '',
+    telefone: '',
+    cargo: '',
+    ativo: false,
+  };
+
   fazendas: Fazenda[];
   oldFarm: Fazenda;
+
   constructor(
     private funcionarioService: FuncionarioService,
     private fazendaService: FazendaService,

@@ -9,7 +9,14 @@ import { FazendaService } from '../fazenda.service';
   styleUrls: ['./fazenda-update.component.scss'],
 })
 export class FazendaUpdateComponent implements OnInit {
-  fazenda: Fazenda;
+  fazenda: Fazenda = {
+    name: '',
+    endereco: '',
+    grao: '',
+    ultimaColheita: '',
+    cidade: '',
+    estoque: null,
+  };
 
   constructor(
     private fazendaService: FazendaService,

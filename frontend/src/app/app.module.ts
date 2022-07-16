@@ -23,9 +23,9 @@ import { EmpresaUpdateComponent } from './components/empresa/empresa-update/empr
 import { EmpresaDeleteComponent } from './components/empresa/empresa-delete/empresa-delete.component';
 
 import { NgModule } from '@angular/core';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -84,9 +84,9 @@ import { HomeViewComponent } from './views/home-view/home-view.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule,
     FormsModule,
     MatCardModule,
     MatFormFieldModule,
@@ -101,7 +101,7 @@ import { HomeViewComponent } from './views/home-view/home-view.component';
     MatSelectModule,
     MatGridListModule,
     MatMenuModule,
-    LayoutModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent],

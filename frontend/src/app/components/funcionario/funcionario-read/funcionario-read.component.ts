@@ -10,7 +10,7 @@ import { Funcionario } from '../funcionario.model';
 export class FuncionarioReadComponent implements OnInit {
   @Output() headerTitle = 'Funcionario';
 
-  funcionarios: Funcionario[];
+  funcionarios: Funcionario[] = [];
 
   constructor(private funcionarioService: FuncionarioService) {}
 

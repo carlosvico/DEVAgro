@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   empresa: Empresa;
   logged: boolean;
 
-  constructor(private empresaService: EmpresaService, private router: Router) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     if (localStorage.getItem('login') == 'true') {
