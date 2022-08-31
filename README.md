@@ -1,20 +1,5 @@
 <h1 align="center"> 🚜 Projeto DEV-Agro 🚜</h1>
-<h2 align="center">🕺🏿 Squad3 - Backstreet Agroboys 🕺</h2>
-<h2 align="center"> 💻 Projeto avaliativo 2 do segundo módulo front-end do curso DevInHouse Senai | Senior Sistemas. 💻</h2>
 <hr>
-<h2>Integrantes</h2>
-<ul>
-    <li>Eduardo Amorim - Product Owner</li>
-    <li>Guilherme Fortes - QA and developer</li>
-    <li>Leonardo Almeida - QA and developer</li>
-    <li>Renan Pinho - Developer</li>
-    <li>Diego Oliveira - Developer</li>
-    <li>Rafaela Ferrari - Developer</li>
-    <li>Carlos Costa - Developer</li>
-    <li>Algusto Oliveira - Developer</li>
-    <li>Matheus Felipe - Developer</li>
-</ul>
-
 <h3 align="center">***********🔧 INSTRUÇÕES 🔧***********</h3>
 <h4 align="center">Como executar a aplicação</h4>
 
@@ -33,5 +18,41 @@ Para executrar a aplicação, siga os seguintes passos:
 * Faça o cadastro e clique em ***LOG IN***, você irá retornar para a tela de login
 * Com o cadastro feito, você já pode acessar o sistema
 
+<ol>
+<h4 align="center"> 🚧 A aplicação desenvolvida utilizando Angular CLI.; 🚧</h4>
 
-<h4 align="center"> 🚧 Projeto em construção 🚧</h4>
+<li> As informações serão salvas em backend mockado </li> 
+
+<li> A aplicação apresenta uma tela de login, conforme o protótipo do projeto.</li> 
+
+<li> O usuário deve  acessar a aplicação utilizando o e-mail e a senha cadastrada.</li> 
+
+<li> Se houver alguma informação incorreta, a aplicação deverá retornar um erro.</li> 
+
+<li> Se a empresa não possuir cadastro, deverá se cadastrar para acessar a aplicação.</li> 
+
+<li> A aplicação apresenta uma tela de cadastro com os seguintes campos:</li> 
+
+<ol>
+  <li>CNPJ</li> 
+  <li>E-mail</li> 
+  <li>Senha</li> 
+  <li>Nome</li> 
+  <li>Endereço da sede</li> 
+  <li>Conformação da senha</li> 
+  <li>Botão de log in </li> 
+</ol>
+
+<li> Quando a empresa acessar a aplicação, é direcionada para a tela Início;</li> 
+<li>A tela inicial contem cards com informações cadastradas pela empresa;</li> 
+<li>A aplicação apresenta uma sidebar com menu de navegação;</li> 
+<li>A aplicação apresenta um menu superior com informação da tela ativa e nome da empresa. </li> 
+<li>A aba ‘Funcionários’ apresenta uma tabela com informações dos funcionários cadastrados pela empresa;</li> 
+<li>A tabela de funcionários apresenta informações. Permitir editar informações de cada funcionário e permiti incluir novos funcionários;</li> 
+<li>Na aba ‘Fazendas’ é apresentado um card com a listagem de propriedades e previsão de colheita.</li> 
+<li>Na aba ‘Fazendas’ existi um botão para cadastro de novas fazendas;</li> 
+<li>Ao clicar no botão ‘Cadastrar nova fazenda’ o usuário é direcionado para a tela de cadastro, onde existi um formulário para cadastro da nova fazenda;</li> 
+<li>A aba ‘Grãos’ apresenta uma tabela com informações dos grãos cadastrados pela empresa;</li> 
+<li>A tabela de grãos apresenta informações dos grãos cadastrados. Deverá permiti editar informações de cada grão e permiti incluir novos;</li> 
+<li>Ao clicar no botão ‘incluir novo grão’ o usuário é direcionado para a tela de cadastro de grãos;</li> 
+</ol>
