@@ -6,9 +6,12 @@
 Para executrar a aplicação, siga os seguintes passos:
 
 * Acesse o terminal e clone o projeto ***git clone git@github.com:DEVin-Senior/M2P2-DEVAgro-Squad03.git***
-* Acesse a pasta ***M2P2-DEVAgro-Squad03/backend*** e execute o comando ***NPM INSTALL***
+* Acesse a pasta ***-DEVAgro/backend*** e execute o comando ***NPM INSTALL***
 * Após a aplicação finalizar a instalação das dependências, execute o comando ***NPM START***
-* Acesse a pasta ***M2P2-DEVAgro-Squad03/frontend***
+* Acesse a pasta ***DEVAgro/backend***
+* Dentro da pasta, execute o comando ***NPM INSTALL***
+* Logo em seguida npm start (para ativar o banco de dados json-server)
+* Acesse a pasta ***DEVAgro/frontend***
 * Dentro da pasta frontend, execute o comando ***NPM INSTALL***
 * Após a aplicação finalizar a instalação das dependências, execute o comando ***NG SERVE***
 * Abra um navegador de sua preferência e acesse o endereço ***http://localhost:4200/***
